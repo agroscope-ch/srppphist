@@ -1,0 +1,40 @@
+#' Publication dates of the available zip files
+#'
+#' @name psmv_xml_dates
+#' @docType data
+#' @format character vector of publication dates in the format YYYY-MM-DD
+#' @examples
+#' print(psmv_xml_dates)
+"psmv_xml_dates"
+
+#' Relative paths of the available zip files
+#'
+#' @name psmv_xml_zip_files
+#' @docType data
+#' @format character vector of paths relative to 'psmv_xml_idir',
+#' named with their publication dates in the format YYYY-MM-DD
+#' @examples
+#' print(psmv_xml_zip_files)
+"psmv_xml_zip_files"
+
+#' List of 'psmv_dm' objects for all years starting 2011
+#'
+#' For each year, the first XML dump published by FOAG is used.
+#'
+#' @name psmv_list
+#' @docType data
+#' @format list A list of PSMV versions created with [psmv_dm], named with a
+#' character vector of the respective years
+#' @examples
+#' names(psmv_list)
+"psmv_list"
+
+#' Table of active substance names extracted from all years starting 2011
+#'
+#' @docType data
+#' @format tibble A table, resolving the primary keys ('pk') of the active 
+#' substances to the latest entry in any of the 'substances' tables in 
+#' [psmv_list].
+#' @examples
+#' print(psmv_active_substances, n = Inf)
+"psmv_active_substances"

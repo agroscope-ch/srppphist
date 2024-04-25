@@ -1,0 +1,30 @@
+Package: psmvdata
+Type: Package
+Title: Historical Data from the Swiss Register of Plant Protection Products as an R Package
+Version: 0.3.1
+Date: 2024-04-24
+Authors@R: c(
+  person("Johannes", "Ranke", role = c("aut", "cre"),
+    email = "johannes.ranke@agroscope.admin.ch",
+    comment = c(ORCID = "0000-0003-4371-6538")),
+  person("Agroscope", role = "cph"))
+Description: Data objects extracted from historical XML versions of the Swiss
+  Register of Plant Protection Products 'PSMV'. Starting from 2011, one such
+  historic PSMV is contained for each year. Note that the information contained
+  in this project is outdated. An online version of the current register can be
+  accessed via <https://www.psm.admin.ch/de/produkte>. An XML dump of the
+  current register can be read in using the 'psmv' package.
+Depends: R (>= 4.1.0)
+Imports: psmv, cli
+Suggests: knitr, rmarkdown, here, DiagrammeR, ggplot2, parallel,
+  testthat (>= 3.0.0), dm, dplyr, tibble, tidyr
+BugReports: https://gitlab.agsad.admin.ch/psmwb/psmvdata/issues
+License: GPL
+LazyData: yes
+LazyDataCompression: xz
+RoxygenNote: 7.3.1.9000
+Roxygen: list(markdown = TRUE)
+VignetteBuilder: knitr
+Encoding: UTF-8
+Language: en-GB
+Config/testthat/edition: 3

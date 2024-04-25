@@ -1,0 +1,13 @@
+template:
+  bootstrap: 5
+
+reference:
+  - title: Data objects for XML versions of the PSMV
+    contents:
+      - psmv_list
+      - psmv_active_substances
+      - psmv_xml_dates
+      - psmv_xml_zip_files
+  - title: Functions to create data objects from XML versions of the PSMV
+    contents:
+      - psmv_xml_get.numeric

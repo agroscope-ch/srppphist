@@ -1,0 +1,12 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.gitlab-ci.yml$
+^_pkgdown.yml$
+^README.html$
+^README.rmd$
+^docs
+^log
+^GNUmakefile$
+^psmvdata_.*\.tar\.gz
+^psmvdata.Rcheck
+^vignettes/.*_cache$
