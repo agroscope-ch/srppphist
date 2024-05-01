@@ -3,10 +3,9 @@
 ✔ No duplicated W-Numbers
 ✔ | F W  S  OK | Context
 ✔ |          3 | alternative_products
-⠏ |          0 | psmv_dm                                                        trying URL '2024-01-03'
-✔ |          5 | psmv_dm [11.3s]
+✔ |          5 | psmv_dm [11.2s]
 
 ══ Results ═════════════════════════════════════════════════════════════════════
-Duration: 11.6 s
+Duration: 11.5 s
 
 [ FAIL 0 | WARN 0 | SKIP 0 | PASS 8 ]
