@@ -7,6 +7,6 @@
 ^docs
 ^log
 ^GNUmakefile$
-^psmvdata_.*\.tar\.gz
-^psmvdata.Rcheck
+^psmvhist_.*\.tar\.gz
+^psmvhist.Rcheck
 ^vignettes/.*_cache$

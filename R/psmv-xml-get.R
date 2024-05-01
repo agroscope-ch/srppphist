@@ -6,7 +6,7 @@ psmv::psmv_xml_get
 #'
 #' @rdname psmv_xml_get
 #' @param from A number giving a year starting from 2011 up to the current year, or
-#' one of the dates in [psmvdata::psmv_xml_dates].
+#' one of the dates in [psmvhist::psmv_xml_dates].
 #' @param \dots Currently not used
 #' @return An object inheriting from 'psmv_xml', 'xml_document', 'xml_node'
 #' @importFrom psmv psmv_xml_get_from_path
@@ -14,7 +14,7 @@ psmv::psmv_xml_get
 #' @examples
 #' \dontrun{
 #' # The following only works if you have a collection of zipped XML dumps in a directory
-#' # specified in the environment variable R_psmvdata_idir
+#' # specified in the environment variable R_psmvhist_idir
 #' psmv_2015 <- psmv_xml_get(2015)
 #' print(psmv_2015)
 #' class(psmv_2015)
@@ -30,7 +30,7 @@ psmv_xml_get.numeric <- function(from, ...) {
     min(
       grep(
         paste0("^", as.character(year)), 
-        as.character(psmvdata::psmv_xml_dates),
+        as.character(psmvhist::psmv_xml_dates),
         value = TRUE)))
 
   ret <- psmv_xml_get(date)
@@ -43,10 +43,10 @@ psmv_xml_get.Date <- function(from, ...)
 {
   date <- from
 
-  if (date %in% psmvdata::psmv_xml_dates) {
-    idir <- Sys.getenv("R_psmvdata_idir")
-    if (idir == "") stop("You need to set the environment variable R_psmvdata_idir")
-    path <- file.path(idir, psmvdata::psmv_xml_zip_files[as.character(date)])
+  if (date %in% psmvhist::psmv_xml_dates) {
+    idir <- Sys.getenv("R_psmvhist_idir")
+    if (idir == "") stop("You need to set the environment variable R_psmvhist_idir")
+    path <- file.path(idir, psmvhist::psmv_xml_zip_files[as.character(date)])
     cli::cli_alert_info(paste("Reading XML for", date))
   } else {
     stop("No XML dump available for ", date)

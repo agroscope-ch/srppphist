@@ -1,4 +1,4 @@
-* using log directory ‘/home/agsad.admin.ch/f80868656/projects/psmvdata/psmvdata.Rcheck’
+* using log directory ‘/home/agsad.admin.ch/f80868656/projects/psmvhist/psmvhist.Rcheck’
 * using R version 4.3.3 (2024-02-29)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * R was compiled by
@@ -7,14 +7,14 @@
 * running under: Ubuntu 22.04.4 LTS
 * using session charset: UTF-8
 * using options ‘--no-tests --as-cran’
-* checking for file ‘psmvdata/DESCRIPTION’ ... OK
+* checking for file ‘psmvhist/DESCRIPTION’ ... OK
 * checking extension type ... Package
-* this is package ‘psmvdata’ version ‘0.3.1’
+* this is package ‘psmvhist’ version ‘0.3.1’
 * package encoding: UTF-8
 * checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Johannes Ranke <johannes.ranke@agroscope.admin.ch>’
 
-Size of tarball: 6371401 bytes
+Size of tarball: 6371416 bytes
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
@@ -23,7 +23,7 @@ Size of tarball: 6371401 bytes
 * checking for hidden files and directories ... OK
 * checking for portable file names ... OK
 * checking for sufficient/correct file permissions ... OK
-* checking whether package ‘psmvdata’ can be installed ... [55s/55s] OK
+* checking whether package ‘psmvhist’ can be installed ... [56s/56s] OK
 * checking installed package size ... NOTE
   installed size is 12.1Mb
   sub-directories of 1Mb or more:
@@ -80,7 +80,7 @@ Skipping checking HTML validation: no command 'tidy' found
 
 Status: 3 NOTEs
 See
-  ‘/home/agsad.admin.ch/f80868656/projects/psmvdata/psmvdata.Rcheck/00check.log’
+  ‘/home/agsad.admin.ch/f80868656/projects/psmvhist/psmvhist.Rcheck/00check.log’
 for details.
 
 

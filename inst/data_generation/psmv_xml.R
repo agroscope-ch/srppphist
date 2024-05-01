@@ -4,8 +4,8 @@ library(here) # For writing to the right directory from an RStudio project
 library(dplyr)
 library(dm)
 library(psmv)
-library(psmvdata)
-Sys.setenv(R_psmvdata_idir = fgpsm::psmv_xml_idir)
+library(psmvhist)
+Sys.setenv(R_psmvhist_idir = fgpsm::psmv_xml_idir)
 
 psmv_xml_zip_files <- dir(fgpsm::psmv_xml_idir, "PublicationData.*\\.zip", recursive = TRUE)
 psmv_xml_dates <- as.Date(

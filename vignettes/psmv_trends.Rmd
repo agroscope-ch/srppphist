@@ -13,7 +13,7 @@ vignette: >
 ```{r setup, include = TRUE, message = FALSE}
 knitr::opts_chunk$set(tidy = FALSE, cache = FALSE)
 options(knitr.kable.NA = '')
-library(psmvdata)
+library(psmvhist)
 library(dm)
 library(dplyr)
 library(knitr)
