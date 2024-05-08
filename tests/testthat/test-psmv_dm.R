@@ -15,7 +15,26 @@ test_that("Methods for reading in XML files work", {
     "cannot open URL"),
   "length 0")
 
+  # Read in XML without duplicated W-Numbers
+  expect_message({
+    psmv_test_2024 <- psmv_dm(as.Date("2024-01-03"))
+  }, "Reading XML for 2024-01-03")
+
+
+  # Read in two different XML files with known duplicates
   expect_message(
-    expect_message(psmv_test <- psmv_dm(as.Date("2024-01-03")), "Reading XML for 2024-01-03"),
-    "No duplicated W-Numbers")
+    expect_message({
+      psmv_test_2012_1 <- psmv_dm(as.Date("2012-08-02"))
+    }, "Reading XML for 2012-08-02"),
+    "Removing second entry for duplicated W-Number: 5945")
+
+  expect_message(
+    expect_message({
+      psmv_test_2015_1 <- psmv_dm(as.Date("2015-01-06"))
+    }, "Reading XML for 2015-01-06"),
+    "Removing entry with expiration date for duplicated W-Number: 6721")
+
+  expect_false(any(duplicated(psmv_test_2012_1$products$wNbr)))
+  expect_false(any(duplicated(psmv_test_2015_1$products$wNbr)))
+
 })

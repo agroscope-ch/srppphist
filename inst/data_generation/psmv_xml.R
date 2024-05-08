@@ -2,7 +2,7 @@
 # of the PSMV
 library(here) # For writing to the right directory from an RStudio project
 library(dplyr)
-library(dm)
+library(dm, warn.conflicts = FALSE)
 library(psmv)
 library(psmvhist)
 Sys.setenv(R_psmvhist_idir = fgpsm::psmv_xml_idir)
@@ -82,6 +82,6 @@ sapply(psmv_list, function(psmv) {
 })
 
 # Check referential integrity of the dm objects
-lapply(psmv_list, function(psmv) dm_examine_constraints(psmv))
+parallel::mclapply(psmv_list, function(psmv) dm_examine_constraints(psmv), mc.cores = 4)
 
 save("psmv_list", file = here("data/psmv_list.rda"), compress = "xz")

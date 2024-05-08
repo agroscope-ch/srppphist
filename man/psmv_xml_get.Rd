@@ -24,7 +24,7 @@ Additional methods to read an XML version of the PSMV
 \examples{
 \dontrun{
 # The following only works if you have a collection of zipped XML dumps in a directory
-# specified in the environment variable R_psmvdata_idir
+# specified in the environment variable R_psmvhist_idir
 psmv_2015 <- psmv_xml_get(2015)
 print(psmv_2015)
 class(psmv_2015)

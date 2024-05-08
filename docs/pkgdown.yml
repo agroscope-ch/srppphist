@@ -1,7 +1,7 @@
-pandoc: 3.1.1
+pandoc: 3.1.11
 pkgdown: 2.0.9
 pkgdown_sha: ~
 articles:
   psmv_trends: psmv_trends.html
-last_built: 2024-05-01T10:06Z
+last_built: 2024-05-08T20:36Z
 
