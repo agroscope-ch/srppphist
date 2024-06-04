@@ -2,9 +2,9 @@
 ℹ Reading XML for 2024-01-03
 ✔ | F W  S  OK | Context
 ✔ |          3 | alternative_products
-✔ |         10 | psmv_dm [35.4s]
+✔ |         10 | psmv_dm [33.9s]
 
 ══ Results ═════════════════════════════════════════════════════════════════════
-Duration: 35.7 s
+Duration: 34.2 s
 
 [ FAIL 0 | WARN 0 | SKIP 0 | PASS 13 ]
