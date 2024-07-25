@@ -1,5 +1,11 @@
 test_that("Methods for reading in XML files work", {
 
+  skip_on_ci()
+
+  Sys.setenv(R_srppphist_idir = fgpsm::srppp_xml_idir)
+
+  srppp_test <- srppp_dm(2024)
+
   # The remaining message "trying URL '2024-01-03'" is from the system library
   # and is not detected by expect_message().
   # Interception of this message by sink() was taken from https://stackoverflow.com/a/66139071
