@@ -10,3 +10,4 @@
 ^.*\.tar\.gz
 ^.*.Rcheck
 ^vignettes/.*_cache$
+^\.github$

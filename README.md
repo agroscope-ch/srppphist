@@ -1,6 +1,9 @@
 # srppphist - Historical Data from the Swiss Register of Plant Protection Products as an R Package
 
+<!-- badges: start -->
+  [![R-CMD-check](https://github.com/agroscope-ch/srppphist/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/agroscope-ch/srppphist/actions/workflows/R-CMD-check.yaml)
 [![srppphist status badge](https://agroscope-ch.r-universe.dev/badges/srppphist)](https://agroscope-ch.r-universe.dev/ui/#package:srppphist)
+<!-- badges: end -->
 
 ## Description
 
