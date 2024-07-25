@@ -1,0 +1,86 @@
+---
+title: Trends of data contained in XML dumps of the Swiss Register of Plant Protection Products
+author: Johannes Ranke
+date: Last change 25 July 2024 (rebuilt `r Sys.Date()`)
+output:
+  rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Trends of data contained in XML dumps of the Swiss Register of Plant Protection Products}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = TRUE, message = FALSE}
+knitr::opts_chunk$set(tidy = FALSE, cache = FALSE)
+options(knitr.kable.NA = '')
+library(srppphist)
+library(dplyr)
+library(knitr)
+library(ggplot2)
+```
+
+## Trends of numbers of active substances
+
+```{r warning = FALSE}
+actives_by_category <- sapply(srppp_list, function(sr) {
+  actives_categories <- sr$products |>
+    left_join(sr$categories, by = "pNbr", relationship = "many-to-many") |>
+    select(pNbr, category = category_de) |>
+    unique() |>
+    left_join(sr$ingredients, by = "pNbr", relationship = "many-to-many") |>
+    dplyr::filter(type == "ACTIVE_INGREDIENT") |>
+    left_join(sr$substances, by = "pk") |>
+    select(pk, category, substance_de) |>
+    unique() |>
+    arrange(pk, substance_de, category)
+
+  n_actives <- actives_categories |>
+    select(pk) |>
+    unique() |>
+    nrow()
+
+  actives_categories |>
+    group_by(category) |>
+    summarise(n = n()) |>
+    arrange(desc(n))
+
+  n_tibble <- actives_categories |>
+    mutate(category = case_when(
+      grepl("Herbizid", category) ~ "Herbicides",
+      grepl("Fungizid", category) ~ "Fungicides",
+      grepl("Insektizid", category) ~ "Insecticides",
+      grepl("Saatbeizmittel", category) ~ "Seed dressings",
+      grepl("Regulator", category) ~ "PGR",
+      grepl("Phytoregulator", category) ~ "PGR", # new in 2024
+      grepl("Lebende Organismen", category) ~ "Organisms",
+      grepl("Akarizid", category) ~ "Acaricides",
+      .default = "Others"
+    )) |>
+    group_by(category) |>
+    summarise(n = n()) |>
+    arrange(desc(n))
+
+  n <- n_tibble$n
+  names(n) <- n_tibble$category
+  n <- c(Total = n_actives, n)
+  return(n)
+})
+kable(actives_by_category)
+```
+
+```{r fig.width = 7, fig.height = 5}
+#| fig.alt: >
+#|   Diagram showing the evolution of the number of active substances per category
+#|   over time
+actives_by_category_long <- actives_by_category |>
+  tibble::as_tibble(rownames = "Category") |>
+  tidyr::pivot_longer(cols = where(is.numeric), names_to = "Year", values_to = "Number") |>
+  ungroup() |>
+  group_by(Category)
+
+actives_by_category_long |>
+  ggplot(aes(Year, Number, group = Category, color = Category)) +
+  geom_point() +
+  geom_line()
+```
+

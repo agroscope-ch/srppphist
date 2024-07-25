@@ -1,0 +1,141 @@
+* using log directory ‘/home/agsad.admin.ch/f80868656/projects/srppphist/srppphist.Rcheck’
+* using R version 4.4.1 (2024-06-14)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+    GNU Fortran (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+* running under: Ubuntu 22.04.4 LTS
+* using session charset: UTF-8
+* using options ‘--no-tests --as-cran’
+* checking for file ‘srppphist/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘srppphist’ version ‘0.99.2’
+* package encoding: UTF-8
+* checking CRAN incoming feasibility ... NOTE
+Maintainer: ‘Johannes Ranke <johannes.ranke@agroscope.admin.ch>’
+
+Size of tarball: 5373360 bytes
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘srppphist’ can be installed ... [56s/47s] OK
+* checking installed package size ... NOTE
+  installed size is 11.3Mb
+  sub-directories of 1Mb or more:
+    data  11.1Mb
+* checking package directory ... OK
+* checking for future file timestamps ... OK
+* checking ‘build’ directory ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... NOTE
+Files ‘README.md’ or ‘NEWS.md’ cannot be checked without ‘pandoc’ being installed.
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking use of S3 registration ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... OK
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking LazyData ... OK
+* checking data for ASCII and uncompressed saves ... OK
+* checking installed files from ‘inst/doc’ ... OK
+* checking files in ‘vignettes’ ... OK
+* checking examples ... ERROR
+Running examples in ‘srppphist-Ex.R’ failed
+The error most likely occurred in:
+
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: srppp_list
+> ### Title: List of 'srppp_dm' objects for all years starting 2011
+> ### Aliases: srppp_list
+> ### Keywords: datasets
+> 
+> ### ** Examples
+> 
+> names(srppp_list)
+ [1] "2011" "2012" "2013" "2014" "2015" "2016" "2017" "2018" "2019" "2020"
+[11] "2021" "2022" "2023" "2024"
+> 
+> # In case you are interested in the registered uses of products containing
+> # a certain active substance, here is some example code
+> library(dplyr)
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+> # Step 1: Get the pk number of a certain active substance
+> pk_active <- srppp_active_substances |>
++   filter(substance_de == "Cyproconazole") |>
++   pull(pk)
+> 
+> # Step 2: Get the products (pNbrs) containing that substance for a specific
+> # year and add the registrations (wNbrs)
+> products_2018 <- srppp_list[["2018"]]$ingredients |>
++   filter(pk == pk_active) |>
++   left_join(srppp_list[["2018"]]$products, by = "pNbr")
+> 
+> # Step 3: Get the associated uses
+> uses_2018 <- products_2018 |>
++   left_join(srppp_list[["2018"]]$uses, by = "wNbr")
+Error in `left_join()`:
+! Join columns in `y` must be present in the data.
+✖ Problem with `wNbr`.
+Backtrace:
+    ▆
+ 1. ├─dplyr::left_join(products_2018, srppp_list[["2018"]]$uses, by = "wNbr")
+ 2. └─dplyr:::left_join.data.frame(products_2018, srppp_list[["2018"]]$uses, by = "wNbr")
+ 3.   └─dplyr:::join_mutate(...)
+ 4.     └─dplyr:::join_cols(...)
+ 5.       └─dplyr:::check_join_vars(by$y, y_names, by$condition, "y", error_call = error_call)
+ 6.         └─rlang::abort(bullets, call = error_call)
+Execution halted
+* checking for unstated dependencies in ‘tests’ ... OK
+* checking tests ... SKIPPED
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes ... OK
+* checking re-building of vignette outputs ... OK
+* checking PDF version of manual ... OK
+* checking HTML version of manual ... NOTE
+Skipping checking HTML validation: no command 'tidy' found
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+
+Status: 1 ERROR, 4 NOTEs
+See
+  ‘/home/agsad.admin.ch/f80868656/projects/srppphist/srppphist.Rcheck/00check.log’
+for details.
+

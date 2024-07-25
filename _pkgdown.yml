@@ -1,0 +1,19 @@
+url: https://agroscope-ch.github.io/srppphist
+
+template:
+  bootstrap: 5
+
+reference:
+  - title: Data objects for XML versions of the SRPPP
+    contents:
+      - srppp_list
+      - srppp_active_substances
+      - srppp_substances
+      - srppp_products
+      - srppp_ingredients
+      - srppp_obligations_spe3
+      - srppp_xml_dates
+      - srppp_xml_zip_files
+  - title: Functions to create data objects from XML versions of the SRPPP
+    contents:
+      - srppp_xml_get.numeric

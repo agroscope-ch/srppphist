@@ -1,0 +1,41 @@
+Package: srppphist
+Type: Package
+Title: Historical Data from the Swiss Register of Plant Protection Products as an R Package
+Version: 0.99.2
+Date: 2024-07-25
+Authors@R: c(
+  person("Johannes", "Ranke", role = c("aut", "cre"),
+    email = "johannes.ranke@agroscope.admin.ch",
+    comment = c(ORCID = "0000-0003-4371-6538")),
+  person("Daniel", "Baumgartner", role = "ctb"),
+  person("Romualdus", "Kasteel", role = c("rev"),
+    email = "romualdus.kasteel@agroscope.admin.ch"),
+  person("Marcel", "Mathis", role = c("rev"),
+    email = "marcel.mathis@agroscope.admin.ch"),
+  person("Agroscope", role = "cph"))
+Description: Data objects extracted from historical XML versions of the Swiss
+  Register of Plant Protection Products 'SRPPP'. Starting from 2011, one such
+  data object is contained for each year. Note that the information contained
+  in this project is outdated. An online version of the current register can be
+  accessed via <https://www.psm.admin.ch/de/produkte>. An XML dump of the
+  current register can be read in using the 'srppp' package. There is no
+  guarantee of correspondence of the data contained in or read in using this 
+  package with any online version, or with the original registration documents.  
+  Also, the Federal Food Safety and Veterinary Office, coordinating the 
+  authorisation of plant protection products in Switzerland, does not answer 
+  requests regarding this package.
+Depends: R (>= 4.1.0), srppp (>= 0.99.2)
+Imports: cli, dplyr
+Suggests: knitr, rmarkdown, here, DiagrammeR, ggplot2, parallel,
+  testthat (>= 3.0.0), tibble, tidyr
+BugReports: https://github.com/agroscope-ch/srppphist/issues
+URL: https://agroscope-ch.github.io/srppphist
+License: GPL
+LazyData: yes
+LazyDataCompression: xz
+RoxygenNote: 7.3.1.9000
+Roxygen: list(markdown = TRUE)
+VignetteBuilder: knitr
+Encoding: UTF-8
+Language: en-GB
+Config/testthat/edition: 3
