@@ -1,11 +1,9 @@
 ℹ Testing srppphist
 ✔ | F W  S  OK | Context
-⠏ |          0 | alternative_products                                           i Reading XML for 2024-01-03
-✔ |          3 | alternative_products [10.1s]
-⠏ |          0 | srppp_dm                                                       i Reading XML for 2024-01-03
-✔ |         10 | srppp_dm [40.5s]
+✔ |          4 | alternative_products [9.9s]
+✔ |         10 | srppp_dm [31.1s]
 
 ══ Results ═════════════════════════════════════════════════════════════════════
-Duration: 50.6 s
+Duration: 41.0 s
 
-[ FAIL 0 | WARN 0 | SKIP 0 | PASS 13 ]
+[ FAIL 0 | WARN 0 | SKIP 0 | PASS 14 ]

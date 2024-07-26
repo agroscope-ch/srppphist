@@ -4,7 +4,9 @@ test_that("Alternative products are found", {
 
   Sys.setenv(R_srppphist_idir = fgpsm::srppp_xml_idir)
 
-  srppp_test <- srppp_dm(2024)
+  expect_message(
+    {srppp_test <- srppp_dm(2024)}, 
+    "Reading XML for 2024-01-03")
 
   lambda_delta_gaps <- alternative_products(srppp_test, c("Lambda-Cyhalothrin", "Deltamethrin"),
     missing = TRUE)
