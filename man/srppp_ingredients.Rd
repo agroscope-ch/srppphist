@@ -19,4 +19,7 @@ Table of product ingredients extracted from all years starting 2011
 \examples{
 print(srppp_ingredients, n = Inf)
 }
+\seealso{
+\link{srppp_products}
+}
 \keyword{datasets}

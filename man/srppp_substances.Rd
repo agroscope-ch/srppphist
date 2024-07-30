@@ -20,4 +20,7 @@ Table of substance names extracted from all years starting 2011
 \examples{
 print(srppp_substances, n = Inf)
 }
+\seealso{
+\link{srppp_products}
+}
 \keyword{datasets}

@@ -15,8 +15,43 @@ srppp_list
 \description{
 For each year, the first XML dump published by the registration authority is
 used, with few exceptions, where a corrected dump was published shortly
-after the first one.
+after the first one. Please note the use conditions set out by the
+registration authority for the XML dumps currently published at their website.
 }
+\section{Use conditions set out by the registration authority}{
+Please consult the
+\href{https://www.blv.admin.ch/blv/de/home/zulassung-pflanzenschutzmittel/pflanzenschutzmittelverzeichnis.html}{use conditions of the XML data files}
+currently published by the Federal Food Safety and Veterinary Office (FSVO).
+For the the historical data contained in this package, the following points
+are of particular importance:
+\itemize{
+\item In cases of doubt, the definitive source of information are always the
+original registration documents, for present as well as past authorisations.
+\item Commercial use of the data provided as XML files is not permitted without
+the written consent of the FSVO.
+}
+}
+
+\section{Additional notes regarding proper use of the data}{
+As we include only historical, not current authorisation data in this package,
+please note the following:
+\itemize{
+\item The descriptions of products and their authorised uses contained in this
+package refer to past authorisations. Regarding current authorisation,
+please refer to the \href{https://www.psm.admin.ch/de/produkte}{Swiss Register of Plant Protection Products}, or use the \code{srppp} package
+which facilitates reading in the current registration data into R.
+\item Products whose authorisation has expired or which have been withdrawn
+from the parallel import list are present in the historical data until the
+end of the period during which use by the end user is still permitted
+('exhaustionDeadline'). This date and the sell-out period
+('soldoutDeadline') are indicated in the \code{products} table of each \code{srppp_dm}
+object.
+\item If you use the historical registration data in the form provided by this
+package, please cite the package as described by the output of
+\code{citation("srppphist")}.
+}
+}
+
 \examples{
 names(srppp_list)
 

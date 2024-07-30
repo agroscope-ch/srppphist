@@ -7,13 +7,17 @@
 \format{
 tibble A table of all unique combinations of P-Number, W-Number
 and product name over all years, and the columns 'earliest' and 'latest',
-indicating the earliest and latest occurrence of that combination.
+indicating the earliest and latest year of occurrence of that combination.
 }
 \usage{
 srppp_products
 }
 \description{
-Table of products extracted from all years starting 2011
+Please note that products whose authorisation has expired remain in the
+files until the end of the period during which use by the end user is
+still permitted. The end of the sell-out period ('soldoutDeadline') and the
+end of the use period ('expirationDeadline') are given in the respective
+columns of the \code{products} table.
 }
 \examples{
 print(srppp_products, n = Inf)

@@ -15,9 +15,17 @@ are given in the columns 'earliest' and 'latest'.
 srppp_active_substances
 }
 \description{
-Table of active substance names extracted from all years starting 2011
+Please note that products whose authorisation has expired remain in the
+files until the end of the period during which use by the end user is
+still permitted. Therefore, the latest year given in this dataset means
+the latest year where a use up period ('expirationDeadline') of at least one
+product containing the substance had not expired in the beginning of the
+respective year.
 }
 \examples{
 print(srppp_active_substances, n = Inf)
+}
+\seealso{
+\link{srppp_products}
 }
 \keyword{datasets}
