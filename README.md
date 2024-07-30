@@ -29,4 +29,5 @@ install.packages("srppphist",
 
 ## Documentation
 
-Please visit the [Documentation page](https://agroscope-ch.github.io/srppphist)!
+An online version of the documentation of the current development version of
+the package is available [on github](https://agroscope-ch.github.io/srppphist).
