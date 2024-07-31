@@ -1,6 +1,8 @@
 test_that("Methods for reading in XML files work", {
 
-  skip_on_ci()
+  srppphist_idir_unavailable <- Sys.getenv("R_srppphist_idir") == ""
+
+  skip_if(srppphist_idir_unavailable)
 
   # The remaining message "trying URL '2024-01-03'" is from the system library
   # and is not detected by expect_message().

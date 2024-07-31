@@ -1,6 +1,8 @@
 test_that("Alternative products are found", {
 
-  skip_on_ci()
+  srppphist_idir_unavailable <- Sys.getenv("R_srppphist_idir") == ""
+
+  skip_if(srppphist_idir_unavailable)
 
   expect_message(
     {srppp_test <- srppp_dm(2024)}, 

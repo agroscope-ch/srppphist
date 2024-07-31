@@ -1,9 +1,9 @@
 ℹ Testing srppphist
 ✔ | F W  S  OK | Context
 ✔ |          4 | alternative_products [9.7s]
-✔ |         10 | srppp_dm [30.4s]
+✔ |         10 | srppp_dm [31.1s]
 
 ══ Results ═════════════════════════════════════════════════════════════════════
-Duration: 40.2 s
+Duration: 40.9 s
 
 [ FAIL 0 | WARN 0 | SKIP 0 | PASS 14 ]
