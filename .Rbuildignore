@@ -1,6 +1,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.gitlab-ci.yml$
+^\.Renviron$
 ^_pkgdown.yml$
 ^README.html$
 ^README.rmd$

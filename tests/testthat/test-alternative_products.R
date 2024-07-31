@@ -2,8 +2,6 @@ test_that("Alternative products are found", {
 
   skip_on_ci()
 
-  Sys.setenv(R_srppphist_idir = fgpsm::srppp_xml_idir)
-
   expect_message(
     {srppp_test <- srppp_dm(2024)}, 
     "Reading XML for 2024-01-03")
