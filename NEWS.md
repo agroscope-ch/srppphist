@@ -1,3 +1,8 @@
+## version 0.99.3
+
+- Update `srppp_list` and the derived data objects using `srppp` version 0.99.3,
+  storing risk mitigation measures as integers instead of character.
+
 ## version 0.99.2
 
 - Use srppp version 0.99.2 to read in the historic data. Thus, product 
