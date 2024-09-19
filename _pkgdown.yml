@@ -14,6 +14,9 @@ reference:
       - srppp_obligations_spe3
       - srppp_xml_dates
       - srppp_xml_zip_files
+  - title: Functions to work with the data
+    contents:
+      - product_categories
   - title: Functions to create data objects from XML versions of the SRPPP
     contents:
       - srppp_xml_get.numeric

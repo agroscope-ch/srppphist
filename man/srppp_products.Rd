@@ -8,6 +8,9 @@
 tibble A table of all unique combinations of P-Number, W-Number
 and product name over all years, and the columns 'earliest' and 'latest',
 indicating the earliest and latest year of occurrence of that combination.
+Finally, the columns 'categories_de', 'categories_fr', and 'categories_it'
+contain concatenations of the product categories in the respective language,
+with the product categories separated by a comma and a space.
 }
 \usage{
 srppp_products
@@ -20,6 +23,6 @@ end of the use period ('expirationDeadline') are given in the respective
 columns of the \code{products} table.
 }
 \examples{
-print(srppp_products, n = Inf)
+print(srppp_products[1:6], n = Inf)
 }
 \keyword{datasets}

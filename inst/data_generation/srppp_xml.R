@@ -79,7 +79,7 @@ srppp_substances <- srppp_substances_tocheck |>
   filter(pk %in% srppp_ingredient_pks$pk) |>
   group_by(pk) |>
   summarise(earliest = min(year), latest = max(year)) |>
-  left_join(srppp_substances_tocheck, by = c("pk", latest = "year")) 
+  left_join(srppp_substances_tocheck, by = c("pk", latest = "year"))
 
 save(srppp_substances,
   file = here("data/srppp_substances.rda"), compress = "xz")
@@ -88,7 +88,7 @@ srppp_active_substances <- srppp_substances_tocheck |>
   filter(pk %in% srppp_active_ingredient_pks$pk) |>
   group_by(pk) |>
   summarise(earliest = min(year), latest = max(year)) |>
-  left_join(srppp_substances_tocheck, by = c("pk", latest = "year")) 
+  left_join(srppp_substances_tocheck, by = c("pk", latest = "year"))
 
 save(srppp_active_substances,
   file = here("data/srppp_active_substances.rda"), compress = "xz")
@@ -110,6 +110,12 @@ srppp_products <- bind_rows(lapply(srppp_list,
     earliest = min(year),
     latest = max(year),
     .groups = "drop_last") |>
+  rowwise() |>
+  mutate(
+    categories_de = product_categories(pNbr, latest, "de"),
+    categories_fr = product_categories(pNbr, latest, "fr"),
+    categories_it = product_categories(pNbr, latest, "it")) |>
+  ungroup() |>
   arrange(pNbr, wNbr)
 
 save(srppp_products,

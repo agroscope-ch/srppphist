@@ -2,7 +2,9 @@
 
 S3method(srppp_xml_get,Date)
 S3method(srppp_xml_get,numeric)
+export(product_categories)
 export(srppp_xml_get)
 importFrom(dplyr,case_when)
+importFrom(dplyr,pull)
 importFrom(srppp,srppp_xml_get)
 importFrom(srppp,srppp_xml_get_from_path)

@@ -21,12 +21,12 @@
 #'
 #' For each year, the first XML dump published by the registration authority is
 #' used, with few exceptions, where a corrected dump was published shortly
-#' after the first one. Please note the use conditions set out by the 
+#' after the first one. Please note the use conditions set out by the
 #' registration authority for the XML dumps currently published at their website.
-#' 
+#'
 #' # Use conditions set out by the registration authority
-#' 
-#' Please consult the 
+#'
+#' Please consult the
 #' [use conditions of the XML data files](https://www.blv.admin.ch/blv/de/home/zulassung-pflanzenschutzmittel/pflanzenschutzmittelverzeichnis.html)
 #' currently published by the Federal Food Safety and Veterinary Office (FSVO).
 #' For the the historical data contained in this package, the following points
@@ -38,7 +38,7 @@
 #' the written consent of the FSVO.
 #'
 #' # Additional notes regarding proper use of the data
-#' 
+#'
 #' As we include only historical, not current authorisation data in this package,
 #' please note the following:
 #'
@@ -47,14 +47,14 @@
 #' please refer to the [Swiss Register of Plant Protection
 #' Products](https://www.psm.admin.ch/de/produkte), or use the `srppp` package
 #' which facilitates reading in the current registration data into R.
-#' - Products whose authorisation has expired or which have been withdrawn 
+#' - Products whose authorisation has expired or which have been withdrawn
 #' from the parallel import list are present in the historical data until the
 #' end of the period during which use by the end user is still permitted
 #' ('exhaustionDeadline'). This date and the sell-out period
 #' ('soldoutDeadline') are indicated in the `products` table of each `srppp_dm`
 #' object.
 #' - If you use the historical registration data in the form provided by this
-#' package, please cite the package as described by the output of 
+#' package, please cite the package as described by the output of
 #' `citation("srppphist")`.
 #'
 #' @name srppp_list
@@ -148,7 +148,7 @@
 #' @docType data
 #' @format tibble A table, resolving the primary keys ('pk') of the active
 #' substances to the latest entry in any of the 'substances' tables in
-#' [srppp_list]. 
+#' [srppp_list].
 #' Also, the earliest and the latest year of occurrence
 #' are given in the columns 'earliest' and 'latest'.
 #' @seealso [srppp_products]
@@ -163,13 +163,16 @@
 #' still permitted. The end of the sell-out period ('soldoutDeadline') and the
 #' end of the use period ('expirationDeadline') are given in the respective
 #' columns of the `products` table.
-#' 
+#'
 #' @docType data
 #' @format tibble A table of all unique combinations of P-Number, W-Number
 #' and product name over all years, and the columns 'earliest' and 'latest',
 #' indicating the earliest and latest year of occurrence of that combination.
+#' Finally, the columns 'categories_de', 'categories_fr', and 'categories_it'
+#' contain concatenations of the product categories in the respective language,
+#' with the product categories separated by a comma and a space.
 #' @examples
-#' print(srppp_products, n = Inf)
+#' print(srppp_products[1:6], n = Inf)
 "srppp_products"
 
 #' Table of product ingredients extracted from all years starting 2011
