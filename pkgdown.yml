@@ -1,9 +1,9 @@
 pandoc: 3.1.11
-pkgdown: 2.1.0
+pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   srppp_trends: srppp_trends.html
-last_built: 2024-08-13T15:20Z
+last_built: 2024-09-19T12:08Z
 urls:
   reference: https://agroscope-ch.github.io/srppphist/reference
   article: https://agroscope-ch.github.io/srppphist/articles
