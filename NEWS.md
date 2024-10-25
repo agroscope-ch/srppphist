@@ -1,9 +1,12 @@
-## version 0.99.3
+## version 1.0.0
 
-- Update `srppp_list` and the derived data objects using `srppp` version 0.99.3,
-  storing risk mitigation measures as integers instead of character.
-- Add the convenience function `product_categories()`, concatenating the product categories for a specific P-Number and a specific year
-- Add the concatenated product categories to `srppp_products`, taken from the latest year that a product is contained in
+- Update `srppp_list` and the derived data objects using `srppp` version 1.0.0
+  storing risk mitigation measures as integers instead of character, and 
+  adding reference to parent cultures to the culture table
+- Add the convenience function `product_categories()`, concatenating the
+  product categories for a specific P-Number and a specific year
+- Add the concatenated product categories to `srppp_products`, taken from the
+  latest year that a product is contained in
 
 ## version 0.99.2
 

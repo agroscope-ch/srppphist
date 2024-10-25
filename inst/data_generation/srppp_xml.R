@@ -25,8 +25,9 @@ save(
 
 # Install the package to make methods for srppp_xml_get and the current srppp_list
 # available, or load the methods without loading the package
-#library(srppphist)
-source(here("R/srppp-xml-get.R"))
+library(srppphist)
+#source(here("R/srppp-xml-get.R"))
+#source(here("R/product_categories.R"))
 
 # One PSMV for each year
 years <- 2011:2024
@@ -149,3 +150,4 @@ parallel::mclapply(srppp_list,
   function(srppp) dm_examine_constraints(srppp), mc.cores = 16)
 
 save("srppp_list", file = here("data/srppp_list.rda"), compress = "xz")
+
