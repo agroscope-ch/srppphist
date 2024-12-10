@@ -3,7 +3,7 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   srppp_trends: srppp_trends.html
-last_built: 2024-11-13T06:38Z
+last_built: 2024-12-10T10:11Z
 urls:
   reference: https://agroscope-ch.github.io/srppphist/reference
   article: https://agroscope-ch.github.io/srppphist/articles
