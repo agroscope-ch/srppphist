@@ -1,3 +1,11 @@
+## version 1.1.0
+
+- Update `srppp_list` and the derived data objects using `srppp` version 1.1.0.
+  This adds a `culture_tree` attribute to each `srppp_dm` object in the list.
+- A new table `srppp_compositions` was added, with only one composition for each
+  P-Number, as opposed to `srppp_ingredients`, where all unique compositions
+  are listed.
+
 ## version 1.0.0
 
 - Update `srppp_list` and the derived data objects using `srppp` version 1.0.1,

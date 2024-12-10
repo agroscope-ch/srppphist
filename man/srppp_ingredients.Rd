@@ -6,7 +6,7 @@
 \title{Table of product ingredients extracted from all years starting 2011}
 \format{
 tibble A table of all unique combinations of P-Number, substance
-primary key 'pk', and product composition columns 'percent', 'g_per_L',
+primary key 'pk', 'type' and product composition columns 'percent', 'g_per_L',
 'ingredient_de', 'ingredient_fr' and 'ingredient_it', and the column
 'latest', indicating the latest entry of that combination.
 }
@@ -14,12 +14,17 @@ primary key 'pk', and product composition columns 'percent', 'g_per_L',
 srppp_ingredients
 }
 \description{
-Table of product ingredients extracted from all years starting 2011
+This table contains all unique ingredient information extracted from
+the XML files. Some products have different ingredient information
+in different years. In this table, all unique compositions occurring
+in one of the years are collected.
 }
 \examples{
 print(srppp_ingredients, n = Inf)
 }
 \seealso{
+\link{srppp_compositions} for one product composition per product
+
 \link{srppp_products}
 }
 \keyword{datasets}

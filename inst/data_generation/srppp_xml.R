@@ -23,7 +23,7 @@ save(
   file = here("data/srppp_xml.rda"),
   compress = "xz")
 
-# Install the package to make methods for srppp_xml_get and the current srppp_list
+# Load the package to make methods for srppp_xml_get and the current srppp_list
 # available, or load the methods without loading the package
 library(srppphist)
 #source(here("R/srppp-xml-get.R"))
@@ -132,6 +132,16 @@ srppp_ingredients <- bind_rows(lapply(srppp_list,
 
 save(srppp_ingredients,
   file = here("data/srppp_ingredients.rda"), compress = "xz")
+
+# Select only one, namely the latest available composition for each product
+srppp_compositions <- srppp_products |>
+  group_by(pNbr) |>
+  summarise(latest = max(latest), .groups = "drop") |>  # latest occurrence of pNbr
+  select(pNbr, latest)  |> 
+  left_join(srppp_ingredients, by = c("pNbr", "latest"))
+
+save(srppp_compositions,
+  file = here("data/srppp_compositions.rda"), compress = "xz")
 
 # Create a table with all SPe 3 obligations over all years
 srppp_obligations_spe3 <- bind_rows(lapply(srppp_list,

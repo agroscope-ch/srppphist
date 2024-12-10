@@ -10,6 +10,7 @@ reference:
       - srppp_active_substances
       - srppp_substances
       - srppp_products
+      - srppp_compositions
       - srppp_ingredients
       - srppp_obligations_spe3
       - srppp_xml_dates
@@ -20,3 +21,6 @@ reference:
   - title: Functions to create data objects from XML versions of the SRPPP
     contents:
       - srppp_xml_get.numeric
+
+news:
+  cran_dates: false
