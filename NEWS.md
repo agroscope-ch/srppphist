@@ -1,4 +1,4 @@
-## version 1.1.0
+## version 1.0.0.9000
 
 - Update `srppp_list` and the derived data objects using `srppp` version 1.1.0.
   This adds a `culture_tree` attribute to each `srppp_dm` object in the list.
