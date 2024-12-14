@@ -18,6 +18,7 @@ reference:
   - title: Functions to work with the data
     contents:
       - product_categories
+      - composition
   - title: Functions to create data objects from XML versions of the SRPPP
     contents:
       - srppp_xml_get.numeric
