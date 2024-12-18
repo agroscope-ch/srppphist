@@ -220,3 +220,9 @@
 #' @examples
 #' print(srppp_obligations_spe3, n = Inf)
 "srppp_obligations_spe3"
+
+#' Dummy data.tree node included to allow data.tree in Imports
+#'
+#' @name
+#' @keywords internal
+dummy_data.tree <- data.tree::Node$new("dummy")

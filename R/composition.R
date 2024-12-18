@@ -1,3 +1,4 @@
+utils::globalVariables("pNbr")
 #' Retrieve one or more product compositions
 #'
 #' @param pNbrs A numeric vector of one or more P-Numbers
