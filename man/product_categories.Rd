@@ -25,6 +25,6 @@ together, separated by a comma.
 Get product categories for a pNbr
 }
 \examples{
-product_categories(7811)
-product_categories(7811, lang = "it")
+product_categories(7811, year = "2024")
+product_categories(7811, year = "2024", lang = "it")
 }

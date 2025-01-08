@@ -8,6 +8,11 @@ pNbr(string, select = interactive())
 }
 \arguments{
 \item{string}{The search string}
+
+\item{select}{If TRUE, then the user is asked to select one product if there
+is more than one match in interactive mode, otherwise the first match is
+returned. If FALSE, more than one number is returned in the case of multiple
+matches}
 }
 \description{
 Retrieve and select a P-Number for a product name

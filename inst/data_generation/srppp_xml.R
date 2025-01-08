@@ -137,7 +137,7 @@ save(srppp_ingredients,
 srppp_compositions <- srppp_products |>
   group_by(pNbr) |>
   summarise(latest = max(latest), .groups = "drop") |>  # latest occurrence of pNbr
-  select(pNbr, latest)  |> 
+  select(pNbr, latest)  |>
   left_join(srppp_ingredients, by = c("pNbr", "latest"))
 
 save(srppp_compositions,

@@ -1,5 +1,7 @@
+utils::globalVariables(c("pNbr", "wNbr", "name", "g_per_L", "percent", "pk"))
 #' Retrieve one or more product compositions
 #'
+#' @importFrom dplyr arrange everything left_join matches row_number select slice
 #' @param pNbrs A numeric vector of one or more P-Numbers
 #' @param lang The language for the returned table
 #' @export
@@ -22,6 +24,10 @@ composition <- function(pNbrs, lang = c("de", "fr", "it")) {
 #' Retrieve and select a P-Number for a product name
 #'
 #' @param string The search string
+#' @param select If TRUE, then the user is asked to select one product if there
+#' is more than one match in interactive mode, otherwise the first match is
+#' returned. If FALSE, more than one number is returned in the case of multiple
+#' matches
 #' @export
 #' @examples
 #' pNbr("Karate")
