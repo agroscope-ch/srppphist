@@ -2,8 +2,3 @@
 * preparing ‘srppphist’:
 * checking DESCRIPTION meta-information ... OK
 * installing the package to build vignettes
-* creating vignettes ... OK
-* checking for LF line-endings in source and make files and shell scripts
-* checking for empty or unneeded directories
-* building ‘srppphist_1.0.0.9000.tar.gz’
-

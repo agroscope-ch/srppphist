@@ -4,11 +4,17 @@
 \alias{composition}
 \title{Retrieve one or more product compositions}
 \usage{
-composition(pNbrs)
+composition(pNbrs, lang = c("de", "fr", "it"))
 }
 \arguments{
 \item{pNbrs}{A numeric vector of one or more P-Numbers}
+
+\item{lang}{The language for the returned table}
 }
 \description{
 Retrieve one or more product compositions
+}
+\examples{
+pNbr("Karate", select = FALSE) |>
+  composition()
 }
