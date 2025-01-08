@@ -18,7 +18,7 @@ composition <- function(pNbrs, lang = c("de", "fr", "it")) {
       pk, matches(paste0("substance_", lang)),
       percent, g_per_L,
       matches(paste0("ingredient_", lang))) |>
-    arrange(pNbr, pk)
+    arrange(pNbr, name, pk)
 }
 
 #' Retrieve and select a P-Number for a product name
