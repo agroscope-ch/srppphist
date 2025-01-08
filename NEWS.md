@@ -6,8 +6,8 @@
 - A new table `srppp_compositions` was added, with only one composition for each
   P-Number, as opposed to `srppp_ingredients`, where all unique compositions
   are listed.
-- A function `composition` was added, making it trivial to query that table
-  for specific P-Numbers
+- The functions `pNbr` and `composition` were added, making it trivial to find
+  P-Numbers from product names and compositions from P-Numbers.
 
 ## version 1.0.0
 
