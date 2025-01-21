@@ -16,6 +16,9 @@ pkgfiles = \
 	R/* \
 	vignettes/*.Rmd
 
+data: 
+	Rscript inst/data_generation/srppp_xml.R
+
 $(TGZ): $(pkgfiles)
 	"$(RBIN)/R" CMD build . 2>&1 | tee log/build.log
 
@@ -52,4 +55,4 @@ test:
 	Rscript -e 'devtools::test()' 2>&1 | tee log/test.log
 	sed -i -e "s/.*\r.*\r//" log/test.log
 
-.PHONY: roxy build install quickinstall check quickcheck pd pd_all test
+.PHONY: data roxy build install quickinstall check quickcheck pd pd_all test

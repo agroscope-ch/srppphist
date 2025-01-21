@@ -33,7 +33,7 @@ library(srppphist)
 years <- 2011:2024
 time <- system.time({
   #srppp_list <- lapply(years, srppp_dm) # lapply prints messages in RStudio
-  srppp_list <- parallel::mclapply(years, srppp_dm, mc.cores = 16)
+  srppp_list <- parallel::mclapply(years, srppp_dm, verbose = FALSE, mc.cores = 16)
   names(srppp_list) <- years
 })
 
