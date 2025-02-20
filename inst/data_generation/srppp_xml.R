@@ -6,6 +6,10 @@ library(dm, warn.conflicts = FALSE)
 library(srppp)
 Sys.setenv(R_srppphist_idir = fgpsm::srppp_xml_idir)
 
+if (packageVersion("data.tree") < "1.1.1") {
+  stop("data.tree versions < 1.1.1 produce srppp_dm objects that lead to spurious warnings in the installation of srppphist (#2)")
+}
+
 srppp_xml_zip_files <- dir(fgpsm::srppp_xml_idir, "PublicationData.*\\.zip", recursive = TRUE)
 srppp_xml_dates <- as.Date(
   gsub(
