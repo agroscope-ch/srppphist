@@ -34,7 +34,8 @@ library(srppphist)
 #source(here("R/product_categories.R"))
 
 # One PSMV for each year
-years <- 2011:2024
+years <- 2011:2025 # When adding a new year, use non-packaged versions of
+# srppp_list in R/srppp-xml-get.R and R/product_categories.R
 time <- system.time({
   #srppp_list <- lapply(years, srppp_dm) # lapply prints messages in RStudio
   srppp_list <- parallel::mclapply(years, srppp_dm, verbose = FALSE, mc.cores = 16)

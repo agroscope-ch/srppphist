@@ -17,6 +17,7 @@ product_categories <- function(pNbr,
 
   category_column <- paste0("category_", lang)
   sr <- srppphist::srppp_list[[as.character(year)]]
+  #sr <- srppp_list[[as.character(year)]] # when adding a new year in data generation
   categories <- sr$categories[sr$categories$pNbr == pNbr, ] |>
     pull(category_column) |>
     paste(collapse = ", ")

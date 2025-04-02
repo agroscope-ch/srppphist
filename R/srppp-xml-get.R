@@ -33,6 +33,7 @@ srppp_xml_get.numeric <- function(from, ...) {
       grep(
         paste0("^", as.character(year)),
         as.character(srppphist::srppp_xml_dates),
+        #as.character(srppp_xml_dates), # when adding a new year
         value = TRUE)))
 
   ret <- srppp_xml_get(as.Date(date))
