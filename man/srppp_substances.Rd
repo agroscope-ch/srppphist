@@ -17,6 +17,12 @@ srppp_substances
 \description{
 Table of substance names extracted from all years starting 2011
 }
+\note{
+Note that a substance occurring in the register in a certain year
+does not necessarily mean that a product containing the substance was
+authorized. In particular, a number of products with such comments are present
+in the register used as representative for 2011.
+}
 \examples{
 print(srppp_substances, n = Inf)
 }
