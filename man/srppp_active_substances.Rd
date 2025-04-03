@@ -22,6 +22,12 @@ the latest year where a use up period ('expirationDeadline') of at least one
 product containing the substance had not expired in the beginning of the
 respective year.
 }
+\note{
+Note that a substance occurring in the register in a certain year
+does not necessarily mean that a product containing the substance was
+authorized. In particular, a number of products with such comments are present
+in the register used as representative for 2011.
+}
 \examples{
 print(srppp_active_substances, n = Inf)
 }

@@ -22,6 +22,14 @@ still permitted. The end of the sell-out period ('soldoutDeadline') and the
 end of the use period ('expirationDeadline') are given in the respective
 columns of the \code{products} table.
 }
+\note{
+Note that comments like "(Bew. beendet/Aut. révoquée/Aut. revocata)" were
+removed from the product names using the function
+\link[srppp:srppp_xml_clean_product_names]{srppp::srppp_xml_clean_product_names}. Therefore, if a product occurs in a
+certain year, it does not necessarily mean that it was authorized in that
+year. In particular, a number of products with such comments are present
+in the register used as representative for 2011.
+}
 \examples{
 print(srppp_products[1:6], n = Inf)
 }

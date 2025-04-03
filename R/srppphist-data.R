@@ -138,6 +138,10 @@
 #' [srppp_list].
 #' Also, the earliest and the latest year of occurrence
 #' are given in the columns 'earliest' and 'latest'.
+#' @note Note that a substance occurring in the register in a certain year
+#' does not necessarily mean that a product containing the substance was
+#' authorized. In particular, a number of products with such comments are present
+#' in the register used as representative for 2011.
 #' @seealso [srppp_products]
 #' @examples
 #' print(srppp_active_substances, n = Inf)
@@ -151,6 +155,10 @@
 #' [srppp_list].
 #' Also, the earliest and the latest year of occurrence
 #' are given in the columns 'earliest' and 'latest'.
+#' @note Note that a substance occurring in the register in a certain year
+#' does not necessarily mean that a product containing the substance was
+#' authorized. In particular, a number of products with such comments are present
+#' in the register used as representative for 2011.
 #' @seealso [srppp_products]
 #' @examples
 #' print(srppp_substances, n = Inf)
@@ -171,6 +179,13 @@
 #' Finally, the columns 'categories_de', 'categories_fr', and 'categories_it'
 #' contain concatenations of the product categories in the respective language,
 #' with the product categories separated by a comma and a space.
+#'
+#' @note Note that comments like "(Bew. beendet/Aut. révoquée/Aut. revocata)" were
+#' removed from the product names using the function
+#' [srppp::srppp_xml_clean_product_names]. Therefore, if a product occurs in a
+#' certain year, it does not necessarily mean that it was authorized in that
+#' year. In particular, a number of products with such comments are present
+#' in the register used as representative for 2011.
 #' @examples
 #' print(srppp_products[1:6], n = Inf)
 "srppp_products"
@@ -178,7 +193,7 @@
 #' Table of product ingredients extracted from all years starting 2011
 #'
 #' This table contains all unique ingredient information extracted from
-#' the XML files. Some products have different ingredient information 
+#' the XML files. Some products have different ingredient information
 #' in different years. In this table, all unique compositions occurring
 #' in one of the years are collected.
 #' @docType data
@@ -193,7 +208,7 @@
 "srppp_ingredients"
 
 #' Table of the latest product compositions
-#' 
+#'
 #' This table contains only one composition for each P-Number In cases, where
 #' several versions of the composition are given in different years, the composition
 #' in the latest year of occurrence is used, assuming that it is the correct one.
