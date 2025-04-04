@@ -42,6 +42,9 @@
 #' register for 2022, there are two products where an exhaustion date of
 #' 31 December 2021 is indicated. In these cases, the function returns TRUE.
 #'
+#' @importFrom dplyr if_else
+#' @importFrom purrr list_rbind
+#' @importFrom stringr str_detect
 #' @param names Character vector of product names that should be checked
 #' @param year The publication years
 #' @param exhaustionDeadline The exhaustion deadlines

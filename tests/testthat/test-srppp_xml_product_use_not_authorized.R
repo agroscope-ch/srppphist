@@ -34,5 +34,4 @@ test_that("Unauthorized products can be detected", {
     head(5)
 
   expect_equal(products_with_exhaustion_date_in_comment$nonauth, c(FALSE, rep(TRUE, 4)))
-}
-
+})
