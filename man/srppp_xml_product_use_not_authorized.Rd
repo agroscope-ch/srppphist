@@ -18,10 +18,10 @@ Boolean (Does a comment in the name indicate that the use of the
 product was not authorized at the time of publication of the file?)
 }
 \description{
-In most cases, products are not present in the XML file,
+In most cases, products are not present in the XML file (source data),
 if the "exhaustionDeadline" (German "Aufbrauchsfrist"), i.e. the date until
 stocks of the product can still be rightully used is earlier than the date
-of the publication.
+of the publication the srppp.
 }
 \details{
 However, in some cases, comments are amended to the product name that show
@@ -75,7 +75,7 @@ srppp_list[["2016"]]$products |>
   select(pNbr:soldoutDeadline, nonauth) |>
   head(20)
 
-# Special case Allegro: There is a conflict of information
+# Special case Allegro: There is a conflict of information (see text)
 srppp_list[["2022"]]$products |>
   filter(grepl("Allegro", name)) |>
   select(pNbr, wNbr, name, exhaustionDeadline) |>
@@ -101,5 +101,4 @@ lapply(example_years, function(year) {
   purrr::list_rbind(names_to = "year") |>
   as.data.frame() |>
   head(2)
-
 }
