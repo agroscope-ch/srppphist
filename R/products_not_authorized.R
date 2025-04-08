@@ -62,7 +62,7 @@
 #'   select(pNbr:soldoutDeadline, nonauth) |>
 #'   head(20)
 #'
-#' # Special case Allegro: There is a conflict of information
+#' # Special case Allegro: There is a conflict of information (see text)
 #' srppp_list[["2022"]]$products |>
 #'   filter(grepl("Allegro", name)) |>
 #'   select(pNbr, wNbr, name, exhaustionDeadline) |>
@@ -88,7 +88,6 @@
 #'   purrr::list_rbind(names_to = "year") |>
 #'   as.data.frame() |>
 #'   head(2)
-#'
 srppp_xml_product_use_not_authorized <- function(names, year, exhaustionDeadline) {
 
   # Ensure year is numeric
