@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">srppphist</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0.9002</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0.9003</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,8 +60,8 @@
                         <h4 data-toc-skip class="author">Johannes
 Ranke</h4>
             
-            <h4 data-toc-skip class="date">Last change 25 July 2024
-(rebuilt 2025-04-03)</h4>
+            <h4 data-toc-skip class="date">Last change 4 April 2025
+(rebuilt 2025-04-08)</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/agroscope-ch/srppphist/blob/main/vignettes/srppp_trends.Rmd" class="external-link"><code>vignettes/srppp_trends.Rmd</code></a></small>
       <div class="d-none name"><code>srppp_trends.Rmd</code></div>
@@ -79,9 +79,23 @@ Ranke</h4>
 <div class="section level2">
 <h2 id="trends-of-numbers-of-active-substances">Trends of numbers of active substances<a class="anchor" aria-label="anchor" href="#trends-of-numbers-of-active-substances"></a>
 </h2>
+<p>The figure below shows the number of active substances contained in
+products occurring in the Swiss Register of Plant Protection Products
+over the years starting from 2011. Unauthorized products and active
+substance only contained in such products are filtered out using the
+function [srppp_xml_product_use_no_authorized].</p>
+<p>The categories are based on the classification in the register. Each
+active substance can have more than one category, therefore the total
+number of active numbers is smaller than the sum of the active
+substances in each category.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">actives_by_category</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">srppp_list</span>, <span class="kw">function</span><span class="op">(</span><span class="va">sr</span><span class="op">)</span> <span class="op">{</span></span>
+<code class="sourceCode R"><span><span class="va">years</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">srppp_list</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">years</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">years</span></span>
+<span><span class="va">actives_by_category</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">years</span>, <span class="kw">function</span><span class="op">(</span><span class="va">year</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">sr</span> <span class="op">&lt;-</span> <span class="va">srppp_list</span><span class="op">[[</span><span class="va">year</span><span class="op">]</span><span class="op">]</span></span>
 <span>  <span class="va">actives_categories</span> <span class="op">&lt;-</span> <span class="va">sr</span><span class="op">$</span><span class="va">products</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>nonauth <span class="op">=</span> <span class="fu"><a href="../reference/srppp_xml_product_use_not_authorized.html">srppp_xml_product_use_not_authorized</a></span><span class="op">(</span><span class="va">name</span>, <span class="va">year</span>, <span class="va">exhaustionDeadline</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="op">!</span><span class="va">nonauth</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">left_join</a></span><span class="op">(</span><span class="va">sr</span><span class="op">$</span><span class="va">categories</span>, by <span class="op">=</span> <span class="st">"pNbr"</span>, relationship <span class="op">=</span> <span class="st">"many-to-many"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">pNbr</span>, category <span class="op">=</span> <span class="va">category_de</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -162,7 +176,7 @@ Ranke</h4>
 <tbody>
 <tr class="odd">
 <td align="left">Total</td>
-<td align="right">521</td>
+<td align="right">425</td>
 <td align="right">454</td>
 <td align="right">439</td>
 <td align="right">420</td>
@@ -171,7 +185,7 @@ Ranke</h4>
 <td align="right">426</td>
 <td align="right">391</td>
 <td align="right">385</td>
-<td align="right">381</td>
+<td align="right">380</td>
 <td align="right">361</td>
 <td align="right">354</td>
 <td align="right">335</td>
@@ -179,7 +193,7 @@ Ranke</h4>
 </tr>
 <tr class="even">
 <td align="left">Herbicides</td>
-<td align="right">138</td>
+<td align="right">109</td>
 <td align="right">120</td>
 <td align="right">112</td>
 <td align="right">107</td>
@@ -188,7 +202,7 @@ Ranke</h4>
 <td align="right">107</td>
 <td align="right">97</td>
 <td align="right">94</td>
-<td align="right">95</td>
+<td align="right">94</td>
 <td align="right">89</td>
 <td align="right">85</td>
 <td align="right">79</td>
@@ -196,7 +210,7 @@ Ranke</h4>
 </tr>
 <tr class="odd">
 <td align="left">Insecticides</td>
-<td align="right">124</td>
+<td align="right">95</td>
 <td align="right">105</td>
 <td align="right">104</td>
 <td align="right">98</td>
@@ -213,7 +227,7 @@ Ranke</h4>
 </tr>
 <tr class="even">
 <td align="left">Fungicides</td>
-<td align="right">119</td>
+<td align="right">94</td>
 <td align="right">100</td>
 <td align="right">96</td>
 <td align="right">90</td>
@@ -230,7 +244,7 @@ Ranke</h4>
 </tr>
 <tr class="odd">
 <td align="left">Others</td>
-<td align="right">111</td>
+<td align="right">83</td>
 <td align="right">85</td>
 <td align="right">83</td>
 <td align="right">81</td>
@@ -247,7 +261,7 @@ Ranke</h4>
 </tr>
 <tr class="even">
 <td align="left">Organisms</td>
-<td align="right">58</td>
+<td align="right">55</td>
 <td align="right">55</td>
 <td align="right">56</td>
 <td align="right">59</td>
@@ -264,7 +278,7 @@ Ranke</h4>
 </tr>
 <tr class="odd">
 <td align="left">Seed dressings</td>
-<td align="right">38</td>
+<td align="right">34</td>
 <td align="right">37</td>
 <td align="right">39</td>
 <td align="right">39</td>
@@ -280,8 +294,8 @@ Ranke</h4>
 <td align="right">26</td>
 </tr>
 <tr class="even">
-<td align="left">Acaricides</td>
-<td align="right">24</td>
+<td align="left">PGR</td>
+<td align="right">23</td>
 <td align="right">23</td>
 <td align="right">26</td>
 <td align="right">26</td>
@@ -297,8 +311,8 @@ Ranke</h4>
 <td align="right">20</td>
 </tr>
 <tr class="odd">
-<td align="left">PGR</td>
-<td align="right">24</td>
+<td align="left">Acaricides</td>
+<td align="right">18</td>
 <td align="right">22</td>
 <td align="right">20</td>
 <td align="right">17</td>
