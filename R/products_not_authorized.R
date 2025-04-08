@@ -108,7 +108,7 @@ srppp_xml_product_use_not_authorized <- function(names, year, exhaustionDeadline
   exhaustion_still_authorized <- !is.na(exhaustion_year) & exhaustion_year >= year
 
   # Check pattern match for each row
-  matches <- stringr::str_detect(names, patterns_not_authorized)
+  matches <- stringr::str_detect(stringr::str_trim(names), patterns_not_authorized)
 
   matches & !exhaustion_still_authorized
 }
