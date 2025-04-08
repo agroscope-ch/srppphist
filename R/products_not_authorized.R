@@ -1,9 +1,9 @@
 #' Check if a product name indicates that its use is not authorized at the time
 #'
-#' In most cases, products are not present in the XML file,
+#' In most cases, products are not present in the XML file (source data),
 #' if the "exhaustionDeadline" (German "Aufbrauchsfrist"), i.e. the date until
 #' stocks of the product can still be rightully used is earlier than the date
-#' of the publication.
+#' of the publication the srppp.
 #'
 #' However, in some cases, comments are amended to the product name that show
 #' that they are not authorized. This is especially true for the year 2011,
@@ -90,17 +90,28 @@
 #'   head(2)
 #'
 srppp_xml_product_use_not_authorized <- function(names, year, exhaustionDeadline) {
-  patterns_not_authorized <- c(
-    " \\(Bew. suspendiert.*\\)$",
-    " \\(Bew. beendet.*\\)$",
-    paste0("Aufbrauch.*frist.*", as.numeric(year) - 1, "\\]$") # A number of products in 2020 and 2022
+
+  # Ensure year is numeric
+  year <- as.numeric(year)
+
+  # Build pattern for each row based on its specific year
+  patterns_not_authorized <- paste0(
+    " \\(Bew\\. suspendiert.*\\)$|",
+    " \\(Bew\\. beendet.*\\)$|",
+    "Aufbrauch.*frist.*", year - 1, "\\]$"
   )
-  pattern_not_authorized <- paste(patterns_not_authorized, collapse = "|")
 
-  # Except checking for the patterns, we also check if there is an exhaustion deadline that hasn't been reached yet
-  exhaustion_still_authorized <- if_else(exhaustionDeadline == "", FALSE,
-    suppressWarnings(as.numeric(substr(exhaustionDeadline, 1, 4)) >= as.numeric(year)))
+  # Extract exhaustion year from deadline
+  exhaustion_year <- suppressWarnings(as.numeric(substr(exhaustionDeadline, 1, 4)))
 
-  stringr::str_detect(names, pattern_not_authorized) & !exhaustion_still_authorized
+  # Check if still authorized
+  exhaustion_still_authorized <- !is.na(exhaustion_year) & exhaustion_year >= year
+
+  # Check pattern match for each row
+  matches <- stringr::str_detect(names, patterns_not_authorized)
+
+  matches & !exhaustion_still_authorized
 }
+
+
 
