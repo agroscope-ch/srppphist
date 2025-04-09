@@ -1,4 +1,4 @@
-## version 1.0.0.9000
+## version 1.0.0.9003
 
 - Add function `srppp_xml_product_use_not_authorized` to find products with no
   active authorisation which are nevertheless present in the source XML file.
