@@ -1,5 +1,7 @@
 ## version 1.0.0.9000
 
+- Add function `srppp_xml_product_use_not_authorized` to find products with no
+  active authorisation which are nevertheless present in the source XML file.
 - Update `srppp_list` and the derived data objects using `srppp` version 1.1.0.
   This adds a `culture_tree` attribute to each `srppp_dm` object in the list.
   Also, duplicate ingredient specificiations in the same product are now removed.
