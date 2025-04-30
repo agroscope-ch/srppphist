@@ -106,12 +106,21 @@ sapply(srppp_list, function(srppp) {
   nrow(confidential)
 })
 
-# Create a table with all products over all years
-srppp_products <- bind_rows(lapply(srppp_list,
+# Create a table with all registered products over all years
+products <- bind_rows(lapply(srppp_list,
   function(x) x$products), .id = "year") |>
   mutate(name = srppp_xml_clean_product_names(name)) |>
-  select(pNbr, wNbr, name, year) |>
-  group_by(pNbr, wNbr, name) |>
+  mutate(chNbr = paste0("W-", wNbr)) |>
+  select(pNbr, wNbr, chNbr, name, year)
+
+parallel_imports <- bind_rows(lapply(srppp_list,
+  function(x) x$parallel_imports), .id = "year") |>
+  mutate(name = srppp_xml_clean_product_names(name)) |>
+  mutate(wNbr = NA) |>
+  select(pNbr, wNbr, chNbr = id, name, year)
+
+srppp_products <- rbind(products, parallel_imports) |>
+  group_by(pNbr, wNbr, chNbr, name) |>
   summarise(
     earliest = min(year),
     latest = max(year),
@@ -122,7 +131,7 @@ srppp_products <- bind_rows(lapply(srppp_list,
     categories_fr = product_categories(pNbr, latest, "fr"),
     categories_it = product_categories(pNbr, latest, "it")) |>
   ungroup() |>
-  arrange(pNbr, wNbr)
+  arrange(pNbr, wNbr, chNbr)
 
 save(srppp_products,
   file = here("data/srppp_products.rda"), compress = "xz")

@@ -23,7 +23,7 @@ Other contributors:
 \itemize{
   \item Daniel Baumgartner [contributor]
   \item Romualdus Kasteel \email{romualdus.kasteel@agroscope.admin.ch} [reviewer]
-  \item Marcel Mathis \email{marcel.mathis@agroscope.admin.ch} [reviewer]
+  \item Marcel Mathis \email{marcel.mathis@agroscope.admin.ch} [contributor, reviewer]
   \item Agroscope [copyright holder]
 }
 

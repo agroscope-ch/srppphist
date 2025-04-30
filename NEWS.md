@@ -1,10 +1,15 @@
-## version 1.0.0.9003
+## version 1.0.0.9004
 
+- Add parallel imports to the table `srppp_products`. Also, add the column
+  `chNbr`, holding the registration number (e.g. "W-7610-1" or "D-6918" as an 
+  example for a parallel import).
+- Add data for 2025 from the XML file dated 1 April 2025, published on the website
+  on 17 April 2025.
 - Add function `srppp_xml_product_use_not_authorized` to find products with no
   active authorisation which are nevertheless present in the source XML file.
 - Update `srppp_list` and the derived data objects using `srppp` version 1.1.0.
   This adds a `culture_tree` attribute to each `srppp_dm` object in the list.
-  Also, duplicate ingredient specificiations in the same product are now removed.
+  Also, duplicate ingredient specifications in the same product are now removed.
 - A new table `srppp_compositions` was added, with only one composition for each
   P-Number, as opposed to `srppp_ingredients`, where all unique compositions
   are listed.

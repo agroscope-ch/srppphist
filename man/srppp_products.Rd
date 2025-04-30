@@ -5,7 +5,8 @@
 \alias{srppp_products}
 \title{Table of products extracted from all years starting 2011}
 \format{
-tibble A table of all unique combinations of P-Number, W-Number
+tibble A table of all unique combinations of P-Number, W-Number,
+Swiss registration number
 and product name over all years, and the columns 'earliest' and 'latest',
 indicating the earliest and latest year of occurrence of that combination.
 Finally, the columns 'categories_de', 'categories_fr', and 'categories_it'
@@ -22,6 +23,13 @@ still permitted. The end of the sell-out period ('soldoutDeadline') and the
 end of the use period ('expirationDeadline') are given in the respective
 columns of the \code{products} table.
 }
+\details{
+As of version 1.0.0.9004, parallel imports are included in the table, and
+the Swiss registration number ("Eigenössische Zulassungsnummer") is given
+in the column \code{chNbr}. For regular products, this column lists the W-Number
+in the format W-XXXX. For parallel import, the format is D-XXXX for a product
+from the German market, F-XXXX for a product from the French market and so on.
+}
 \note{
 Note that comments like "(Bew. beendet/Aut. révoquée/Aut. revocata)" were
 removed from the product names using the function
@@ -31,6 +39,6 @@ year. In particular, a number of products with such comments are present
 in the register used as representative for 2011.
 }
 \examples{
-print(srppp_products[1:6], n = Inf)
+print(srppp_products[1:7], n = Inf)
 }
 \keyword{datasets}
