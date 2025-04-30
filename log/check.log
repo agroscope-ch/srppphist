@@ -9,16 +9,14 @@
 * using options ‘--no-tests --as-cran’
 * checking for file ‘srppphist/DESCRIPTION’ ... OK
 * checking extension type ... Package
-* this is package ‘srppphist’ version ‘1.0.0.9002’
+* this is package ‘srppphist’ version ‘1.0.0.9003’
 * package encoding: UTF-8
 * checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Johannes Ranke <johannes.ranke@agroscope.admin.ch>’
 
-Version contains large components (1.0.0.9002)
+Version contains large components (1.0.0.9003)
 
-The Date field is over a month old.
-
-Size of tarball: 6857598 bytes
+Size of tarball: 6862292 bytes
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
@@ -27,7 +25,7 @@ Size of tarball: 6857598 bytes
 * checking for hidden files and directories ... OK
 * checking for portable file names ... OK
 * checking for sufficient/correct file permissions ... OK
-* checking whether package ‘srppphist’ can be installed ... [142s/133s] OK
+* checking whether package ‘srppphist’ can be installed ... [144s/135s] OK
 * checking installed package size ... NOTE
   installed size is 37.5Mb
   sub-directories of 1Mb or more:
@@ -70,10 +68,10 @@ unable to verify current time
 * checking data for ASCII and uncompressed saves ... OK
 * checking installed files from ‘inst/doc’ ... OK
 * checking files in ‘vignettes’ ... OK
-* checking examples ... [28s/26s] NOTE
+* checking examples ... [27s/25s] NOTE
 Examples with CPU (user + system) or elapsed time > 5s
                     user system elapsed
-product_categories 8.924  0.658   9.583
+product_categories 8.666  0.688   9.357
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... SKIPPED
 * checking for unstated dependencies in vignettes ... OK

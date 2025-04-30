@@ -1,5 +1,8 @@
 url: https://agroscope-ch.github.io/srppphist
 
+development:
+  mode: release
+
 template:
   bootstrap: 5
 
@@ -14,6 +17,7 @@ reference:
       - srppp_ingredients
       - srppp_obligations_spe3
       - srppp_xml_dates
+      - srppp_xml_product_use_not_authorized
       - srppp_xml_zip_files
   - title: Functions to work with the data
     contents:

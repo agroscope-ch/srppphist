@@ -1,7 +1,7 @@
 ---
 title: Trends of data contained in XML dumps of the Swiss Register of Plant Protection Products
 author: Johannes Ranke
-date: Last change 25 July 2024 (rebuilt `r Sys.Date()`)
+date: Last change 4 April 2025 (rebuilt `r Sys.Date()`)
 output:
   rmarkdown::html_vignette
 vignette: >
@@ -21,9 +21,23 @@ library(ggplot2)
 
 ## Trends of numbers of active substances
 
+The figure below shows the number of active substances contained in products
+occurring in the Swiss Register of Plant Protection Products over the years 
+starting from 2011. Unauthorized products and active substance only contained
+in such products are filtered out using the function [srppp_xml_product_use_no_authorized].
+
+The categories are based on the classification in the register. Each active 
+substance can have more than one category, therefore the total number of active
+numbers is smaller than the sum of the active substances in each category.
+
 ```{r warning = FALSE}
-actives_by_category <- sapply(srppp_list, function(sr) {
+years <- names(srppp_list)
+names(years) <- years
+actives_by_category <- sapply(years, function(year) {
+  sr <- srppp_list[[year]]
   actives_categories <- sr$products |>
+    mutate(nonauth = srppp_xml_product_use_not_authorized(name, year, exhaustionDeadline)) |>
+    filter(!nonauth) |> 
     left_join(sr$categories, by = "pNbr", relationship = "many-to-many") |>
     select(pNbr, category = category_de) |>
     unique() |>
