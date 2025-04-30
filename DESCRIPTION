@@ -1,8 +1,8 @@
 Package: srppphist
 Type: Package
 Title: Historical Data from the Swiss Register of Plant Protection Products as an R Package
-Version: 1.0.0.9003
-Date: 2025-04-04
+Version: 1.0.0.9004
+Date: 2025-04-30
 Authors@R: c(
   person("Johannes", "Ranke", role = c("aut", "cre"),
     email = "johannes.ranke@agroscope.admin.ch",
@@ -10,7 +10,7 @@ Authors@R: c(
   person("Daniel", "Baumgartner", role = "ctb"),
   person("Romualdus", "Kasteel", role = c("rev"),
     email = "romualdus.kasteel@agroscope.admin.ch"),
-  person("Marcel", "Mathis", role = c("rev"),
+  person("Marcel", "Mathis", role = c("ctb", "rev"),
     email = "marcel.mathis@agroscope.admin.ch"),
   person("Agroscope", role = "cph"))
 Description: Data objects extracted from historical XML versions of the Swiss
