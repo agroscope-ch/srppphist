@@ -27,7 +27,7 @@ columns of the \code{products} table.
 As of version 1.0.0.9004, parallel imports are included in the table, and
 the Swiss registration number ("Eigenössische Zulassungsnummer") is given
 in the column \code{chNbr}. For regular products, this column lists the W-Number
-in the format W-XXXX. For parallel import, the format is D-XXXX for a
+in the format W-XXXX. For a parallel import, the format is D-XXXX for a
 product from the German market, F-XXXX for a product from the French market
 and so on. The \code{W} in the W-Number stands for Wädenswil, the first location
 of the Swiss registration office for plant protection products
