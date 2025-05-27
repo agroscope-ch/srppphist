@@ -15,6 +15,7 @@ reference:
       - srppp_products
       - srppp_compositions
       - srppp_ingredients
+      - srppp_pests
       - srppp_obligations_spe3
       - srppp_xml_dates
       - srppp_xml_product_use_not_authorized

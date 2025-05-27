@@ -178,7 +178,7 @@
 #' in the format W-XXXX. For a parallel import, the format is D-XXXX for a
 #' product from the German market, F-XXXX for a product from the French market
 #' and so on. The `W` in the W-Number stands for Wädenswil, the first location
-#' of the Swiss registration office for plant protection products 
+#' of the Swiss registration office for plant protection products
 #' ("Zulassungsstelle").
 #'
 #' @docType data
@@ -199,6 +199,17 @@
 #' @examples
 #' print(srppp_products[1:7], n = Inf)
 "srppp_products"
+
+#' Table of pesticide targets ("pests") extracted from all years starting 2011
+#'
+#' @docType data
+#' @format tibble A table of all pesticide target names in German, French and
+#' Italian, a scientific name if available and the columns 'earliest' and 'latest',
+#' indicating the earliest and latest year of occurrence.
+#'
+#' @examples
+#' print(srppp_pests, n = Inf)
+"srppp_pests"
 
 #' Table of product ingredients extracted from all years starting 2011
 #'

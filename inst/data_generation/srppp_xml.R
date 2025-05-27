@@ -157,6 +157,22 @@ srppp_compositions <- srppp_products |>
 save(srppp_compositions,
   file = here("data/srppp_compositions.rda"), compress = "xz")
 
+# Create a table with all pests over all the years
+srppp_pests_all_languages <- lapply(srppp_list, function(x) x$pests) |>
+  bind_rows(.id = "year") |>
+  select(pest_de, pest_fr, pest_it, lt, year) |>
+  unique()
+
+srppp_pests <- srppp_pests_all_languages |>
+  group_by(pest_de) |>
+  summarise(earliest = min(year), latest = max(year)) |>
+  left_join(srppp_pests_all_languages, by = c("pest_de", latest = "year")) |>
+  select(pest_de, pest_fr, pest_it, lt, earliest, latest) |>
+  arrange(pest_de)
+
+save(srppp_pests,
+  file = here("data/srppp_pests.rda"), compress = "xz")
+
 # Create a table with all SPe 3 obligations over all years
 srppp_obligations_spe3 <- bind_rows(lapply(srppp_list,
   function(x) x$obligations), .id = "year") |>
