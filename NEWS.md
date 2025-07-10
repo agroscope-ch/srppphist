@@ -1,5 +1,6 @@
 ## version 1.0.0.9004
 
+- Add `srppp_pests`, a table of pesticide targets ("pests") extracted from all years.
 - Add parallel imports to the table `srppp_products`. Also, add the column
   `chNbr`, holding the registration number (e.g. "W-7610-1" or "D-6918" as an 
   example for a parallel import).
