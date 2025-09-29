@@ -1,8 +1,8 @@
 Package: srppphist
 Type: Package
 Title: Historical Data from the Swiss Register of Plant Protection Products as an R Package
-Version: 1.0.0.9004
-Date: 2025-04-30
+Version: 1.0.0.9005
+Date: 2025-09-29
 Authors@R: c(
   person("Johannes", "Ranke", role = c("aut", "cre"),
     email = "johannes.ranke@agroscope.admin.ch",

@@ -1,5 +1,7 @@
-## version 1.0.0.9004
+## version 1.0.0.9005
 
+- `srppp_products`, `srppp_substances` and similar objects: Change the type of the 
+  'year' column to integer to have the natural representation.
 - Add `srppp_pests`, a table of pesticide targets ("pests") extracted from all years.
 - Add parallel imports to the table `srppp_products`. Also, add the column
   `chNbr`, holding the registration number (e.g. "W-7610-1" or "D-6918" as an 

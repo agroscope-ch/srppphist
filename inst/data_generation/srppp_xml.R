@@ -43,8 +43,10 @@ time <- system.time({
 })
 
 # Get all pk values of substances that are used as active ingredients in any year
-srppp_ingredients <- bind_rows(lapply(srppp_list, function(x) x$ingredients), .id = "year")
-srppp_substances_tocheck <- bind_rows(lapply(srppp_list, function(x) x$substances), .id = "year")
+srppp_ingredients <- bind_rows(lapply(srppp_list, function(x) x$ingredients), .id = "year") |>
+  mutate(year = as.integer(year))
+srppp_substances_tocheck <- bind_rows(lapply(srppp_list, function(x) x$substances), .id = "year") |>
+  mutate(year = as.integer(year))
 
 srppp_ingredient_pks <- srppp_ingredients |>
   left_join(srppp_substances_tocheck, by = join_by(pk, year)) |>
@@ -109,12 +111,14 @@ sapply(srppp_list, function(srppp) {
 # Create a table with all registered products over all years
 products <- bind_rows(lapply(srppp_list,
   function(x) x$products), .id = "year") |>
+  mutate(year = as.integer(year)) |>
   mutate(name = srppp_xml_clean_product_names(name)) |>
   mutate(chNbr = paste0("W-", wNbr)) |>
   select(pNbr, wNbr, chNbr, name, year)
 
 parallel_imports <- bind_rows(lapply(srppp_list,
   function(x) x$parallel_imports), .id = "year") |>
+  mutate(year = as.integer(year)) |>
   mutate(name = srppp_xml_clean_product_names(name)) |>
   mutate(wNbr = NA) |>
   select(pNbr, wNbr, chNbr = id, name, year)
@@ -139,6 +143,7 @@ save(srppp_products,
 # Create a table with all product compositions over all years
 srppp_ingredients <- bind_rows(lapply(srppp_list,
   function(x) x$ingredients), .id = "year") |>
+  mutate(year = as.integer(year)) |>
   group_by(pNbr, pk, type, percent, g_per_L, ingredient_de, ingredient_fr, ingredient_it) |>
   summarise(latest = max(year), .groups = "drop_last") |>
   select(pNbr, latest, pk, type, percent:ingredient_it) |>
@@ -160,6 +165,7 @@ save(srppp_compositions,
 # Create a table with all pests over all the years
 srppp_pests_all_languages <- lapply(srppp_list, function(x) x$pests) |>
   bind_rows(.id = "year") |>
+  mutate(year = as.integer(year)) |>
   select(pest_de, pest_fr, pest_it, lt, year) |>
   unique()
 
@@ -176,6 +182,7 @@ save(srppp_pests,
 # Create a table with all SPe 3 obligations over all years
 srppp_obligations_spe3 <- bind_rows(lapply(srppp_list,
   function(x) x$obligations), .id = "year") |>
+  mutate(year = as.integer(year)) |>
   select(obligation_de, sw_drift_dist, sw_runoff_dist,
     sw_runoff_points, biotope_drift_dist) |>
   filter(grepl("[sS][pP]e ?3", obligation_de)) |>
