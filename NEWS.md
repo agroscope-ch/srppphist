@@ -1,5 +1,7 @@
 ## version 1.0.0.9005
 
+- Add a vignette showing cases in which products were registered under the same name
+  that contain a different set of active ingredients.
 - `srppp_products`, `srppp_substances` and similar objects: Change the type of the 
   'year' column to integer to have the natural representation.
 - Add `srppp_pests`, a table of pesticide targets ("pests") extracted from all years.

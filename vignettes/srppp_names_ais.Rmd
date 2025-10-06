@@ -1,0 +1,67 @@
+---
+title: Products with the same name but different active ingredients in the Swiss Register of Plant Protection Products
+author: Johannes Ranke
+date: Last change 6 October 2025 (rebuilt `r Sys.Date()`)
+output:
+  rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Products with the same name but different compositions in the Swiss Register of Plant Protection Products}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = TRUE, message = FALSE}
+knitr::opts_chunk$set(tidy = FALSE, cache = FALSE)
+options(knitr.kable.NA = '')
+library(srppphist)
+library(dplyr)
+library(knitr)
+library(flextable)
+```
+
+The following table shows the names under which products with different 
+active ingredient combinations were registered between 2011 and 2025 in the
+Swiss Register of Plant Protection Products.
+
+In most cases, simply a different active ingredient name was chosen for the same
+active ingredient. For example, a content of propamocarb-hydrochlorid 
+was later given in terms of the cation propamocarb, and a content of 
+tribenuron-methyl was later expressed in terms of the corresponding acid
+tribenuron. In  other cases, banned substances like carbendazim were replaced 
+by alternative active substances. Sometimes, a complete set of active ingredients
+was apparently replaced by a different set of active ingredients. In the case
+of the product name "Dominator", three very different active ingredient compositions
+were registered under this name.
+
+```{r different_ais}
+chNbr_ais <- srppp_compositions |> 
+  filter(type == "ACTIVE_INGREDIENT") |>  
+  select(pNbr, pk, percent, g_per_L) |> 
+  left_join(srppp_products, by = "pNbr", relationship = "many-to-many") |> 
+  left_join(srppp_substances, by = "pk") |> 
+  arrange(pNbr, pk) |> 
+  group_by(pNbr, chNbr, name) |> 
+  summarise(ais = paste(substance_de, collapse = ", "), .groups = "drop")
+
+names_different_ais <- chNbr_ais |>
+  select(name, ais) |> 
+  distinct() |> # Look for distinct combinations of name and ais
+  summarise(n = n(), .by = "name") |> 
+  filter(n > 1) |> 
+  pull(name)
+  
+different_ais <- chNbr_ais |> 
+  filter(name %in% names_different_ais) |> 
+  select(name, ais, pNbr, chNbr) |> 
+  group_by(name, ais) |> 
+  summarise(
+    pNbr = paste(unique(pNbr), collapse = ", "),
+    chNbr = paste(chNbr, collapse = ", "),
+    .groups = "drop"
+  ) |> 
+  select(name, pNbr, ais, chNbr) |> 
+  arrange(name, pNbr)
+
+different_ais |> 
+  flextable()
+```

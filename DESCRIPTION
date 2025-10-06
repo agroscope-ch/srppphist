@@ -27,7 +27,7 @@ Description: Data objects extracted from historical XML versions of the Swiss
 Depends: R (>= 4.1.0), srppp (>= 1.0.1)
 Imports: cli, dplyr, data.tree, stringr, purrr
 Suggests: knitr, rmarkdown, here, DiagrammeR, ggplot2, parallel,
-  testthat (>= 3.0.0), tibble, tidyr
+  testthat (>= 3.0.0), tibble, tidyr, flextable
 BugReports: https://github.com/agroscope-ch/srppphist/issues
 URL: https://agroscope-ch.github.io/srppphist
 License: GPL (>= 3)
