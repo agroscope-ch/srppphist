@@ -77,18 +77,19 @@ Ranke</h4>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/" class="external-link">knitr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ardata-fr.github.io/flextable-book/" class="external-link">flextable</a></span><span class="op">)</span></span></code></pre></div>
-<p>The following table shows the names under which products with
-different active ingredient combinations were registered between 2011
-and 2025 in the Swiss Register of Plant Protection Products.</p>
+<p>The main table generated in this vignette shows the names under which
+products with different active ingredient combinations were registered
+between 2011 and 2025 in the Swiss Register of Plant Protection
+Products.</p>
 <p>In most cases, simply a different active ingredient name was chosen
 for the same active ingredient. For example, a content of
 propamocarb-hydrochlorid was later given in terms of the cation
 propamocarb, and a content of tribenuron-methyl was later expressed in
 terms of the corresponding acid tribenuron. In other cases, one or more
-active substances were replaced by an alternative. In at least one case,
-a product name was even used for different application areas: The name
-“Auxilior Rex” was used for a fungicide in the 2011 register and is used
-for a herbicide since 2016.</p>
+active substances were replaced by an alternative substance. In at least
+one case, a product name was even used for a different application area:
+The name “Auxilior Rex” was used for a fungicide in the 2011 register,
+and is used for a herbicide since 2016.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">srppp_products</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">name</span> <span class="op">==</span> <span class="st">"Auxilior Rex"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
@@ -133,1256 +134,1256 @@ compositions were registered under this name.</p>
 <span>  <span class="fu"><a href="https://davidgohel.github.io/flextable/reference/merge_v.html" class="external-link">merge_v</a></span><span class="op">(</span>j <span class="op">=</span> <span class="op">~</span> <span class="va">ais</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://davidgohel.github.io/flextable/reference/set_table_properties.html" class="external-link">set_table_properties</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">1</span>, layout <span class="op">=</span> <span class="st">"autofit"</span><span class="op">)</span></span></code></pre></div>
 <div class="tabwid">
-<style>.cl-797ebdc6{table-layout:auto;width:100%;}.cl-796fd5f4{font-family:'DejaVu Sans';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-796fd608{font-family:'DejaVu Sans';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-7974a76e{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-7974ce38{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0.75pt solid rgba(102, 102, 102, 1.00);border-right: 0.75pt solid rgba(102, 102, 102, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7974ce4c{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0.75pt solid rgba(102, 102, 102, 1.00);border-right: 0.75pt solid rgba(102, 102, 102, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style>
-<table data-quarto-disable-processing="true" class="table cl-797ebdc6">
+<style>.cl-90529434{table-layout:auto;width:100%;}.cl-9043931c{font-family:'DejaVu Sans';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-90439330{font-family:'DejaVu Sans';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-9048533e{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-90487a80{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0.75pt solid rgba(102, 102, 102, 1.00);border-right: 0.75pt solid rgba(102, 102, 102, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-90487a8a{background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0.75pt solid rgba(102, 102, 102, 1.00);border-right: 0.75pt solid rgba(102, 102, 102, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style>
+<table data-quarto-disable-processing="true" class="table cl-90529434">
 <thead><tr style="overflow-wrap:break-word;">
-<th class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd5f4">Product name</span></p></th>
-<th class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd5f4">Active ingredients</span></p></th>
-<th class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd5f4">Earliest</span></p></th>
-<th class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd5f4">Latest</span></p></th>
-<th class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd5f4">Registration ID</span></p></th>
+<th class="cl-90487a80"><p class="cl-9048533e"><span class="cl-9043931c">Product name</span></p></th>
+<th class="cl-90487a80"><p class="cl-9048533e"><span class="cl-9043931c">Active ingredients</span></p></th>
+<th class="cl-90487a80"><p class="cl-9048533e"><span class="cl-9043931c">Earliest</span></p></th>
+<th class="cl-90487a80"><p class="cl-9048533e"><span class="cl-9043931c">Latest</span></p></th>
+<th class="cl-90487a80"><p class="cl-9048533e"><span class="cl-9043931c">Registration ID</span></p></th>
 </tr></thead>
 <tbody>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce4c"><p class="cl-7974a76e"><span class="cl-796fd608">Agroseller Thifensulfuron &amp; Tribenuron</span></p></td>
-<td class="cl-7974ce4c"><p class="cl-7974a76e"><span class="cl-796fd608">Thifensulfuron-methyl, Tribenuron-methyl</span></p></td>
-<td class="cl-7974ce4c"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce4c"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce4c"><p class="cl-7974a76e"><span class="cl-796fd608">D-5747</span></p></td>
+<td rowspan="2" class="cl-90487a8a"><p class="cl-9048533e"><span class="cl-90439330">Agroseller Thifensulfuron &amp; Tribenuron</span></p></td>
+<td class="cl-90487a8a"><p class="cl-9048533e"><span class="cl-90439330">Thifensulfuron-methyl, Tribenuron-methyl</span></p></td>
+<td class="cl-90487a8a"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a8a"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a8a"><p class="cl-9048533e"><span class="cl-90439330">D-5747</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tribenuron, Thifensulfuron-methyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2020</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-5747</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tribenuron, Thifensulfuron-methyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2020</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-5747</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Agroseller Tribenuron-I</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tribenuron-methyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2015</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-5210</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Agroseller Tribenuron-I</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tribenuron-methyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2015</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-5210</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tribenuron</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2020</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-5210</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tribenuron</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2020</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-5210</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Alfil WG</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Aluminiumfosetyl (Fosetyl-Al)</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7046</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Alfil WG</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Aluminiumfosetyl (Fosetyl-Al)</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7046</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Fosetyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7221</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Fosetyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7221</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7605</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7605</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="6" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Amaline Flow</span></p></td>
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Kupfer (als Oxysulfat), Zoxamid</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2013</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2023</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6839</span></p></td>
+<td rowspan="6" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Amaline Flow</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Kupfer (als Oxysulfat), Zoxamid</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2013</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2023</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6839</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2013</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2023</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6839-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2013</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2023</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6839-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">F-6035</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">F-6035</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Zoxamid, Kupfer (als Tribasisches Kupfersulfat)</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">F-6035</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Zoxamid, Kupfer (als Tribasisches Kupfersulfat)</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">F-6035</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7464</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7464</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7464-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7464-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="4" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Arcade</span></p></td>
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Prosulfocarb</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2012</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-3626</span></p></td>
+<td rowspan="4" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Arcade</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Prosulfocarb</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2012</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-3626</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2013</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-3626</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2013</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-3626</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Metribuzin, Prosulfocarb</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">F-6041</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Metribuzin, Prosulfocarb</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">F-6041</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2024</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-6532</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2024</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-6532</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Arlit</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Amidosulfuron, Isoproturon</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5246</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Arlit</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Amidosulfuron, Isoproturon</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5246</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Chlorotoluron</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6673-2</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Chlorotoluron</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6673-2</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7448-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7448-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Atac</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Fenbutatin oxide</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-4605</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Atac</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Fenbutatin oxide</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-4605</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Emamectinbenzoat</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6748-3</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Emamectinbenzoat</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6748-3</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Auriga</span></p></td>
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Propamocarb-hydrochlorid</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-3794</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Auriga</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Propamocarb-hydrochlorid</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-3794</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-3794</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-3794</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Propamocarb</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2023</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-3794</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Propamocarb</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2023</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-3794</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Auxilior Rex</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Carbendazim</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-4438-1</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Auxilior Rex</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Carbendazim</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-4438-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Fluazifop-P-butyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2016</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6085-2</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Fluazifop-P-butyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2016</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6085-2</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Banjo</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Fluazinam</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-6220</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Banjo</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Fluazinam</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-6220</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tebuconazole, Prothioconazole</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-6221</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tebuconazole, Prothioconazole</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-6221</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Belrose Winterspritzmittel</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Folpet, Kupfer (als 19% Oxychloride, 6.5% Karbonat basisch und 14.3% Kalkpräparat)</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2012</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5374</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Belrose Winterspritzmittel</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Folpet, Kupfer (als 19% Oxychloride, 6.5% Karbonat basisch und 14.3% Kalkpräparat)</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2012</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5374</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Kupfer (als Oxychlorid)</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-4128-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Kupfer (als Oxychlorid)</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-4128-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Belrose gegen Pilzkrankheiten</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Pyrifenox, Difenoconazol</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5216</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Belrose gegen Pilzkrankheiten</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Pyrifenox, Difenoconazol</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5216</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Penconazole, Difenoconazol</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6426</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Penconazole, Difenoconazol</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6426</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Bio Garden Pilz-Stopp</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Oleum foeniculi</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2014</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-4687-1</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Bio Garden Pilz-Stopp</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Oleum foeniculi</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2014</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-4687-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Kaliumhydrogencarbonat</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6940-3</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Kaliumhydrogencarbonat</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6940-3</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="4" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Biplay SX</span></p></td>
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Metsulfuron-methyl, Tribenuron-methyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2014</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2020</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6857</span></p></td>
+<td rowspan="4" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Biplay SX</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Metsulfuron-methyl, Tribenuron-methyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2014</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2020</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6857</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2015</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2020</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6857-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2015</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2020</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6857-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tribenuron, Metsulfuron-methyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7289</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tribenuron, Metsulfuron-methyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7289</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7289-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7289-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">CCC</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Chlormequat (Chlorcholinchlorid) (CCC)</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-3058</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">CCC</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Chlormequat (Chlorcholinchlorid) (CCC)</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-3058</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Chlormequat</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2016</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7044</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Chlormequat</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2016</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7044</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Calypso</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Chlorothalonil (TCPN), Hexaconazole</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-4769</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Calypso</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Chlorothalonil (TCPN), Hexaconazole</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-4769</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Thiacloprid</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2016</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-5223</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Thiacloprid</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2016</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-5223</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2016</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">F-5402</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2016</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">F-5402</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Capito Winterspritzmittel</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Mineralöl / Petroleum oils</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2013</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5584</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Capito Winterspritzmittel</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Mineralöl / Petroleum oils</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2013</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5584</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Paraffinöl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2013</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-1526-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Paraffinöl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2013</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-1526-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Contreverse</span></p></td>
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Chlormequat (Chlorcholinchlorid) (CCC)</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2015</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">F-5213</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Contreverse</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Chlormequat (Chlorcholinchlorid) (CCC)</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2015</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">F-5213</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">F-5213</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">F-5213</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Chlormequat</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">F-5213</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Chlormequat</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">F-5213</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Coop Oecoplan Biocontrol Fungizid</span></p></td>
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Oleum foeniculi</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6146</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Coop Oecoplan Biocontrol Fungizid</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Oleum foeniculi</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6146</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2015</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-4687-3</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2015</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-4687-3</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Kaliumhydrogencarbonat</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2024</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6940-2</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Kaliumhydrogencarbonat</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2024</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6940-2</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Coop Oecoplan Biocontrol Insectizid</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Fettsäuren C7-C18</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6158</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Coop Oecoplan Biocontrol Insectizid</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Fettsäuren C7-C18</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6158</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Fettsäuren</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5762-7</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Fettsäuren</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5762-7</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Coop Oecoplan Biocontrol Läuse-Stop</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Paraffinöl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6361</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Coop Oecoplan Biocontrol Läuse-Stop</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Paraffinöl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6361</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Rapsöl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7475-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Rapsöl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7475-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Coop Oecoplan Biocontrol Nützlinge gegen Dickmaulrüsslerlarven</span></p></td>
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Photorhabdus luminescens, Heterorhabditis megidis</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6140</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Coop Oecoplan Biocontrol Nützlinge gegen Dickmaulrüsslerlarven</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Photorhabdus luminescens, Heterorhabditis megidis</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6140</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5276-3</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5276-3</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Heterorhabditis bacteriophora</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2016</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6336-4</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Heterorhabditis bacteriophora</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2016</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6336-4</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Cycocel extra</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Chlormequat (Chlorcholinchlorid) (CCC)</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-3017</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Cycocel extra</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Chlormequat (Chlorcholinchlorid) (CCC)</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-3017</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Chlormequat</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7075</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Chlormequat</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7075</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Detmolin P</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Pyrethrine, Piperonyl butoxid</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5420</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Detmolin P</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Pyrethrine, Piperonyl butoxid</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5420</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Pyrethrine</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6484</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Pyrethrine</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6484</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Dickmaulrüssler-Nematoden</span></p></td>
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Photorhabdus luminescens, Heterorhabditis megidis</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2015</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5276-4</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Dickmaulrüssler-Nematoden</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Photorhabdus luminescens, Heterorhabditis megidis</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2015</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5276-4</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2015</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5276-5</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2015</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5276-5</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Heterorhabditis bacteriophora</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2014</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6336-5</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Heterorhabditis bacteriophora</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2014</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6336-5</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="5" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Dicotex</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Dicamba, Mecoprop-P, Ioxynil, MCPA</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-4333</span></p></td>
+<td rowspan="5" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Dicotex</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Dicamba, Mecoprop-P, Ioxynil, MCPA</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-4333</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="4" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2,4-D, Dicamba, Mecoprop-P, MCPA</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">B-6484</span></p></td>
+<td rowspan="4" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2,4-D, Dicamba, Mecoprop-P, MCPA</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">B-6484</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-6454</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-6454</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">B-6484</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">B-6484</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-6454</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-6454</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Dominator</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Fenpropimorph, Epoxiconazole, Kresoxim-methyl, Quinoxyfen</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6190</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Dominator</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Fenpropimorph, Epoxiconazole, Kresoxim-methyl, Quinoxyfen</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6190</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Cyromazin</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2013</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-4187</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Cyromazin</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2013</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-4187</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Dimethomorph, Ametoctradin</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2020</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7275-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Dimethomorph, Ametoctradin</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2020</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7275-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Elios</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Aluminiumfosetyl (Fosetyl-Al)</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2013</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-2216</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Elios</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Aluminiumfosetyl (Fosetyl-Al)</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2013</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-2216</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Quinoxyfen</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">F-6077</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Quinoxyfen</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">F-6077</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Ethosan</span></p></td>
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tebuconazole</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2015</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6589-1</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Ethosan</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tebuconazole</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2015</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6589-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2013</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6589-3</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2013</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6589-3</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Difenoconazol, Fenpropidin</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7031-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Difenoconazol, Fenpropidin</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7031-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Express Max SX</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Metsulfuron-methyl, Tribenuron-methyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2020</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6473</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Express Max SX</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Metsulfuron-methyl, Tribenuron-methyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2020</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6473</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tribenuron, Metsulfuron-methyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7296</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tribenuron, Metsulfuron-methyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7296</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="4" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Express SX</span></p></td>
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tribenuron-methyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2020</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6366</span></p></td>
+<td rowspan="4" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Express SX</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tribenuron-methyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2020</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6366</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2016</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-5248</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2016</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-5248</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tribenuron</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-5248</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tribenuron</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-5248</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7297</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7297</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Gesal Langzeit-Pilzschutz Folicur</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tebuconazole</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2012</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2015</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6440-1</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Gesal Langzeit-Pilzschutz Folicur</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tebuconazole</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2012</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2015</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6440-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tebuconazole, Trifloxystrobin</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2016</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2020</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7014-1</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tebuconazole, Trifloxystrobin</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2016</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2020</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7014-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7251-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7251-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Gesal Milben-Stop</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Milbemectin</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2020</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6526-1</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Gesal Milben-Stop</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Milbemectin</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2020</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6526-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Rapsöl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7214-2</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Rapsöl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7214-2</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Gesal Natur-Insektizid</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Pyrethrine</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2016</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5959-2</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Gesal Natur-Insektizid</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Pyrethrine</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2016</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5959-2</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Fettsäuren C7-C18</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2024</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-4682-4</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Fettsäuren C7-C18</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2024</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-4682-4</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Gesal Rasenunkraut-Spray</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2,4-D, Dicamba, Mecoprop-P, MCPA</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6407-1</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Gesal Rasenunkraut-Spray</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2,4-D, Dicamba, Mecoprop-P, MCPA</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6407-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2,4-D, Mecoprop-P</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7317-3</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2,4-D, Mecoprop-P</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7317-3</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Gesal Schädlings-Stop für Zimmerpflanzen</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Fettsäuren (Kaliumsalze)</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6402</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Gesal Schädlings-Stop für Zimmerpflanzen</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Fettsäuren (Kaliumsalze)</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6402</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Rapsöl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7214</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Rapsöl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7214</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Gesal Unkrautvertilger Super Rapid</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Fettsäuren (Kaliumsalze)</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6055</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Gesal Unkrautvertilger Super Rapid</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Fettsäuren (Kaliumsalze)</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6055</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Pelargonsäure</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2013</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6824</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Pelargonsäure</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2013</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6824</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Gibberellin A3</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Gibberellin A3</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-3084</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Gibberellin A3</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Gibberellin A3</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-3084</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Gibberellinsäure</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-3028</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Gibberellinsäure</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-3028</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Gladiator</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Deltamethrin</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5234</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Gladiator</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Deltamethrin</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5234</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Methoxyfenozide</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2023</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-7140</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Methoxyfenozide</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2023</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-7140</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="7" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Harmony SX</span></p></td>
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Thifensulfuron-methyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2020</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6443</span></p></td>
+<td rowspan="7" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Harmony SX</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Thifensulfuron-methyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2020</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6443</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2016</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-5255</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2016</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-5255</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tribenuron</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2020</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-5255</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tribenuron</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2020</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-5255</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="4" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Thifensulfuron-methyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7298</span></p></td>
+<td rowspan="4" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Thifensulfuron-methyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7298</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-5255</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-5255</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-6660</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-6660</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2024</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-7257</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2024</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-7257</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Herbasan</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Phenmedipham</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5799</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Herbasan</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Phenmedipham</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5799</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Pyridate</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2024</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7145-1</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Pyridate</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2024</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7145-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2024</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7539-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2024</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7539-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Huntar</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Asulam</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5555</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Huntar</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Asulam</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5555</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Cymoxanil, Propamocarb</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7421-3</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Cymoxanil, Propamocarb</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7421-3</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Larvanem</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Heterorhabditis sp., Photorhabdus luminescens</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5387</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Larvanem</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Heterorhabditis sp., Photorhabdus luminescens</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5387</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Heterorhabditis bacteriophora</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7032</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Heterorhabditis bacteriophora</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7032</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">MCPA Plus</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">MCPA, MCPB</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6017</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">MCPA Plus</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">MCPA, MCPB</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6017</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">MCPA</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7023-1</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">MCPA</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7023-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2024</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7437</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2024</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7437</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Marox SX</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Thifensulfuron-methyl, Tribenuron-methyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-5672</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Marox SX</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Thifensulfuron-methyl, Tribenuron-methyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-5672</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tribenuron, Thifensulfuron-methyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-5672</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tribenuron, Thifensulfuron-methyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-5672</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Micula</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Metribuzin, Orbencarb</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2014</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6116-1</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Micula</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Metribuzin, Orbencarb</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2014</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6116-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Rapsöl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2023</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-3609</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Rapsöl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2023</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-3609</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Mikal WG</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Folpet, Fosetyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6265</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Mikal WG</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Folpet, Fosetyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6265</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Folpet, Aluminiumfosetyl (Fosetyl-Al)</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5532</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Folpet, Aluminiumfosetyl (Fosetyl-Al)</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5532</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Mioplant Unkrautvertilger für Rasen</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Dicamba, Mecoprop-P, Ioxynil, MCPA</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-4329</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Mioplant Unkrautvertilger für Rasen</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Dicamba, Mecoprop-P, Ioxynil, MCPA</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-4329</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Bromoxynil, Mecoprop-P, Ioxynil, MCPA</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5257</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Bromoxynil, Mecoprop-P, Ioxynil, MCPA</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5257</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Mioplant Windenvertilger</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Dicamba, MCPA</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5108</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Mioplant Windenvertilger</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Dicamba, MCPA</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5108</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">MCPB</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6230</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">MCPB</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6230</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Netzmittel Sprinter</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Rapsölmethylester</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2016</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6132-1</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Netzmittel Sprinter</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Rapsölmethylester</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2016</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6132-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Alkoholethoxylat, Polyethermodifiziertes Trisiloxan</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7071</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Alkoholethoxylat, Polyethermodifiziertes Trisiloxan</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7071</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Neudosan AF Neu</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Fettsäuren (Kaliumsalze)</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2013</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5541</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Neudosan AF Neu</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Fettsäuren (Kaliumsalze)</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2013</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5541</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Fettsäuren C7-C18</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6668</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Fettsäuren C7-C18</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6668</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Neudosan Neu</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Fettsäuren (Kaliumsalze)</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2013</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5540</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Neudosan Neu</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Fettsäuren (Kaliumsalze)</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2013</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5540</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Fettsäuren C7-C18</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6671</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Fettsäuren C7-C18</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6671</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="4" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Oikos</span></p></td>
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Azadirachtin A+B</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6303</span></p></td>
+<td rowspan="4" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Oikos</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Azadirachtin A+B</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6303</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6304</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6304</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Azadirachtin A</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2023</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7490</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Azadirachtin A</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2023</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7490</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2024</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7490-2</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2024</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7490-2</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Pallitop</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Metiram, Nitrothal - isopropyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5065</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Pallitop</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Metiram, Nitrothal - isopropyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5065</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Nitrothal - isopropyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5346</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Nitrothal - isopropyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5346</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Pandorra</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Oleum foeniculi</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-4955</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Pandorra</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Oleum foeniculi</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-4955</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tebuconazole, Bixafen</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7152-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tebuconazole, Bixafen</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7152-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Pheroprax</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Ipsdienol, (S)-cis-Verbenol, Methylbutenol</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6058</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Pheroprax</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Ipsdienol, (S)-cis-Verbenol, Methylbutenol</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6058</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Ipsdienol, Methylbutenol, S-CIS-Verbenol</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-4122</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Ipsdienol, Methylbutenol, S-CIS-Verbenol</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-4122</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Phytonic</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">1-Naphthylacetamid</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-3038</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Phytonic</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">1-Naphthylacetamid</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-3038</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2-(1-naphthyl) Acetamide</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2016</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-3004-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2-(1-naphthyl) Acetamide</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2016</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-3004-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Pistol</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Phenmedipham</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-2982</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Pistol</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Phenmedipham</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-2982</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Acetamiprid</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6581-4</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Acetamiprid</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6581-4</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Pitstop</span></p></td>
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Propamocarb-hydrochlorid</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-3804</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Pitstop</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Propamocarb-hydrochlorid</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-3804</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-3804</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-3804</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Propamocarb</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-3804</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Propamocarb</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-3804</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="4" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Pointer Plus</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Metsulfuron-methyl, Tribenuron-methyl, Florasulam</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2016</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2020</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7026</span></p></td>
+<td rowspan="4" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Pointer Plus</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Metsulfuron-methyl, Tribenuron-methyl, Florasulam</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2016</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2020</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7026</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tribenuron, Metsulfuron-methyl, Florasulam</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7300</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tribenuron, Metsulfuron-methyl, Florasulam</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7300</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-7413</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-7413</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">F-7414</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">F-7414</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="5" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Pointer SX</span></p></td>
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tribenuron-methyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">A-5828</span></p></td>
+<td rowspan="5" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Pointer SX</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tribenuron-methyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">A-5828</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-6058</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-6058</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tribenuron</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">A-5828</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tribenuron</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">A-5828</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-6058</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-6058</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2024</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7297-2</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2024</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7297-2</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="12" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Proplant</span></p></td>
-<td rowspan="7" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Propamocarb-hydrochlorid</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-2340</span></p></td>
+<td rowspan="12" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Proplant</span></p></td>
+<td rowspan="7" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Propamocarb-hydrochlorid</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-2340</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">F-2436</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">F-2436</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-3811</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-3811</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5609</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5609</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-2340</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-2340</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">F-2436</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">F-2436</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-3811</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-3811</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="5" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Propamocarb</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7401</span></p></td>
+<td rowspan="5" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Propamocarb</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7401</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2023</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-2340</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2023</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-2340</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">F-2436</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">F-2436</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-3811</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-3811</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7401-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7401-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Proxan SL</span></p></td>
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Propamocarb-hydrochlorid</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-3812</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Proxan SL</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Propamocarb-hydrochlorid</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-3812</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-3812</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-3812</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Propamocarb</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2023</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-3812</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Propamocarb</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2023</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-3812</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="5" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Proxanil</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Cymoxanil, Propamocarb-hydrochlorid</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2023</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6615</span></p></td>
+<td rowspan="5" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Proxanil</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Cymoxanil, Propamocarb-hydrochlorid</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2023</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6615</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="4" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Cymoxanil, Propamocarb</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7421</span></p></td>
+<td rowspan="4" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Cymoxanil, Propamocarb</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7421</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7421-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7421-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7421-2</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7421-2</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2024</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">F-7402</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2024</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">F-7402</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Proxanil SC</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Cymoxanil, Propamocarb-hydrochlorid</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-6109</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Proxanil SC</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Cymoxanil, Propamocarb-hydrochlorid</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-6109</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Cymoxanil, Propamocarb</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-6109</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Cymoxanil, Propamocarb</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-6109</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Refine Extra SX</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Thifensulfuron-methyl, Tribenuron-methyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2020</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6488</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Refine Extra SX</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Thifensulfuron-methyl, Tribenuron-methyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2020</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6488</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tribenuron, Thifensulfuron-methyl</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7303</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tribenuron, Thifensulfuron-methyl</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7303</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">D-7074</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">D-7074</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Rodeo</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Diquat</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7174</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Rodeo</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Diquat</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7174</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Glyphosat</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2023</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7455-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Glyphosat</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2023</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7455-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Selectox Royal Spray</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Dicamba, Mecoprop-P, Ioxynil, MCPA</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-4332</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Selectox Royal Spray</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Dicamba, Mecoprop-P, Ioxynil, MCPA</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-4332</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2,4-D, Mecoprop-P</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7317-2</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2,4-D, Mecoprop-P</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7317-2</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="5" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Serenade Max</span></p></td>
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Bacillus subtilis</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2013</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6577</span></p></td>
+<td rowspan="5" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Serenade Max</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Bacillus subtilis</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2013</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6577</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2015</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6678</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2015</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6678</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2015</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6678-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2015</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6678-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Bacillus amyloliquefaciens</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2014</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2023</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6877</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Bacillus amyloliquefaciens</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2014</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2023</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6877</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2023</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">I-6506</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2023</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">I-6506</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Sicid Neem</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Azadirachtin A+B</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2016</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6304-1</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Sicid Neem</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Azadirachtin A+B</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2016</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6304-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Azadirachtin A</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2024</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7490-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Azadirachtin A</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2024</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7490-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Spomil</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Bromopropylate</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2014</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-2882</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Spomil</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Bromopropylate</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2014</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-2882</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Fenpyroximate</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2019</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-4579-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Fenpyroximate</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2019</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-4579-1</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Tofa</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Prochloraz</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-5269</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Tofa</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Prochloraz</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-5269</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Fluxapyroxad</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2022</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2025</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-7134-2</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Fluxapyroxad</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2022</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2025</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-7134-2</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="3" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Verita</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Aluminiumfosetyl (Fosetyl-Al), Fenamidon</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2018</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6176</span></p></td>
+<td rowspan="3" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Verita</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Aluminiumfosetyl (Fosetyl-Al), Fenamidon</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2018</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6176</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td rowspan="2" class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">Fosetyl, Fenamidon</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2011</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6351</span></p></td>
+<td rowspan="2" class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">Fosetyl, Fenamidon</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2011</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6351</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2017</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">2021</span></p></td>
-<td class="cl-7974ce38"><p class="cl-7974a76e"><span class="cl-796fd608">W-6351-1</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2017</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">2021</span></p></td>
+<td class="cl-90487a80"><p class="cl-9048533e"><span class="cl-90439330">W-6351-1</span></p></td>
 </tr>
 </tbody>
 </table>
