@@ -27,8 +27,18 @@ In most cases, simply a different active ingredient name was chosen for the same
 active ingredient. For example, a content of propamocarb-hydrochlorid 
 was later given in terms of the cation propamocarb, and a content of 
 tribenuron-methyl was later expressed in terms of the corresponding acid
-tribenuron. In  other cases, banned substances like carbendazim were replaced 
-by alternative active substances. Sometimes, a complete set of active ingredients
+tribenuron. In  other cases, one or more active substances were replaced by an 
+alternative. In at least one case, a product name was even used
+for different application areas: The name "Auxilior Rex" was used for a 
+fungicide in the 2011 register and is used for a herbicide since 2016.
+
+```{r}
+srppp_products |> 
+  filter(name == "Auxilior Rex") |> 
+  select(chNbr, name, categories_de, earliest, latest)
+```
+
+Sometimes, a complete set of active ingredients
 was apparently replaced by a different set of active ingredients. In the case
 of the product name "Dominator", three very different active ingredient compositions
 were registered under this name.
@@ -44,8 +54,7 @@ chNbr_ais <- srppp_compositions |>
   summarise(ais = paste(substance_de, collapse = ", "), .groups = "drop")
 
 names_different_ais <- chNbr_ais |>
-  select(name, ais) |> 
-  distinct() |> # Look for distinct combinations of name and ais
+  distinct(name, ais) |> # Look for distinct combinations of name and ais
   summarise(n = n(), .by = "name") |> 
   filter(n > 1) |> 
   pull(name)
@@ -65,3 +74,4 @@ different_ais |>
   merge_v(j = ~ ais) |> 
   set_table_properties(width = 1, layout = "autofit")
 ```
+
