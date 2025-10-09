@@ -1,7 +1,7 @@
 ---
 title: Trends of data contained in XML dumps of the Swiss Register of Plant Protection Products
 author: Johannes Ranke
-date: Last change 4 April 2025 (rebuilt `r Sys.Date()`)
+date: Last change 9 October 2025 (rebuilt `r Sys.Date()`)
 output:
   rmarkdown::html_vignette
 vignette: >
@@ -24,7 +24,8 @@ library(ggplot2)
 The figure below shows the number of active substances contained in products
 occurring in the Swiss Register of Plant Protection Products over the years 
 starting from 2011. Unauthorized products and active substance only contained
-in such products are filtered out using the function [srppp_xml_product_use_no_authorized].
+in such products are filtered out using the function 
+[srppp_xml_product_use_no_authorized](https://agroscope-ch.github.io/srppphist/reference/srppp_xml_product_use_not_authorized.html).
 
 The categories are based on the classification in the register. Each active 
 substance can have more than one category, therefore the total number of active
