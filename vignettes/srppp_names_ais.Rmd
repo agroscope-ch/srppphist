@@ -1,7 +1,7 @@
 ---
 title: Products with the same name but different active ingredients in the Swiss Register of Plant Protection Products
 author: Johannes Ranke
-date: Last change 6 October 2025 (rebuilt `r Sys.Date()`)
+date: Last change 9 October 2025 (rebuilt `r Sys.Date()`)
 output:
   rmarkdown::html_vignette
 vignette: >
@@ -38,9 +38,9 @@ chNbr_ais <- srppp_compositions |>
   filter(type == "ACTIVE_INGREDIENT") |>  
   select(pNbr, pk, percent, g_per_L) |> 
   left_join(srppp_products, by = "pNbr", relationship = "many-to-many") |> 
-  left_join(srppp_substances, by = "pk") |> 
+  left_join(srppp_substances[c("pk", "substance_de")], by = "pk") |> 
   arrange(pNbr, pk) |> 
-  group_by(pNbr, chNbr, name) |> 
+  group_by(pNbr, chNbr, name, earliest = earliest, latest = latest) |> 
   summarise(ais = paste(substance_de, collapse = ", "), .groups = "drop")
 
 names_different_ais <- chNbr_ais |>
@@ -52,16 +52,16 @@ names_different_ais <- chNbr_ais |>
   
 different_ais <- chNbr_ais |> 
   filter(name %in% names_different_ais) |> 
-  select(name, ais, pNbr, chNbr) |> 
-  group_by(name, ais) |> 
-  summarise(
-    pNbr = paste(unique(pNbr), collapse = ", "),
-    chNbr = paste(chNbr, collapse = ", "),
-    .groups = "drop"
-  ) |> 
-  select(name, pNbr, ais, chNbr) |> 
-  arrange(name, pNbr)
+  select(name, ais, earliest, latest, ais, chNbr) |> 
+  arrange(name, earliest, latest, ais, chNbr)
 
 different_ais |> 
-  flextable()
+  mutate(across(earliest:latest, as.character)) |> 
+  flextable() |> 
+  set_header_labels(name = "Product name", ais = "Active ingredients", 
+    chNbr = "Registration ID", earliest = "Earliest", latest = "Latest") |> 
+  theme_box() |> 
+  merge_v(j = ~ name) |> 
+  merge_v(j = ~ ais) |> 
+  set_table_properties(width = 1, layout = "autofit")
 ```
