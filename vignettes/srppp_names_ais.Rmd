@@ -5,7 +5,7 @@ date: Last change 9 October 2025 (rebuilt `r Sys.Date()`)
 output:
   rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Products with the same name but different compositions in the Swiss Register of Plant Protection Products}
+  %\VignetteIndexEntry{Products with the same name but different active ingredients in the Swiss Register of Plant Protection Products}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

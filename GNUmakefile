@@ -3,7 +3,6 @@ PKGVERS := $(shell sed -n "s/Version: *\([^ ]*\)/\1/p" DESCRIPTION)
 TGZ     := $(PKGNAME)_$(PKGVERS).tar.gz
 TGZVNR  := $(PKGNAME)_$(PKGVERS)-vignettes-not-rebuilt.tar.gz
 RBIN ?= $(shell dirname "`which R`")
-export R_srppphist_idir := $(shell Rscript -e "cat(fgpsm::srppp_xml_idir)")
 
 pkgfiles = \
 	.Rbuildignore \
