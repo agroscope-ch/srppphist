@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   srppp_names_ais: srppp_names_ais.html
   srppp_trends: srppp_trends.html
-last_built: 2025-11-04T13:16Z
+last_built: 2025-11-04T13:28Z
 urls:
   reference: https://agroscope-ch.github.io/srppphist/reference
   article: https://agroscope-ch.github.io/srppphist/articles
