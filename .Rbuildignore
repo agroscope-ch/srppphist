@@ -13,3 +13,4 @@
 ^vignettes/.*_cache$
 ^\.github$
 ^LICENSE\.md$
+^tmp

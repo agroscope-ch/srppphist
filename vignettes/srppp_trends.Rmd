@@ -15,7 +15,7 @@ knitr::opts_chunk$set(tidy = FALSE, cache = FALSE)
 options(knitr.kable.NA = '')
 library(srppphist)
 library(dplyr)
-library(knitr)
+library(kableExtra)
 library(ggplot2)
 ```
 
@@ -72,15 +72,28 @@ actives_by_category <- sapply(years, function(year) {
       .default = "Others"
     )) |>
     group_by(category) |>
-    summarise(n = n()) |>
-    arrange(desc(n))
+    select(substance_de, category) |> 
+    distinct() |> 
+    summarise(n = n())
 
   n <- n_tibble$n
   names(n) <- n_tibble$category
   n <- c(Total = n_actives, n)
+  n <- n[c(
+    "Acaricides",
+    "Fungicides", 
+    "Herbicides", 
+    "Insecticides", 
+    "Organisms", 
+    "PGR", 
+    "Seed dressings", 
+    "Others", 
+    "Total"
+    )]
   return(n)
 })
-kable(actives_by_category)
+actives_by_category |> 
+  kbl()
 ```
 
 ```{r fig.width = 7, fig.height = 5}
