@@ -53,7 +53,7 @@
 
 
 
-
+<script src="srppp_trends_files/kePrint-0.0.1/kePrint.js"></script><link href="srppp_trends_files/lightable-0.0.1/lightable.css" rel="stylesheet">
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
 
@@ -62,7 +62,7 @@
 Ranke</h4>
             
             <h4 data-toc-skip class="date">Last change 9 October 2025
-(rebuilt 2025-10-09)</h4>
+(rebuilt 2025-11-04)</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/agroscope-ch/srppphist/blob/main/vignettes/srppp_trends.Rmd" class="external-link"><code>vignettes/srppp_trends.Rmd</code></a></small>
       <div class="d-none name"><code>srppp_trends.Rmd</code></div>
@@ -75,7 +75,7 @@ Ranke</h4>
 <span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>knitr.kable.NA <span class="op">=</span> <span class="st">''</span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://agroscope-ch.github.io/srppphist">srppphist</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/" class="external-link">knitr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://haozhu233.github.io/kableExtra/" class="external-link">kableExtra</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span></code></pre></div>
 <div class="section level2">
 <h2 id="trends-of-numbers-of-active-substances">Trends of numbers of active substances<a class="anchor" aria-label="anchor" href="#trends-of-numbers-of-active-substances"></a>
@@ -130,214 +130,528 @@ substances in each category.</p>
 <span>      .default <span class="op">=</span> <span class="st">"Others"</span></span>
 <span>    <span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html" class="external-link">group_by</a></span><span class="op">(</span><span class="va">category</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html" class="external-link">summarise</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html" class="external-link">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html" class="external-link">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html" class="external-link">desc</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">substance_de</span>, <span class="va">category</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html" class="external-link">distinct</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html" class="external-link">summarise</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html" class="external-link">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span>  <span class="va">n</span> <span class="op">&lt;-</span> <span class="va">n_tibble</span><span class="op">$</span><span class="va">n</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">n_tibble</span><span class="op">$</span><span class="va">category</span></span>
 <span>  <span class="va">n</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>Total <span class="op">=</span> <span class="va">n_actives</span>, <span class="va">n</span><span class="op">)</span></span>
+<span>  <span class="va">n</span> <span class="op">&lt;-</span> <span class="va">n</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
+<span>    <span class="st">"Acaricides"</span>,</span>
+<span>    <span class="st">"Fungicides"</span>, </span>
+<span>    <span class="st">"Herbicides"</span>, </span>
+<span>    <span class="st">"Insecticides"</span>, </span>
+<span>    <span class="st">"Organisms"</span>, </span>
+<span>    <span class="st">"PGR"</span>, </span>
+<span>    <span class="st">"Seed dressings"</span>, </span>
+<span>    <span class="st">"Others"</span>, </span>
+<span>    <span class="st">"Total"</span></span>
+<span>    <span class="op">)</span><span class="op">]</span></span>
 <span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span></span>
 <span><span class="op">}</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="va">actives_by_category</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">actives_by_category</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kbl.html" class="external-link">kbl</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <table class="table">
-<colgroup>
-<col width="16%">
-<col width="5%">
-<col width="5%">
-<col width="5%">
-<col width="5%">
-<col width="5%">
-<col width="5%">
-<col width="5%">
-<col width="5%">
-<col width="5%">
-<col width="5%">
-<col width="5%">
-<col width="5%">
-<col width="5%">
-<col width="5%">
-<col width="5%">
-</colgroup>
-<thead><tr class="header">
-<th align="left"></th>
-<th align="right">2011</th>
-<th align="right">2012</th>
-<th align="right">2013</th>
-<th align="right">2014</th>
-<th align="right">2015</th>
-<th align="right">2016</th>
-<th align="right">2017</th>
-<th align="right">2018</th>
-<th align="right">2019</th>
-<th align="right">2020</th>
-<th align="right">2021</th>
-<th align="right">2022</th>
-<th align="right">2023</th>
-<th align="right">2024</th>
-<th align="right">2025</th>
+<thead><tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+2011
+</th>
+<th style="text-align:right;">
+2012
+</th>
+<th style="text-align:right;">
+2013
+</th>
+<th style="text-align:right;">
+2014
+</th>
+<th style="text-align:right;">
+2015
+</th>
+<th style="text-align:right;">
+2016
+</th>
+<th style="text-align:right;">
+2017
+</th>
+<th style="text-align:right;">
+2018
+</th>
+<th style="text-align:right;">
+2019
+</th>
+<th style="text-align:right;">
+2020
+</th>
+<th style="text-align:right;">
+2021
+</th>
+<th style="text-align:right;">
+2022
+</th>
+<th style="text-align:right;">
+2023
+</th>
+<th style="text-align:right;">
+2024
+</th>
+<th style="text-align:right;">
+2025
+</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
-<td align="left">Total</td>
-<td align="right">425</td>
-<td align="right">454</td>
-<td align="right">439</td>
-<td align="right">420</td>
-<td align="right">425</td>
-<td align="right">423</td>
-<td align="right">426</td>
-<td align="right">391</td>
-<td align="right">385</td>
-<td align="right">380</td>
-<td align="right">361</td>
-<td align="right">354</td>
-<td align="right">335</td>
-<td align="right">332</td>
-<td align="right">338</td>
+<tr>
+<td style="text-align:left;">
+Acaricides
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+14
+</td>
 </tr>
-<tr class="even">
-<td align="left">Herbicides</td>
-<td align="right">109</td>
-<td align="right">120</td>
-<td align="right">112</td>
-<td align="right">107</td>
-<td align="right">105</td>
-<td align="right">103</td>
-<td align="right">107</td>
-<td align="right">97</td>
-<td align="right">94</td>
-<td align="right">94</td>
-<td align="right">89</td>
-<td align="right">85</td>
-<td align="right">79</td>
-<td align="right">78</td>
-<td align="right">78</td>
+<tr>
+<td style="text-align:left;">
+Fungicides
+</td>
+<td style="text-align:right;">
+94
+</td>
+<td style="text-align:right;">
+100
+</td>
+<td style="text-align:right;">
+96
+</td>
+<td style="text-align:right;">
+98
+</td>
+<td style="text-align:right;">
+103
+</td>
+<td style="text-align:right;">
+103
+</td>
+<td style="text-align:right;">
+107
+</td>
+<td style="text-align:right;">
+94
+</td>
+<td style="text-align:right;">
+94
+</td>
+<td style="text-align:right;">
+94
+</td>
+<td style="text-align:right;">
+89
+</td>
+<td style="text-align:right;">
+85
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+76
+</td>
+<td style="text-align:right;">
+78
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Insecticides</td>
-<td align="right">95</td>
-<td align="right">105</td>
-<td align="right">104</td>
-<td align="right">98</td>
-<td align="right">103</td>
-<td align="right">102</td>
-<td align="right">100</td>
-<td align="right">94</td>
-<td align="right">92</td>
-<td align="right">91</td>
-<td align="right">87</td>
-<td align="right">85</td>
-<td align="right">79</td>
-<td align="right">76</td>
-<td align="right">76</td>
+<tr>
+<td style="text-align:left;">
+Herbicides
+</td>
+<td style="text-align:right;">
+105
+</td>
+<td style="text-align:right;">
+116
+</td>
+<td style="text-align:right;">
+108
+</td>
+<td style="text-align:right;">
+103
+</td>
+<td style="text-align:right;">
+101
+</td>
+<td style="text-align:right;">
+98
+</td>
+<td style="text-align:right;">
+96
+</td>
+<td style="text-align:right;">
+94
+</td>
+<td style="text-align:right;">
+91
+</td>
+<td style="text-align:right;">
+90
+</td>
+<td style="text-align:right;">
+87
+</td>
+<td style="text-align:right;">
+85
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+78
+</td>
+<td style="text-align:right;">
+75
+</td>
 </tr>
-<tr class="even">
-<td align="left">Fungicides</td>
-<td align="right">94</td>
-<td align="right">100</td>
-<td align="right">96</td>
-<td align="right">90</td>
-<td align="right">89</td>
-<td align="right">90</td>
-<td align="right">87</td>
-<td align="right">83</td>
-<td align="right">79</td>
-<td align="right">78</td>
-<td align="right">75</td>
-<td align="right">74</td>
-<td align="right">67</td>
-<td align="right">71</td>
-<td align="right">75</td>
+<tr>
+<td style="text-align:left;">
+Insecticides
+</td>
+<td style="text-align:right;">
+90
+</td>
+<td style="text-align:right;">
+100
+</td>
+<td style="text-align:right;">
+99
+</td>
+<td style="text-align:right;">
+86
+</td>
+<td style="text-align:right;">
+85
+</td>
+<td style="text-align:right;">
+85
+</td>
+<td style="text-align:right;">
+84
+</td>
+<td style="text-align:right;">
+80
+</td>
+<td style="text-align:right;">
+77
+</td>
+<td style="text-align:right;">
+76
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:right;">
+63
+</td>
+<td style="text-align:right;">
+64
+</td>
+<td style="text-align:right;">
+64
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Others</td>
-<td align="right">83</td>
-<td align="right">85</td>
-<td align="right">83</td>
-<td align="right">81</td>
-<td align="right">82</td>
-<td align="right">83</td>
-<td align="right">86</td>
-<td align="right">72</td>
-<td align="right">74</td>
-<td align="right">69</td>
-<td align="right">64</td>
-<td align="right">64</td>
-<td align="right">65</td>
-<td align="right">66</td>
-<td align="right">66</td>
+<tr>
+<td style="text-align:left;">
+Organisms
+</td>
+<td style="text-align:right;">
+53
+</td>
+<td style="text-align:right;">
+53
+</td>
+<td style="text-align:right;">
+54
+</td>
+<td style="text-align:right;">
+57
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:right;">
+59
+</td>
+<td style="text-align:right;">
+61
+</td>
+<td style="text-align:right;">
+56
+</td>
+<td style="text-align:right;">
+56
+</td>
+<td style="text-align:right;">
+59
+</td>
+<td style="text-align:right;">
+59
+</td>
+<td style="text-align:right;">
+59
+</td>
+<td style="text-align:right;">
+62
+</td>
+<td style="text-align:right;">
+71
+</td>
+<td style="text-align:right;">
+76
+</td>
 </tr>
-<tr class="even">
-<td align="left">Organisms</td>
-<td align="right">55</td>
-<td align="right">55</td>
-<td align="right">56</td>
-<td align="right">59</td>
-<td align="right">60</td>
-<td align="right">59</td>
-<td align="right">61</td>
-<td align="right">56</td>
-<td align="right">56</td>
-<td align="right">59</td>
-<td align="right">59</td>
-<td align="right">59</td>
-<td align="right">62</td>
-<td align="right">64</td>
-<td align="right">66</td>
+<tr>
+<td style="text-align:left;">
+PGR
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:right;">
+26
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Seed dressings</td>
-<td align="right">34</td>
-<td align="right">37</td>
-<td align="right">39</td>
-<td align="right">39</td>
-<td align="right">35</td>
-<td align="right">35</td>
-<td align="right">35</td>
-<td align="right">32</td>
-<td align="right">30</td>
-<td align="right">30</td>
-<td align="right">27</td>
-<td align="right">26</td>
-<td align="right">26</td>
-<td align="right">26</td>
-<td align="right">26</td>
+<tr>
+<td style="text-align:left;">
+Seed dressings
+</td>
+<td style="text-align:right;">
+34
+</td>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:right;">
+39
+</td>
+<td style="text-align:right;">
+39
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+20
+</td>
 </tr>
-<tr class="even">
-<td align="left">PGR</td>
-<td align="right">23</td>
-<td align="right">23</td>
-<td align="right">26</td>
-<td align="right">26</td>
-<td align="right">29</td>
-<td align="right">29</td>
-<td align="right">28</td>
-<td align="right">27</td>
-<td align="right">27</td>
-<td align="right">27</td>
-<td align="right">26</td>
-<td align="right">25</td>
-<td align="right">23</td>
-<td align="right">20</td>
-<td align="right">20</td>
+<tr>
+<td style="text-align:left;">
+Others
+</td>
+<td style="text-align:right;">
+80
+</td>
+<td style="text-align:right;">
+82
+</td>
+<td style="text-align:right;">
+80
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+80
+</td>
+<td style="text-align:right;">
+81
+</td>
+<td style="text-align:right;">
+84
+</td>
+<td style="text-align:right;">
+70
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:right;">
+67
+</td>
+<td style="text-align:right;">
+62
+</td>
+<td style="text-align:right;">
+62
+</td>
+<td style="text-align:right;">
+65
+</td>
+<td style="text-align:right;">
+62
+</td>
+<td style="text-align:right;">
+64
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Acaricides</td>
-<td align="right">18</td>
-<td align="right">22</td>
-<td align="right">20</td>
-<td align="right">17</td>
-<td align="right">17</td>
-<td align="right">18</td>
-<td align="right">19</td>
-<td align="right">18</td>
-<td align="right">16</td>
-<td align="right">16</td>
-<td align="right">16</td>
-<td align="right">16</td>
-<td align="right">15</td>
-<td align="right">14</td>
-<td align="right">14</td>
+<tr>
+<td style="text-align:left;">
+Total
+</td>
+<td style="text-align:right;">
+425
+</td>
+<td style="text-align:right;">
+454
+</td>
+<td style="text-align:right;">
+439
+</td>
+<td style="text-align:right;">
+420
+</td>
+<td style="text-align:right;">
+425
+</td>
+<td style="text-align:right;">
+423
+</td>
+<td style="text-align:right;">
+426
+</td>
+<td style="text-align:right;">
+391
+</td>
+<td style="text-align:right;">
+385
+</td>
+<td style="text-align:right;">
+380
+</td>
+<td style="text-align:right;">
+361
+</td>
+<td style="text-align:right;">
+354
+</td>
+<td style="text-align:right;">
+335
+</td>
+<td style="text-align:right;">
+332
+</td>
+<td style="text-align:right;">
+338
+</td>
 </tr>
 </tbody>
 </table>
