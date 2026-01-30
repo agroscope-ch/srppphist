@@ -1,0 +1,60 @@
+publiccodeYmlVersion: 0.5.0
+name: srppphist
+url: https://github.com/agroscope-ch/srppphist
+softwareVersion: 1.0.0.9005
+releaseDate: 2025-11-04
+platforms:
+  - windows
+  - mac
+  - linux
+  - ios
+categories:
+  - data-analytics
+usedBy:
+  - Federal Office of Agriculture (FOAG)
+  - Federal Office of the Environment (FOEN)
+  - Agroscope
+developmentStatus: stable
+softwareType: addon
+organisation:
+  uri: https://ld.admin.ch/ou/10003634
+  name: Agroscope
+description:
+  en:
+    localisedName: srppphist
+    shortDescription: srppphist is an R package containing historical data from the
+      Swiss Register of Plant Protection Products
+    longDescription: Data objects extracted from historical XML versions of the
+      Swiss Register of Plant Protection Products ‘SRPPP’. Starting from 2011,
+      one such data object is contained for each year. Note that the
+      information contained in this project is outdated. An online version of
+      the current register can be accessed via
+      https://www.psm.admin.ch/de/produkte. An XML dump of the current register
+      can be read in using the companion package agroscope-ch/srppp. There is
+      no guarantee of correspondence of the data contained in or read in using
+      this package with any online version, or with the original registration
+      documents. Also, the Federal Food Safety and Veterinary Office,
+      coordinating the authorisation of plant protection products in
+      Switzerland, does not answer requests regarding this package.
+    documentation: https://agroscope-ch.github.io/srppphist/
+    apiDocumentation: https://agroscope-ch.github.io/srppphist/reference/
+    features:
+      - Provide a list of data objects, each containing a historical version of
+        the Swiss Register of Plant Protection Products and their uses
+      - Provide summary tables of products, active substances, other
+        ingredients, product compositions, pests (pesticide targets)
+        and obligations that are collected from these historical objects
+      - Provide functions to determine product categories, compositions
+        and to find P-Numbers
+legal:
+  license: LGPL-3.0-or-later
+maintenance:
+  type: internal
+  contacts:
+    - name: Johannes Ranke
+      email: johannes.ranke@agroscope.admin.ch
+      affiliation: Agroscope
+localisation:
+  localisationReady: false
+  availableLanguages:
+    - en
