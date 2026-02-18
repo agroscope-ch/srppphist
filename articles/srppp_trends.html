@@ -62,7 +62,7 @@
 Ranke</h4>
             
             <h4 data-toc-skip class="date">Last change 4 November 2025
-(rebuilt 2025-11-04)</h4>
+(rebuilt 2026-02-18)</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/agroscope-ch/srppphist/blob/main/vignettes/srppp_trends.Rmd" class="external-link"><code>vignettes/srppp_trends.Rmd</code></a></small>
       <div class="d-none name"><code>srppp_trends.Rmd</code></div>
@@ -118,7 +118,7 @@ substances in each category.</p>
 <span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html" class="external-link">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html" class="external-link">desc</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span>  <span class="va">n_tibble</span> <span class="op">&lt;-</span> <span class="va">actives_categories</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>category <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html" class="external-link">case_when</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>category <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case-and-replace-when.html" class="external-link">case_when</a></span><span class="op">(</span></span>
 <span>      <span class="fu"><a href="https://rdrr.io/r/base/grep.html" class="external-link">grepl</a></span><span class="op">(</span><span class="st">"Herbizid"</span>, <span class="va">category</span><span class="op">)</span> <span class="op">~</span> <span class="st">"Herbicides"</span>,</span>
 <span>      <span class="fu"><a href="https://rdrr.io/r/base/grep.html" class="external-link">grepl</a></span><span class="op">(</span><span class="st">"Fungizid"</span>, <span class="va">category</span><span class="op">)</span> <span class="op">~</span> <span class="st">"Fungicides"</span>,</span>
 <span>      <span class="fu"><a href="https://rdrr.io/r/base/grep.html" class="external-link">grepl</a></span><span class="op">(</span><span class="st">"Insektizid"</span>, <span class="va">category</span><span class="op">)</span> <span class="op">~</span> <span class="st">"Insecticides"</span>,</span>
@@ -666,7 +666,7 @@ Total
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">Year</span>, <span class="va">Number</span>, group <span class="op">=</span> <span class="va">Category</span>, color <span class="op">=</span> <span class="va">Category</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html" class="external-link">geom_line</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p><img src="srppp_trends_files/figure-html/unnamed-chunk-2-1.png" alt="Diagram showing the evolution of the number of active substances per category over time" width="672"></p>
+<p><img src="srppp_trends_files/figure-html/unnamed-chunk-2-1.png" class="r-plt" alt="Diagram showing the evolution of the number of active substances per category over time" width="672"></p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
@@ -679,7 +679,7 @@ Total
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>

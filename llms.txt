@@ -1,0 +1,84 @@
+# srppphist - Historical Data from the Swiss Register of Plant Protection Products as an R Package
+
+## Description
+
+Data objects extracted from historical XML versions of the Swiss
+Register of Plant Protection Products ‘SRPPP’. Starting from 2011, one
+such data object is contained for each year. Note that the information
+contained in this project is outdated. An online version of the current
+register can be accessed via <https://www.psm.admin.ch/de/produkte>. An
+XML dump of the current register can be read in using the companion
+package [agroscope-ch/srppp](https://agroscope-ch.github.io/srppp).
+There is no guarantee of correspondence of the data contained in or read
+in using this package with any online version, or with the original
+registration documents. Also, the Federal Food Safety and Veterinary
+Office, coordinating the authorisation of plant protection products in
+Switzerland, does not answer requests regarding this package.
+
+## Installation
+
+    install.packages("srppphist",
+      repos = c("https://agroscope-ch.r-universe.dev", "https://cran.r-project.org"))
+
+## Documentation
+
+An online version of the documentation of the current development
+version of the package is available [on
+github](https://agroscope-ch.github.io/srppphist).
+
+# Package index
+
+## Data objects for XML versions of the SRPPP
+
+- [`srppp_list`](https://agroscope-ch.github.io/srppphist/reference/srppp_list.md)
+  : List of 'srppp_dm' objects for all years starting 2011
+- [`srppp_active_substances`](https://agroscope-ch.github.io/srppphist/reference/srppp_active_substances.md)
+  : Table of active substance names extracted from all years starting
+  2011
+- [`srppp_substances`](https://agroscope-ch.github.io/srppphist/reference/srppp_substances.md)
+  : Table of substance names extracted from all years starting 2011
+- [`srppp_products`](https://agroscope-ch.github.io/srppphist/reference/srppp_products.md)
+  : Table of products extracted from all years starting 2011
+- [`srppp_compositions`](https://agroscope-ch.github.io/srppphist/reference/srppp_compositions.md)
+  : Table of the latest product compositions
+- [`srppp_ingredients`](https://agroscope-ch.github.io/srppphist/reference/srppp_ingredients.md)
+  : Table of product ingredients extracted from all years starting 2011
+- [`srppp_pests`](https://agroscope-ch.github.io/srppphist/reference/srppp_pests.md)
+  : Table of pesticide targets ("pests") extracted from all years
+  starting 2011
+- [`srppp_obligations_spe3`](https://agroscope-ch.github.io/srppphist/reference/srppp_obligations_spe3.md)
+  : Table of all SPe 3 obligations and corresponding mitigation measures
+- [`srppp_xml_dates`](https://agroscope-ch.github.io/srppphist/reference/srppp_xml_dates.md)
+  : Publication dates of the available zip files
+- [`srppp_xml_product_use_not_authorized()`](https://agroscope-ch.github.io/srppphist/reference/srppp_xml_product_use_not_authorized.md)
+  : Check if a product name indicates that its use is not authorized at
+  the time
+- [`srppp_xml_zip_files`](https://agroscope-ch.github.io/srppphist/reference/srppp_xml_zip_files.md)
+  : Relative paths of the available zip files
+
+## Functions to work with the data
+
+- [`product_categories()`](https://agroscope-ch.github.io/srppphist/reference/product_categories.md)
+  : Get product categories for a pNbr
+- [`composition()`](https://agroscope-ch.github.io/srppphist/reference/composition.md)
+  : Retrieve one or more product compositions
+- [`pNbr()`](https://agroscope-ch.github.io/srppphist/reference/pNbr.md)
+  : Retrieve and select a P-Number for a product name
+
+## Functions to create data objects from XML versions of the SRPPP
+
+- [`srppp_xml_get(`*`<numeric>`*`)`](https://agroscope-ch.github.io/srppphist/reference/srppp_xml_get.md)
+  [`srppp_xml_get(`*`<Date>`*`)`](https://agroscope-ch.github.io/srppphist/reference/srppp_xml_get.md)
+  : Additional methods to read an XML version of the Swiss Register of
+  Plant Protection Products
+
+# Articles
+
+### All vignettes
+
+- [Products with the same name but different active ingredients in the
+  Swiss Register of Plant Protection
+  Products](https://agroscope-ch.github.io/srppphist/articles/srppp_names_ais.md):
+- [Trends of data contained in XML dumps of the Swiss Register of Plant
+  Protection
+  Products](https://agroscope-ch.github.io/srppphist/articles/srppp_trends.md):
