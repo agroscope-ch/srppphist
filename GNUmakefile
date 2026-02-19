@@ -13,6 +13,8 @@ pkgfiles = \
 	NAMESPACE \
 	README.md \
 	R/* \
+	tests/testthat.R \
+	tests/testthat/* \
 	vignettes/*.Rmd
 
 data: 
