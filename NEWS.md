@@ -1,3 +1,19 @@
+## version 2.0.0
+
+- Add data for 2026 from the XML file dated 3 February 2026.
+- As a new primary key scheme is used for substances in the 2026 data, the 
+  lists `srppp_substances` and `srppp_active substances`, resolving primary
+  keys to substance names now contain duplicated entries. Also, the `pk` column
+  is now of type `character`, so it can hold the new type of primary keys 
+  formatted as a UUID.
+- For these tables, new versions without duplicates are added, i.e. 
+  `srppp_substances_merged` and `srppp_active_substances_merged`. In these tables,
+  there are two primary key columns, one called `pk_v1` containing the 
+  integer primary keys from the previous format, and `pk_v2` containing
+  the primary keys from the current format, i.e. in the form of an UUID.
+- The package now depends on srppp v2.0.4, which fixes a problem that occurred
+  when reading in the register from 2015 with srppp versions 2.0.0 to 2.0.3.
+
 ## version 1.0.0.9005
 
 - Add a vignette showing cases in which products were registered under the same name

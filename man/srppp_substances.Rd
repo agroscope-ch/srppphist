@@ -3,30 +3,35 @@
 \docType{data}
 \name{srppp_substances}
 \alias{srppp_substances}
-\title{Table of substance names extracted from all years starting 2011}
+\title{Table resolving substance primary keys extracted from all years starting 2011}
 \format{
-tibble A table, resolving the primary keys ('pk') of the active
-substances to the latest entry in any of the 'substances' tables in
-\link{srppp_list}.
-Also, the earliest and the latest year of occurrence
-are given in the columns 'earliest' and 'latest'.
+A \link[tibble:tibble]{tibble::tibble}.
 }
 \usage{
 srppp_substances
 }
 \description{
-Table of substance names extracted from all years starting 2011
+A table of all primary keys ('pk') of the active substances, resolving them
+to the latest entry in any of the 'substances' tables in \link{srppp_list}. As the
+primary key scheme was in the XML files published by the registration
+authorities in the end of 2025, some substances in this table are listed
+twice, once with the old integer primary key, and once with the new primary
+key in the form of a
+\href{https://en.wikipedia.org/wiki/Universally_unique_identifier}{UUID}. For each
+primary key, the earliest and the latest year of occurrence are given in the
+columns 'earliest' and 'latest'. A substance list without these duplicates is
+supplied as \link{srppp_substances_merged}.
 }
 \note{
-Note that a substance occurring in the register in a certain year
-does not necessarily mean that a product containing the substance was
-authorized. In particular, a number of products with such comments are present
-in the register used as representative for 2011.
+Note that a substance occurring in the register in a certain year does
+not necessarily mean that a product containing the substance was
+authorized. In particular, a number of products with such comments are
+present in the register used as representative for 2011.
 }
 \examples{
 print(srppp_substances, n = Inf)
 }
 \seealso{
-\link{srppp_products}
+\link{srppp_substances_merged}, \link{srppp_products}
 }
 \keyword{datasets}

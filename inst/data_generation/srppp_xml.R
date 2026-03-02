@@ -10,13 +10,18 @@ if (packageVersion("data.tree") < "1.1.1") {
   stop("data.tree versions < 1.1.1 produce srppp_dm objects that lead to spurious warnings in the installation of srppphist (#2)")
 }
 
-srppp_xml_zip_files <- dir(fgpsm::srppp_xml_idir, "PublicationData.*\\.zip", recursive = TRUE)
-srppp_xml_dates <- as.Date(
-  gsub(
-    "20../PublicationData_(....)_(..)_(..).*\\.zip",
-    "\\1-\\2-\\3",
-    srppp_xml_zip_files)
-  )
+srppp_xml_zip_files <- dir(fgpsm::srppp_xml_idir, ".*\\.zip$", recursive = TRUE)
+# Extract publication dates from the file names in the zip files, i.e. PublicationData_YYYY_MM_DD.xml
+
+srppp_xml_dates <- sapply(srppp_xml_zip_files, function(zip_file) {
+    file_names <- unzip(file.path(fgpsm::srppp_xml_idir, zip_file), list = TRUE)$Name
+
+    file_with_date <- grep("PublicationData_.*\\.xml$", file_names, value = TRUE)
+    gsub("PublicationData_(....)_(..)_(..).*\\.xml",
+      "\\1-\\2-\\3", file_with_date)
+  }) |>
+as.Date()
+
 names(srppp_xml_zip_files) <- as.character(srppp_xml_dates)
 
 save(
@@ -28,40 +33,34 @@ save(
   compress = "xz")
 
 # Load the package to make methods for srppp_xml_get and the current srppp_list
-# available, or load the methods without loading the package
+# available
 library(srppphist)
-#source(here("R/srppp-xml-get.R"))
-#source(here("R/product_categories.R"))
 
-# One PSMV for each year
-years <- 2011:2025 # When adding a new year, use non-packaged versions of
-# srppp_list in R/srppp-xml-get.R and R/product_categories.R
+# One register for each year
+years <- 2011:2026 # When adding a new year, we need to install the package
+# after collecting the new dates and corresponding zip_files and restart R to
+# make them available to the function srppp_xml_get.numeric.
 time <- system.time({
   #srppp_list <- lapply(years, srppp_dm) # lapply prints messages in RStudio
-  srppp_list <- parallel::mclapply(years, srppp_dm, verbose = FALSE, mc.cores = 16)
+  srppp_list <- parallel::mclapply(years, srppp_dm, verbose = FALSE, mc.cores = 8)
   names(srppp_list) <- years
 })
 
-# Get all pk values of substances that are used as active ingredients in any year
+# Check referential integrity of the dm objects in the list
+parallel::mclapply(srppp_list,
+  function(srppp) dm_examine_constraints(srppp), mc.cores = 16)
+
+save("srppp_list", file = here("data/srppp_list.rda"), compress = "xz")
+
+# Get all pk values (integer and uuid) of substances that are used as ingredients in any year
 srppp_ingredients <- bind_rows(lapply(srppp_list, function(x) x$ingredients), .id = "year") |>
   mutate(year = as.integer(year))
+
+# Manually check if pks of substances always refer to the same substance
 srppp_substances_tocheck <- bind_rows(lapply(srppp_list, function(x) x$substances), .id = "year") |>
   mutate(year = as.integer(year))
 
-srppp_ingredient_pks <- srppp_ingredients |>
-  left_join(srppp_substances_tocheck, by = join_by(pk, year)) |>
-  select(pk) |>
-  unique() |>
-  arrange(pk)
-
-srppp_active_ingredient_pks <- srppp_ingredients |>
-  filter(type == "ACTIVE_INGREDIENT") |>
-  left_join(srppp_substances_tocheck, by = join_by(pk, year)) |>
-  select(pk) |>
-  unique() |>
-  arrange(pk)
-
-# Manually check if pks of substances always refer to the same substance
+# This is the case (last checked 2026-03-02)
 if (FALSE) {
   srppp_check_dups <- srppp_substances_tocheck |>
     filter(pk %in% srppp_ingredient_pks$pk) |>
@@ -79,27 +78,98 @@ if (FALSE) {
   print(tmp[1:39, ], n = Inf)
   print(tmp[40:79, ], n = Inf)
   print(tmp[80:119, ], n = Inf)
-  print(tmp[120:nrow(tmp), ], n = Inf)
+  print(tmp[120:159, ], n = Inf)
+  print(tmp[160:nrow(tmp), ], n = Inf)
 }
 
-# This is the case, so we can establish a list of pk values from the last occurrence of each pk
+# Now (2026) that we have two versions of primary keys, we can establish
+# different substance lists.
+
+# Get a list of all pk values, regardless if integer or uuid
+srppp_ingredient_pks <- srppp_ingredients |>
+  left_join(srppp_substances_tocheck, by = join_by(pk, year)) |>
+  select(pk) |>
+  unique() |>
+  arrange(pk)
+
+# Get a corresponding list only for active ingredients
+srppp_active_ingredient_pks <- srppp_ingredients |>
+  filter(type == "ACTIVE_INGREDIENT") |>
+  left_join(srppp_substances_tocheck, by = join_by(pk, year)) |>
+  select(pk) |>
+  unique() |>
+  arrange(pk)
+
+# Filter pk values, so only the integer keys from the first version are kept
+srppp_ingredient_pks_v1 <- srppp_ingredient_pks |>
+  filter(nchar(pk) < 10)
+
+# Filter pk values, so only uuid values are kept
+srppp_ingredient_pks_v2 <- srppp_ingredient_pks |>
+  filter(nchar(pk) > 10) # uuids have a width of 32 characters plus the dashes
+
 srppp_substances <- srppp_substances_tocheck |>
   filter(pk %in% srppp_ingredient_pks$pk) |>
   group_by(pk) |>
   summarise(earliest = min(year), latest = max(year)) |>
+  left_join(srppp_substances_tocheck, by = c("pk", latest = "year")) |>
+  arrange(earliest, suppressWarnings(as.integer(pk)))
+
+srppp_substances_v1 <- srppp_substances_tocheck |>
+  filter(pk %in% srppp_ingredient_pks_v1$pk) |>
+  group_by(pk) |>
+  summarise(earliest = min(year), latest = max(year)) |>
   left_join(srppp_substances_tocheck, by = c("pk", latest = "year"))
+
+srppp_substances_v2 <- srppp_substances_tocheck |>
+  filter(pk %in% srppp_ingredient_pks_v2$pk) |>
+  group_by(pk) |>
+  summarise(earliest = min(year), latest = max(year)) |>
+  left_join(srppp_substances_tocheck, by = c("pk", latest = "year"))
+
+# To establish a unified list, we need to join via "substance_de" and
+# "substance_fr", as the German name is not unique in srppp_substances_v2
+# because "Paraffinöl" occurs twice. We cannot use "substance_de" and "iupac"
+# for joining, because in that case substances like "Kaolin" that have a "iupac"
+# name in the new version but not in the old one would be duplicated. Joining
+# via "substance_de" and "substance_fr" leads to the desired result without
+# many-to-many relationship for the moment, as the french name for "Paraffinöl"
+# is different for the two versions of this ingredient.
+srppp_substances_merged <- srppp_substances |>
+  full_join(srppp_substances_v2[c("pk", "iupac", "substance_de", "substance_fr", "earliest", "latest")],
+            by = c("substance_de", "substance_fr"),
+            suffix = c("_v1", "_v2")) |>
+  mutate(
+    earliest = pmin(earliest_v1, earliest_v2, na.rm = TRUE),
+    latest = pmax(latest_v1, latest_v2, na.rm = TRUE)) |>
+  mutate(iupac = if_else(is.na(iupac_v2), iupac_v1, iupac_v2)) |>
+  mutate(pk_v1 = suppressWarnings(as.integer(pk_v1))) |>
+  arrange(pk_v1) |>
+  select(pk_v1, pk_v2, earliest, latest, iupac, substance_de, substance_fr, substance_it, substance_en)
 
 save(srppp_substances,
   file = here("data/srppp_substances.rda"), compress = "xz")
+
+save(srppp_substances_merged,
+  file = here("data/srppp_substances_merged.rda"), compress = "xz")
 
 srppp_active_substances <- srppp_substances_tocheck |>
   filter(pk %in% srppp_active_ingredient_pks$pk) |>
   group_by(pk) |>
   summarise(earliest = min(year), latest = max(year)) |>
-  left_join(srppp_substances_tocheck, by = c("pk", latest = "year"))
+  left_join(srppp_substances_tocheck, by = c("pk", latest = "year")) |>
+  arrange(earliest, suppressWarnings(as.integer(pk)))
+
+srppp_active_substances_merged <- srppp_substances_merged |>
+  filter(
+    pk_v1 %in% srppp_active_ingredient_pks$pk |
+    pk_v2 %in% srppp_active_ingredient_pks$pk)
 
 save(srppp_active_substances,
   file = here("data/srppp_active_substances.rda"), compress = "xz")
+
+save(srppp_active_substances_merged,
+  file = here("data/srppp_active_substances_merged.rda"), compress = "xz")
 
 # Check if accidentially included confidential information is removed
 sapply(srppp_list, function(srppp) {
@@ -123,6 +193,9 @@ parallel_imports <- bind_rows(lapply(srppp_list,
   mutate(wNbr = NA) |>
   select(pNbr, wNbr, chNbr = id, name, year)
 
+# When adding a new year we need to install srppphist
+# after creating the new srppp_list object, in order
+# to make it available to `product_categories`
 srppp_products <- rbind(products, parallel_imports) |>
   group_by(pNbr, wNbr, chNbr, name) |>
   summarise(
@@ -191,10 +264,4 @@ srppp_obligations_spe3 <- bind_rows(lapply(srppp_list,
 
 save(srppp_obligations_spe3,
   file = here("data/srppp_obligations_spe3.rda"), compress = "xz")
-
-# Check referential integrity of the dm objects in the list
-parallel::mclapply(srppp_list,
-  function(srppp) dm_examine_constraints(srppp), mc.cores = 16)
-
-save("srppp_list", file = here("data/srppp_list.rda"), compress = "xz")
 

@@ -1,7 +1,7 @@
 ---
 title: Products with the same name but different active ingredients in the Swiss Register of Plant Protection Products
 author: Johannes Ranke
-date: Last change 9 October 2025 (rebuilt `r Sys.Date()`)
+date: Last change 3 March 2026 (rebuilt `r Sys.Date()`)
 output:
   rmarkdown::html_vignette
 vignette: >
@@ -21,7 +21,7 @@ library(flextable)
 
 The main table generated in this vignette shows the names under which products 
 with different active ingredient combinations were registered between 2011 and 
-2025 in the Swiss Register of Plant Protection Products.
+2026 in the Swiss Register of Plant Protection Products.
 
 In most cases, simply a different active ingredient name was chosen for the same
 active ingredient. For example, a content of propamocarb-hydrochlorid 

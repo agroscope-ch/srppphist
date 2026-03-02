@@ -1,10 +1,10 @@
 ℹ Testing srppphist
 ✔ | F W  S  OK | Context
-✔ |          5 | alternative_products [10.6s]
-✔ |         10 | srppp_dm [32.1s]
+✔ |          5 | alternative_products [11.4s]
+✔ |         10 | srppp_dm [32.8s]
 ✔ |          3 | srppp_xml_product_use_not_authorized
 
 ══ Results ═════════════════════════════════════════════════════════════════════
-Duration: 42.8 s
+Duration: 44.2 s
 
 [ FAIL 0 | WARN 0 | SKIP 0 | PASS 18 ]

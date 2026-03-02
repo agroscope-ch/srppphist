@@ -11,7 +11,9 @@ reference:
     contents:
       - srppp_list
       - srppp_active_substances
+      - srppp_active_substances_merged
       - srppp_substances
+      - srppp_substances_merged
       - srppp_products
       - srppp_compositions
       - srppp_ingredients

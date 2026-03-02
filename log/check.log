@@ -1,22 +1,20 @@
-* using log directory ‘/home/agsad.admin.ch/f80868656/projects/srppphist/srppphist.Rcheck’
-* using R version 4.5.1 (2025-06-13)
+* using log directory ‘/home/f80868656/projects/srppphist/srppphist.Rcheck’
+* using R version 4.5.2 (2025-10-31)
 * using platform: x86_64-pc-linux-gnu
 * R was compiled by
     gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
     GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
-* running under: Ubuntu 24.04.3 LTS
+* running under: Ubuntu 24.04.4 LTS
 * using session charset: UTF-8
 * using options ‘--no-tests --as-cran’
 * checking for file ‘srppphist/DESCRIPTION’ ... OK
 * checking extension type ... Package
-* this is package ‘srppphist’ version ‘1.0.0.9005’
+* this is package ‘srppphist’ version ‘2.0.0’
 * package encoding: UTF-8
 * checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Johannes Ranke <johannes.ranke@agroscope.admin.ch>’
 
-Version contains large components (1.0.0.9005)
-
-Size of tarball: 6956186 bytes
+Size of tarball: 7833151 bytes
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
@@ -25,11 +23,11 @@ Size of tarball: 6956186 bytes
 * checking for hidden files and directories ... OK
 * checking for portable file names ... OK
 * checking for sufficient/correct file permissions ... OK
-* checking whether package ‘srppphist’ can be installed ... [138s/128s] OK
+* checking whether package ‘srppphist’ can be installed ... [121s/128s] OK
 * checking installed package size ... INFO
-  installed size is 37.7Mb
+  installed size is 40.6Mb
   sub-directories of 1Mb or more:
-    data  37.3Mb
+    data  40.2Mb
 * checking package directory ... OK
 * checking for future file timestamps ... NOTE
 unable to verify current time
@@ -63,20 +61,20 @@ unable to verify current time
 * checking Rd contents ... OK
 * checking for unstated dependencies in examples ... OK
 * checking contents of ‘data’ directory ... OK
-* checking data for non-ASCII characters ... [13s/11s] OK
+* checking data for non-ASCII characters ... [12s/12s] OK
 * checking LazyData ... OK
 * checking data for ASCII and uncompressed saves ... OK
 * checking installed files from ‘inst/doc’ ... OK
 * checking files in ‘vignettes’ ... OK
-* checking examples ... [29s/27s] NOTE
+* checking examples ... [31s/35s] NOTE
 Examples with CPU (user + system) or elapsed time > 5s
                     user system elapsed
-product_categories 8.239  0.734   8.977
+product_categories 8.405  1.966  14.039
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... SKIPPED
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes ... OK
-* checking re-building of vignette outputs ... [20s/14s] OK
+* checking re-building of vignette outputs ... [18s/19s] OK
 * checking PDF version of manual ... OK
 * checking HTML version of manual ... NOTE
 Skipping checking HTML validation: no command 'tidy' found.
@@ -88,6 +86,6 @@ release or compiling the source code from <https://www.html-tidy.org/>.
 
 Status: 4 NOTEs
 See
-  ‘/home/agsad.admin.ch/f80868656/projects/srppphist/srppphist.Rcheck/00check.log’
+  ‘/home/f80868656/projects/srppphist/srppphist.Rcheck/00check.log’
 for details.
 

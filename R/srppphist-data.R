@@ -123,6 +123,33 @@
 #'     relationship = "many-to-many")
 "srppp_list"
 
+#' Table of active substance keys extracted from all years starting 2011
+#'
+#' Please note that products whose authorisation has expired remain in the
+#' files until the end of the period during which use by the end user is
+#' still permitted. Therefore, the latest year given in this dataset means
+#' the latest year where a use up period ('expirationDeadline') of at least one
+#' product containing the substance had not expired in the beginning of the
+#' respective year.
+#'
+#' Please see [srppp_substances] and [srppp_substances_merged] for details
+#' on the different primary keys used in these tables.
+#'
+#' @docType data
+#' @format tibble A table, resolving the primary keys ('pk') of the active
+#' substances to the latest entry in any of the 'substances' tables in
+#' [srppp_list].
+#' Also, the earliest and the latest year of occurrence
+#' are given in the columns 'earliest' and 'latest'.
+#' @note Note that a substance occurring in the register in a certain year
+#' does not necessarily mean that a product containing the substance was
+#' authorized. In particular, a number of products with such comments are present
+#' in the register used as representative for 2011.
+#' @seealso [srppp_active_substances_merged], [srppp_substances], [srppp_products]
+#' @examples
+#' print(srppp_active_substances, n = Inf)
+"srppp_active_substances"
+
 #' Table of active substance names extracted from all years starting 2011
 #'
 #' Please note that products whose authorisation has expired remain in the
@@ -132,37 +159,61 @@
 #' product containing the substance had not expired in the beginning of the
 #' respective year.
 #'
-#' @docType data
-#' @format tibble A table, resolving the primary keys ('pk') of the active
-#' substances to the latest entry in any of the 'substances' tables in
-#' [srppp_list].
-#' Also, the earliest and the latest year of occurrence
-#' are given in the columns 'earliest' and 'latest'.
-#' @note Note that a substance occurring in the register in a certain year
-#' does not necessarily mean that a product containing the substance was
-#' authorized. In particular, a number of products with such comments are present
-#' in the register used as representative for 2011.
-#' @seealso [srppp_products]
-#' @examples
-#' print(srppp_active_substances, n = Inf)
-"srppp_active_substances"
-
-#' Table of substance names extracted from all years starting 2011
+#' Please see [srppp_substances] and [srppp_substances_merged] for details
+#' on the different primary keys used in these tables.
 #'
 #' @docType data
-#' @format tibble A table, resolving the primary keys ('pk') of the active
-#' substances to the latest entry in any of the 'substances' tables in
-#' [srppp_list].
-#' Also, the earliest and the latest year of occurrence
-#' are given in the columns 'earliest' and 'latest'.
+#' @format tibble A [tibble]
 #' @note Note that a substance occurring in the register in a certain year
 #' does not necessarily mean that a product containing the substance was
 #' authorized. In particular, a number of products with such comments are present
 #' in the register used as representative for 2011.
-#' @seealso [srppp_products]
+#' @seealso [srppp_active_substances], [srppp_substances_merged], [srppp_products]
+#' @examples
+#' print(srppp_active_substances_merged, n = Inf)
+"srppp_active_substances_merged"
+
+#' Table resolving substance primary keys extracted from all years starting 2011
+#'
+#' A table of all primary keys ('pk') of the active substances, resolving them
+#' to the latest entry in any of the 'substances' tables in [srppp_list]. As the
+#' primary key scheme was in the XML files published by the registration
+#' authorities in the end of 2025, some substances in this table are listed
+#' twice, once with the old integer primary key, and once with the new primary
+#' key in the form of a
+#' [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier). For each
+#' primary key, the earliest and the latest year of occurrence are given in the
+#' columns 'earliest' and 'latest'. A substance list without these duplicates is
+#' supplied as [srppp_substances_merged].
+#' @docType data
+#' @format A [tibble].
+#' @note Note that a substance occurring in the register in a certain year does
+#'   not necessarily mean that a product containing the substance was
+#'   authorized. In particular, a number of products with such comments are
+#'   present in the register used as representative for 2011.
+#' @seealso [srppp_substances_merged], [srppp_products]
 #' @examples
 #' print(srppp_substances, n = Inf)
 "srppp_substances"
+
+#' Table of substance names extracted from all years starting 2011
+#'
+#' A table of all unique substance names (strictly speaking, of all unique
+#' combinations of German and French names) occurring in any of the 'substances'
+#' tables in [srppp_list].
+#' @docType data
+#' @format A [tibble]. The different types of primary keys (integer and uuid)
+#'   are listed in the columns `pk_v1` and `pk_v2`, respectively. The earliest
+#'   and the latest year of occurrence are given in the columns 'earliest' and
+#'   'latest'.
+#' @note Note that a substance occurring in the register in a certain year does
+#'   not necessarily mean that a product containing the substance was
+#'   authorized. In particular, a number of products with such comments are
+#'   present in the register used as representative for 2011.
+#' @seealso [srppp_substances], [srppp_products]
+#' @examples
+#' print(srppp_substances_merged, n = Inf)
+"srppp_substances_merged"
 
 #' Table of products extracted from all years starting 2011
 #'

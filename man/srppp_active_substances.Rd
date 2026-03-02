@@ -3,7 +3,7 @@
 \docType{data}
 \name{srppp_active_substances}
 \alias{srppp_active_substances}
-\title{Table of active substance names extracted from all years starting 2011}
+\title{Table of active substance keys extracted from all years starting 2011}
 \format{
 tibble A table, resolving the primary keys ('pk') of the active
 substances to the latest entry in any of the 'substances' tables in
@@ -22,6 +22,10 @@ the latest year where a use up period ('expirationDeadline') of at least one
 product containing the substance had not expired in the beginning of the
 respective year.
 }
+\details{
+Please see \link{srppp_substances} and \link{srppp_substances_merged} for details
+on the different primary keys used in these tables.
+}
 \note{
 Note that a substance occurring in the register in a certain year
 does not necessarily mean that a product containing the substance was
@@ -32,6 +36,6 @@ in the register used as representative for 2011.
 print(srppp_active_substances, n = Inf)
 }
 \seealso{
-\link{srppp_products}
+\link{srppp_active_substances_merged}, \link{srppp_substances}, \link{srppp_products}
 }
 \keyword{datasets}
