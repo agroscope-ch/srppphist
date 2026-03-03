@@ -5,7 +5,7 @@
 \alias{srppp_active_substances_merged}
 \title{Table of active substance names extracted from all years starting 2011}
 \format{
-tibble A \link[tibble:tibble]{tibble::tibble}
+A \link[tibble:tibble]{tibble::tibble}
 }
 \usage{
 srppp_active_substances_merged

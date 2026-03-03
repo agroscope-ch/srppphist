@@ -5,7 +5,7 @@
 \alias{srppp_ingredients}
 \title{Table of product ingredients extracted from all years starting 2011}
 \format{
-tibble A table of all unique combinations of P-Number, substance
+A \link[tibble:tibble]{tibble::tibble} of all unique combinations of P-Number, substance
 primary key 'pk', 'type' and product composition columns 'percent', 'g_per_L',
 'ingredient_de', 'ingredient_fr' and 'ingredient_it', and the column
 'latest', indicating the latest entry of that combination.

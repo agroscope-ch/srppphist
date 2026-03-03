@@ -5,7 +5,7 @@
 \alias{srppp_obligations_spe3}
 \title{Table of all SPe 3 obligations and corresponding mitigation measures}
 \format{
-A table with the relevant obligation texts in German, and its
+A \link[tibble:tibble]{tibble::tibble} with the relevant obligation texts in German, and its
 corresponding mitigation measures
 }
 \usage{

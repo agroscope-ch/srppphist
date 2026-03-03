@@ -2,7 +2,7 @@
 #'
 #' @name srppp_xml_dates
 #' @docType data
-#' @format character vector of publication dates in the format YYYY-MM-DD
+#' @format A character vector of publication dates in the format YYYY-MM-DD
 #' @examples
 #' print(srppp_xml_dates)
 "srppp_xml_dates"
@@ -11,7 +11,7 @@
 #'
 #' @name srppp_xml_zip_files
 #' @docType data
-#' @format character vector of paths relative to 'srppp_xml_idir',
+#' @format A character vector of paths relative to 'srppp_xml_idir',
 #' named with their publication dates in the format YYYY-MM-DD
 #' @examples
 #' print(srppp_xml_zip_files)
@@ -59,7 +59,7 @@
 #'
 #' @name srppp_list
 #' @docType data
-#' @format list A named list of `srppp::srppp_dm` objects created with the companion
+#' @format A named list of `srppp::srppp_dm` objects created with the companion
 #' package 'srppp'. The list elements are named with the years from 2011 to the
 #' current year as a character vector
 #' @examples
@@ -136,10 +136,9 @@
 #' on the different primary keys used in these tables.
 #'
 #' @docType data
-#' @format tibble A table, resolving the primary keys ('pk') of the active
+#' @format A [tibble], resolving the primary keys ('pk') of the active
 #' substances to the latest entry in any of the 'substances' tables in
-#' [srppp_list].
-#' Also, the earliest and the latest year of occurrence
+#' [srppp_list]. The earliest and the latest year of occurrence
 #' are given in the columns 'earliest' and 'latest'.
 #' @note Note that a substance occurring in the register in a certain year
 #' does not necessarily mean that a product containing the substance was
@@ -163,7 +162,7 @@
 #' on the different primary keys used in these tables.
 #'
 #' @docType data
-#' @format tibble A [tibble]
+#' @format A [tibble]
 #' @note Note that a substance occurring in the register in a certain year
 #' does not necessarily mean that a product containing the substance was
 #' authorized. In particular, a number of products with such comments are present
@@ -233,7 +232,7 @@
 #' ("Zulassungsstelle").
 #'
 #' @docType data
-#' @format tibble A table of all unique combinations of P-Number, W-Number,
+#' @format A [tibble] with all unique combinations of P-Number, W-Number,
 #' Swiss registration number
 #' and product name over all years, and the columns 'earliest' and 'latest',
 #' indicating the earliest and latest year of occurrence of that combination.
@@ -254,7 +253,7 @@
 #' Table of pesticide targets ("pests") extracted from all years starting 2011
 #'
 #' @docType data
-#' @format tibble A table of all pesticide target names in German, French and
+#' @format A [tibble] with all pesticide target names in German, French and
 #' Italian, a scientific name if available and the columns 'earliest' and 'latest',
 #' indicating the earliest and latest year of occurrence.
 #'
@@ -269,7 +268,7 @@
 #' in different years. In this table, all unique compositions occurring
 #' in one of the years are collected.
 #' @docType data
-#' @format tibble A table of all unique combinations of P-Number, substance
+#' @format A [tibble] of all unique combinations of P-Number, substance
 #' primary key 'pk', 'type' and product composition columns 'percent', 'g_per_L',
 #' 'ingredient_de', 'ingredient_fr' and 'ingredient_it', and the column
 #' 'latest', indicating the latest entry of that combination.
@@ -281,12 +280,12 @@
 
 #' Table of the latest product compositions
 #'
-#' This table contains only one composition for each P-Number In cases, where
+#' This table contains only one composition for each P-Number. In cases, where
 #' several versions of the composition are given in different years, the composition
 #' in the latest year of occurrence is used, assuming that it is the correct one.
 #'
 #' @docType data
-#' @format tibble A table with the columns P-Number 'pNbr', substance
+#' @format A [tibble] with the columns P-Number 'pNbr', substance
 #' primary key 'pk', 'type' and product composition columns 'percent', 'g_per_L',
 #' 'ingredient_de', 'ingredient_fr' and 'ingredient_it', and the column
 #' 'latest', indicating the year entry of that combination.
@@ -302,7 +301,7 @@
 #' as explained in the documentation to [srppp::srppp_dm].
 #'
 #' @docType data
-#' @format A table with the relevant obligation texts in German, and its
+#' @format A [tibble] with the relevant obligation texts in German, and its
 #' corresponding mitigation measures
 #' @examples
 #' print(srppp_obligations_spe3, n = Inf)

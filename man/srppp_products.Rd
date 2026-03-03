@@ -5,7 +5,7 @@
 \alias{srppp_products}
 \title{Table of products extracted from all years starting 2011}
 \format{
-tibble A table of all unique combinations of P-Number, W-Number,
+A \link[tibble:tibble]{tibble::tibble} with all unique combinations of P-Number, W-Number,
 Swiss registration number
 and product name over all years, and the columns 'earliest' and 'latest',
 indicating the earliest and latest year of occurrence of that combination.

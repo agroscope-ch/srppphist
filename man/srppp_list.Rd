@@ -5,7 +5,7 @@
 \alias{srppp_list}
 \title{List of 'srppp_dm' objects for all years starting 2011}
 \format{
-list A named list of \code{srppp::srppp_dm} objects created with the companion
+A named list of \code{srppp::srppp_dm} objects created with the companion
 package 'srppp'. The list elements are named with the years from 2011 to the
 current year as a character vector
 }

@@ -5,7 +5,7 @@
 \alias{srppp_xml_dates}
 \title{Publication dates of the available zip files}
 \format{
-character vector of publication dates in the format YYYY-MM-DD
+A character vector of publication dates in the format YYYY-MM-DD
 }
 \usage{
 srppp_xml_dates

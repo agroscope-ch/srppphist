@@ -5,10 +5,9 @@
 \alias{srppp_active_substances}
 \title{Table of active substance keys extracted from all years starting 2011}
 \format{
-tibble A table, resolving the primary keys ('pk') of the active
+A \link[tibble:tibble]{tibble::tibble}, resolving the primary keys ('pk') of the active
 substances to the latest entry in any of the 'substances' tables in
-\link{srppp_list}.
-Also, the earliest and the latest year of occurrence
+\link{srppp_list}. The earliest and the latest year of occurrence
 are given in the columns 'earliest' and 'latest'.
 }
 \usage{

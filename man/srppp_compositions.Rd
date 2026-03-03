@@ -5,7 +5,7 @@
 \alias{srppp_compositions}
 \title{Table of the latest product compositions}
 \format{
-tibble A table with the columns P-Number 'pNbr', substance
+A \link[tibble:tibble]{tibble::tibble} with the columns P-Number 'pNbr', substance
 primary key 'pk', 'type' and product composition columns 'percent', 'g_per_L',
 'ingredient_de', 'ingredient_fr' and 'ingredient_it', and the column
 'latest', indicating the year entry of that combination.
@@ -14,7 +14,7 @@ primary key 'pk', 'type' and product composition columns 'percent', 'g_per_L',
 srppp_compositions
 }
 \description{
-This table contains only one composition for each P-Number In cases, where
+This table contains only one composition for each P-Number. In cases, where
 several versions of the composition are given in different years, the composition
 in the latest year of occurrence is used, assuming that it is the correct one.
 }

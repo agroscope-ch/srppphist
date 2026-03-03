@@ -5,7 +5,7 @@
 \alias{srppp_xml_zip_files}
 \title{Relative paths of the available zip files}
 \format{
-character vector of paths relative to 'srppp_xml_idir',
+A character vector of paths relative to 'srppp_xml_idir',
 named with their publication dates in the format YYYY-MM-DD
 }
 \usage{

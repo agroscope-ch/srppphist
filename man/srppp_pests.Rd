@@ -5,7 +5,7 @@
 \alias{srppp_pests}
 \title{Table of pesticide targets ("pests") extracted from all years starting 2011}
 \format{
-tibble A table of all pesticide target names in German, French and
+A \link[tibble:tibble]{tibble::tibble} with all pesticide target names in German, French and
 Italian, a scientific name if available and the columns 'earliest' and 'latest',
 indicating the earliest and latest year of occurrence.
 }
