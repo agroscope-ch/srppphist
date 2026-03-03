@@ -5,9 +5,15 @@
 - [`srppp_list`](https://agroscope-ch.github.io/srppphist/reference/srppp_list.md)
   : List of 'srppp_dm' objects for all years starting 2011
 - [`srppp_active_substances`](https://agroscope-ch.github.io/srppphist/reference/srppp_active_substances.md)
+  : Table of active substance keys extracted from all years starting
+  2011
+- [`srppp_active_substances_merged`](https://agroscope-ch.github.io/srppphist/reference/srppp_active_substances_merged.md)
   : Table of active substance names extracted from all years starting
   2011
 - [`srppp_substances`](https://agroscope-ch.github.io/srppphist/reference/srppp_substances.md)
+  : Table resolving substance primary keys extracted from all years
+  starting 2011
+- [`srppp_substances_merged`](https://agroscope-ch.github.io/srppphist/reference/srppp_substances_merged.md)
   : Table of substance names extracted from all years starting 2011
 - [`srppp_products`](https://agroscope-ch.github.io/srppphist/reference/srppp_products.md)
   : Table of products extracted from all years starting 2011

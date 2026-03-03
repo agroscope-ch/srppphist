@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">srppphist</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.0.0.9005</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">2.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,6 +37,13 @@
       <small>Source: <a href="https://github.com/agroscope-ch/srppphist/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="2.0.0" id="version-200">version 2.0.0<a class="anchor" aria-label="anchor" href="#version-200"></a></h2>
+<ul><li>Add data for 2026 from the XML file dated 3 February 2026.</li>
+<li>As a new primary key scheme is used for substances in the 2026 data, the lists <code>srppp_substances</code> and <code>srppp_active substances</code>, resolving primary keys to substance names now contain duplicated entries. Also, the <code>pk</code> column is now of type <code>character</code>, so it can hold the new type of primary keys formatted as a UUID.</li>
+<li>For these tables, new versions without duplicates are added, i.e.  <code>srppp_substances_merged</code> and <code>srppp_active_substances_merged</code>. In these tables, there are two primary key columns, one called <code>pk_v1</code> containing the integer primary keys from the previous format, and <code>pk_v2</code> containing the primary keys from the current format, i.e. in the form of an UUID.</li>
+<li>The package now depends on srppp v2.0.4, which fixes a problem that occurred when reading in the register from 2015 with srppp versions 2.0.0 to 2.0.3.</li>
+</ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.0.0.9005" id="version-1009005">version 1.0.0.9005<a class="anchor" aria-label="anchor" href="#version-1009005"></a></h2>
 <ul><li>Add a vignette showing cases in which products were registered under the same name that contain a different set of active ingredients.</li>

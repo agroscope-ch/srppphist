@@ -63,7 +63,7 @@ package, please note the following:
 ``` r
 names(srppp_list)
 #>  [1] "2011" "2012" "2013" "2014" "2015" "2016" "2017" "2018" "2019" "2020"
-#> [11] "2021" "2022" "2023" "2024" "2025"
+#> [11] "2021" "2022" "2023" "2024" "2025" "2026"
 
 # In case you are interested in the registered uses of products containing
 # a certain active substance, here is some example code
