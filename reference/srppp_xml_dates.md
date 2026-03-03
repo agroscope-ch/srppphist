@@ -10,7 +10,7 @@ srppp_xml_dates
 
 ## Format
 
-character vector of publication dates in the format YYYY-MM-DD
+A character vector of publication dates in the format YYYY-MM-DD
 
 ## Examples
 

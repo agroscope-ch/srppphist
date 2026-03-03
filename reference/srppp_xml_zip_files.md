@@ -10,8 +10,8 @@ srppp_xml_zip_files
 
 ## Format
 
-character vector of paths relative to 'srppp_xml_idir', named with their
-publication dates in the format YYYY-MM-DD
+A character vector of paths relative to 'srppp_xml_idir', named with
+their publication dates in the format YYYY-MM-DD
 
 ## Examples
 

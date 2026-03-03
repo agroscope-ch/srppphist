@@ -15,8 +15,7 @@ srppp_active_substances_merged
 
 ## Format
 
-tibble A
-[tibble::tibble](https://tibble.tidyverse.org/reference/tibble.html)
+A [tibble::tibble](https://tibble.tidyverse.org/reference/tibble.html)
 
 ## Details
 

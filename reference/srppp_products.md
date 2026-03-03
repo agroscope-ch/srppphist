@@ -14,13 +14,14 @@ srppp_products
 
 ## Format
 
-tibble A table of all unique combinations of P-Number, W-Number, Swiss
-registration number and product name over all years, and the columns
-'earliest' and 'latest', indicating the earliest and latest year of
-occurrence of that combination. Finally, the columns 'categories_de',
-'categories_fr', and 'categories_it' contain concatenations of the
-product categories in the respective language, with the product
-categories separated by a comma and a space.
+A [tibble::tibble](https://tibble.tidyverse.org/reference/tibble.html)
+with all unique combinations of P-Number, W-Number, Swiss registration
+number and product name over all years, and the columns 'earliest' and
+'latest', indicating the earliest and latest year of occurrence of that
+combination. Finally, the columns 'categories_de', 'categories_fr', and
+'categories_it' contain concatenations of the product categories in the
+respective language, with the product categories separated by a comma
+and a space.
 
 ## Details
 

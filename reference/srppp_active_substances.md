@@ -15,11 +15,12 @@ srppp_active_substances
 
 ## Format
 
-tibble A table, resolving the primary keys ('pk') of the active
-substances to the latest entry in any of the 'substances' tables in
+A [tibble::tibble](https://tibble.tidyverse.org/reference/tibble.html),
+resolving the primary keys ('pk') of the active substances to the latest
+entry in any of the 'substances' tables in
 [srppp_list](https://agroscope-ch.github.io/srppphist/reference/srppp_list.md).
-Also, the earliest and the latest year of occurrence are given in the
-columns 'earliest' and 'latest'.
+The earliest and the latest year of occurrence are given in the columns
+'earliest' and 'latest'.
 
 ## Details
 

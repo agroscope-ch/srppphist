@@ -14,7 +14,7 @@ srppp_list
 
 ## Format
 
-list A named list of
+A named list of
 [`srppp::srppp_dm`](https://agroscope-ch.github.io/srppp/reference/srppp_dm.html)
 objects created with the companion package 'srppp'. The list elements
 are named with the years from 2011 to the current year as a character
