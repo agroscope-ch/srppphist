@@ -60,37 +60,30 @@ srppp_ingredients <- bind_rows(lapply(srppp_list, function(x) x$ingredients), .i
 srppp_substances_tocheck <- bind_rows(lapply(srppp_list, function(x) x$substances), .id = "year") |>
   mutate(year = as.integer(year))
 
-# This is the case (last checked 2026-03-02)
-if (FALSE) {
-  srppp_check_dups <- srppp_substances_tocheck |>
-    filter(pk %in% srppp_ingredient_pks$pk) |>
-    select(pk, iupac, substance_de, substance_fr, substance_it, substance_en) |>
-    unique() |>
-    arrange(pk)
-
-  dup_pks <- srppp_check_dups[duplicated(srppp_check_dups$pk), ]$pk |>
-    unique()
-
-  tmp <- srppp_check_dups |>
-    filter(pk %in% dup_pks) |>
-    select(pk, substance_de)
-
-  print(tmp[1:39, ], n = Inf)
-  print(tmp[40:79, ], n = Inf)
-  print(tmp[80:119, ], n = Inf)
-  print(tmp[120:159, ], n = Inf)
-  print(tmp[160:nrow(tmp), ], n = Inf)
-}
-
-# Now (2026) that we have two versions of primary keys, we can establish
-# different substance lists.
-
 # Get a list of all pk values, regardless if integer or uuid
 srppp_ingredient_pks <- srppp_ingredients |>
   left_join(srppp_substances_tocheck, by = join_by(pk, year)) |>
   select(pk) |>
   unique() |>
   arrange(pk)
+
+srppp_check_dups <- srppp_substances_tocheck |>
+  filter(pk %in% srppp_ingredient_pks$pk) |>
+  select(pk, iupac, substance_de, substance_fr, substance_it, substance_en) |>
+  unique() |>
+  arrange(suppressWarnings(as.integer(pk))) |>
+  add_count(pk) |>
+  filter(n > 1) |>
+  distinct() |>
+  select(pk, n, substance_de, iupac, substance_fr) # differences can also be in it or en
+
+# This is the case (last checked 2026-03-03, where we had 166 rows to check)
+if (nrow(srppp_check_dups) > 166) {
+  View(srppp_check_dups)
+}
+
+# Now (2026) that we have two versions of primary keys, we can establish
+# different substance lists.
 
 # Get a corresponding list only for active ingredients
 srppp_active_ingredient_pks <- srppp_ingredients |>
