@@ -42,7 +42,7 @@ years <- 2011:2026 # When adding a new year, we need to install the package
 # make them available to the function srppp_xml_get.numeric.
 time <- system.time({
   #srppp_list <- lapply(years, srppp_dm) # lapply prints messages in RStudio
-  srppp_list <- parallel::mclapply(years, srppp_dm, verbose = FALSE, mc.cores = 8)
+  srppp_list <- parallel::mclapply(years, srppp_dm, verbose = FALSE, mc.cores = 16)
   names(srppp_list) <- years
 })
 
@@ -52,20 +52,28 @@ parallel::mclapply(srppp_list,
 
 save("srppp_list", file = here("data/srppp_list.rda"), compress = "xz")
 
-# Get all pk values (integer and uuid) of substances that are used as ingredients in any year
+# Combine ingredients tables from all years, using both versions of substance keys
 srppp_ingredients <- bind_rows(lapply(srppp_list, function(x) x$ingredients), .id = "year") |>
   mutate(year = as.integer(year))
 
-# Manually check if pks of substances always refer to the same substance
-srppp_substances_tocheck <- bind_rows(lapply(srppp_list, function(x) x$substances), .id = "year") |>
-  mutate(year = as.integer(year))
-
-# Get a list of all pk values, regardless if integer or uuid
+# All pk values used for ingredients (integer and uuid)
 srppp_ingredient_pks <- srppp_ingredients |>
-  left_join(srppp_substances_tocheck, by = join_by(pk, year)) |>
   select(pk) |>
   unique() |>
   arrange(pk)
+
+# All primary keys used for active ingredients (integer and uuid)
+srppp_active_ingredient_pks <- srppp_ingredients |>
+  filter(type == "ACTIVE_INGREDIENT") |>
+  select(pk) |>
+  unique() |>
+  arrange(pk)
+
+# Combine substance tables from all years
+# Manually check if pks of substances always refer to the same substance,
+# so only some of the names (IUPAC, German, French) were adapted over the years.
+srppp_substances_tocheck <- bind_rows(lapply(srppp_list, function(x) x$substances), .id = "year") |>
+  mutate(year = as.integer(year))
 
 srppp_check_dups <- srppp_substances_tocheck |>
   filter(pk %in% srppp_ingredient_pks$pk) |>
@@ -77,30 +85,21 @@ srppp_check_dups <- srppp_substances_tocheck |>
   distinct() |>
   select(pk, n, substance_de, iupac, substance_fr) # differences can also be in it or en
 
-# This is the case (last checked 2026-03-03, where we had 166 rows to check)
-if (nrow(srppp_check_dups) > 166) {
+# This is the case (last checked 2026-03-03, where we had 176 rows to check)
+if (nrow(srppp_check_dups) > 176) {
   View(srppp_check_dups)
 }
 
-# Now (2026) that we have two versions of primary keys, we can establish
-# different substance lists.
-
-# Get a corresponding list only for active ingredients
-srppp_active_ingredient_pks <- srppp_ingredients |>
-  filter(type == "ACTIVE_INGREDIENT") |>
-  left_join(srppp_substances_tocheck, by = join_by(pk, year)) |>
-  select(pk) |>
-  unique() |>
-  arrange(pk)
-
 # Filter pk values, so only the integer keys from the first version are kept
 srppp_ingredient_pks_v1 <- srppp_ingredient_pks |>
-  filter(nchar(pk) < 10)
+  filter(nchar(pk) < 10) |>
+  arrange(as.integer(pk))
 
 # Filter pk values, so only uuid values are kept
 srppp_ingredient_pks_v2 <- srppp_ingredient_pks |>
   filter(nchar(pk) > 10) # uuids have a width of 32 characters plus the dashes
 
+# This is the full list of substances resolving all primary keys (integer and uuid)
 srppp_substances <- srppp_substances_tocheck |>
   filter(pk %in% srppp_ingredient_pks$pk) |>
   group_by(pk) |>
@@ -108,17 +107,11 @@ srppp_substances <- srppp_substances_tocheck |>
   left_join(srppp_substances_tocheck, by = c("pk", latest = "year")) |>
   arrange(earliest, suppressWarnings(as.integer(pk)))
 
-srppp_substances_v1 <- srppp_substances_tocheck |>
-  filter(pk %in% srppp_ingredient_pks_v1$pk) |>
-  group_by(pk) |>
-  summarise(earliest = min(year), latest = max(year)) |>
-  left_join(srppp_substances_tocheck, by = c("pk", latest = "year"))
+srppp_substances_v1 <- srppp_substances |>
+  filter(pk %in% srppp_ingredient_pks_v1$pk)
 
-srppp_substances_v2 <- srppp_substances_tocheck |>
-  filter(pk %in% srppp_ingredient_pks_v2$pk) |>
-  group_by(pk) |>
-  summarise(earliest = min(year), latest = max(year)) |>
-  left_join(srppp_substances_tocheck, by = c("pk", latest = "year"))
+srppp_substances_v2 <- srppp_substances |>
+  filter(pk %in% srppp_ingredient_pks_v2$pk)
 
 # To establish a unified list, we need to join via "substance_de" and
 # "substance_fr", as the German name is not unique in srppp_substances_v2
@@ -128,7 +121,7 @@ srppp_substances_v2 <- srppp_substances_tocheck |>
 # via "substance_de" and "substance_fr" leads to the desired result without
 # many-to-many relationship for the moment, as the french name for "Paraffinöl"
 # is different for the two versions of this ingredient.
-srppp_substances_merged <- srppp_substances |>
+srppp_substances_merged <- srppp_substances_v1 |>
   full_join(srppp_substances_v2[c("pk", "iupac", "substance_de", "substance_fr", "earliest", "latest")],
             by = c("substance_de", "substance_fr"),
             suffix = c("_v1", "_v2")) |>
@@ -146,12 +139,8 @@ save(srppp_substances,
 save(srppp_substances_merged,
   file = here("data/srppp_substances_merged.rda"), compress = "xz")
 
-srppp_active_substances <- srppp_substances_tocheck |>
-  filter(pk %in% srppp_active_ingredient_pks$pk) |>
-  group_by(pk) |>
-  summarise(earliest = min(year), latest = max(year)) |>
-  left_join(srppp_substances_tocheck, by = c("pk", latest = "year")) |>
-  arrange(earliest, suppressWarnings(as.integer(pk)))
+srppp_active_substances <- srppp_substances |>
+  filter(pk %in% srppp_active_ingredient_pks$pk)
 
 srppp_active_substances_merged <- srppp_substances_merged |>
   filter(
