@@ -3,7 +3,7 @@
 <!-- badges: start -->
   [![R-CMD-check](https://github.com/agroscope-ch/srppphist/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/agroscope-ch/srppphist/actions/workflows/R-CMD-check.yaml)
 [![R-universe status](https://agroscope-ch.r-universe.dev/badges/srppphist)](https://agroscope-ch.r-universe.dev/srppphist)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13993856.svg)](https://doi.org/10.5281/zenodo.13993856)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13993855.svg)](https://doi.org/10.5281/zenodo.13993855)
 <!-- badges: end -->
 
 ## Description
