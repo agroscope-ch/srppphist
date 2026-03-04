@@ -16,7 +16,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/agroscope-ch/srppphist/blob/v2.0.0/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/agroscope-ch/srppphist/blob/main/DESCRIPTION)
 
 Ranke J (2026). *srppphist: Historical Data from the Swiss Register of
 Plant Protection Products as an R Package*. R package version 2.0.0,

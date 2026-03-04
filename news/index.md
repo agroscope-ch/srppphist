@@ -1,5 +1,10 @@
 # Changelog
 
+## version 2.0.1
+
+- Remove duplicate entries in `srppp_substances_merged` and
+  `srppp_active_substances_merged`.
+
 ## version 2.0.0
 
 - Add data for 2026 from the XML file dated 3 February 2026.
