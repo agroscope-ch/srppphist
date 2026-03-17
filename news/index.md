@@ -1,5 +1,10 @@
 # Changelog
 
+## version 2.0.2
+
+- Read in using srppp v2.0.5, in order to correct some dosage
+  information that is incorrect or missing in older XML files.
+
 ## version 2.0.1
 
 - Remove duplicate entries in `srppp_substances_merged` and
