@@ -1,8 +1,8 @@
 Package: srppphist
 Type: Package
 Title: Historical Data from the Swiss Register of Plant Protection Products as an R Package
-Version: 2.0.1
-Date: 2026-03-04
+Version: 2.0.2
+Date: 2026-03-17
 Authors@R: c(
   person("Johannes", "Ranke", role = c("aut", "cre"),
     email = "johannes.ranke@agroscope.admin.ch",
@@ -24,7 +24,7 @@ Description: Data objects extracted from historical XML versions of the Swiss
   Also, the Federal Food Safety and Veterinary Office, coordinating the 
   authorisation of plant protection products in Switzerland, does not answer 
   requests regarding this package.
-Depends: R (>= 4.1.0), srppp (>= 2.0.4)
+Depends: R (>= 4.1.0), srppp (>= 2.0.5)
 Imports: cli, dplyr, data.tree, stringr, purrr
 Suggests: knitr, rmarkdown, here, DiagrammeR, ggplot2, parallel,
   testthat (>= 3.0.0), tibble, tidyr, flextable, kableExtra
