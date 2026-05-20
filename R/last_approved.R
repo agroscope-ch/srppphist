@@ -1,5 +1,6 @@
 #' Find the year of the last approved use of an active substance
 
+#' @importFrom rlang .data
 #' @param pattern Search pattern for the substance name, passed to [grepl].
 #' @param lang Should the German names be searched in (default), or the French 
 #' or the Italian ones?
