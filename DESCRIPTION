@@ -1,8 +1,8 @@
 Package: srppphist
 Type: Package
 Title: Historical Data from the Swiss Register of Plant Protection Products as an R Package
-Version: 2.0.2
-Date: 2026-03-17
+Version: 2.0.3
+Date: 2026-05-20
 Authors@R: c(
   person("Johannes", "Ranke", role = c("aut", "cre"),
     email = "johannes.ranke@agroscope.admin.ch",
@@ -31,11 +31,11 @@ Suggests: knitr, rmarkdown, here, DiagrammeR, ggplot2, parallel,
 BugReports: https://github.com/agroscope-ch/srppphist/issues
 URL: https://agroscope-ch.github.io/srppphist
 License: GPL (>= 3)
-LazyData: yes
+LazyData: true
 LazyDataCompression: xz
-RoxygenNote: 7.3.3
 Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr
 Encoding: UTF-8
 Language: en-GB
 Config/testthat/edition: 3
+Config/roxygen2/version: 8.0.0

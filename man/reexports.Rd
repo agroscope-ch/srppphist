@@ -11,6 +11,6 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
-  \item{srppp}{\code{\link[srppp]{srppp_xml_get}}}
+  \item{srppp}{\code{\link[srppp:srppp_xml_get]{srppp_xml_get()}}}
 }}
 

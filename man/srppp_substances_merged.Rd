@@ -5,7 +5,7 @@
 \alias{srppp_substances_merged}
 \title{Table of substance names extracted from all years starting 2011}
 \format{
-A \link[tibble:tibble]{tibble::tibble}. The different types of primary keys (integer and uuid)
+A \link[tibble:tibble]{tibble}. The different types of primary keys (integer and uuid)
 are listed in the columns \code{pk_v1} and \code{pk_v2}, respectively. The earliest
 and the latest year of occurrence are given in the columns 'earliest' and
 'latest'.

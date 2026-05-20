@@ -3,6 +3,7 @@
 S3method(srppp_xml_get,Date)
 S3method(srppp_xml_get,numeric)
 export(composition)
+export(last_approved)
 export(pNbr)
 export(product_categories)
 export(srppp_xml_get)

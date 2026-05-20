@@ -19,6 +19,11 @@ Useful links:
 \author{
 \strong{Maintainer}: Johannes Ranke \email{johannes.ranke@agroscope.admin.ch} (\href{https://orcid.org/0000-0003-4371-6538}{ORCID})
 
+Authors:
+\itemize{
+  \item Johannes Ranke \email{johannes.ranke@agroscope.admin.ch} (\href{https://orcid.org/0000-0003-4371-6538}{ORCID})
+}
+
 Other contributors:
 \itemize{
   \item Daniel Baumgartner [contributor]

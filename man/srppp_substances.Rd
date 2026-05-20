@@ -5,7 +5,7 @@
 \alias{srppp_substances}
 \title{Table resolving substance primary keys extracted from all years starting 2011}
 \format{
-A \link[tibble:tibble]{tibble::tibble}.
+A \link[tibble:tibble]{tibble}.
 }
 \usage{
 srppp_substances

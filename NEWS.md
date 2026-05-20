@@ -1,3 +1,7 @@
+## version 2.0.3
+
+- Add function `last_approved()` to find the year of the last occurrence of a substance in the list of registers provided here
+
 ## version 2.0.2
 
 - Read in using srppp v2.0.5, in order to correct some dosage information that is incorrect or missing in older XML files.

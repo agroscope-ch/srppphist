@@ -27,6 +27,7 @@ reference:
       - product_categories
       - composition
       - pNbr
+      - last_approved
   - title: Functions to create data objects from XML versions of the SRPPP
     contents:
       - srppp_xml_get.numeric
