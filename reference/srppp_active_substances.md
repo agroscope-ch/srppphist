@@ -15,7 +15,7 @@ srppp_active_substances
 
 ## Format
 
-A [tibble::tibble](https://tibble.tidyverse.org/reference/tibble.html),
+A [tibble](https://tibble.tidyverse.org/reference/tibble.html),
 resolving the primary keys ('pk') of the active substances to the latest
 entry in any of the 'substances' tables in
 [srppp_list](https://agroscope-ch.github.io/srppphist/reference/srppp_list.md).

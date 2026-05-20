@@ -11,10 +11,10 @@ srppp_pests
 
 ## Format
 
-A [tibble::tibble](https://tibble.tidyverse.org/reference/tibble.html)
-with all pesticide target names in German, French and Italian, a
-scientific name if available and the columns 'earliest' and 'latest',
-indicating the earliest and latest year of occurrence.
+A [tibble](https://tibble.tidyverse.org/reference/tibble.html) with all
+pesticide target names in German, French and Italian, a scientific name
+if available and the columns 'earliest' and 'latest', indicating the
+earliest and latest year of occurrence.
 
 ## Examples
 

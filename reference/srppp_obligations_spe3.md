@@ -12,9 +12,9 @@ srppp_obligations_spe3
 
 ## Format
 
-A [tibble::tibble](https://tibble.tidyverse.org/reference/tibble.html)
-with the relevant obligation texts in German, and its corresponding
-mitigation measures
+A [tibble](https://tibble.tidyverse.org/reference/tibble.html) with the
+relevant obligation texts in German, and its corresponding mitigation
+measures
 
 ## Examples
 

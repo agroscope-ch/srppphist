@@ -21,7 +21,7 @@ srppp_substances
 
 ## Format
 
-A [tibble::tibble](https://tibble.tidyverse.org/reference/tibble.html).
+A [tibble](https://tibble.tidyverse.org/reference/tibble.html).
 
 ## Note
 

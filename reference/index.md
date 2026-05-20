@@ -42,6 +42,8 @@
   : Retrieve one or more product compositions
 - [`pNbr()`](https://agroscope-ch.github.io/srppphist/reference/pNbr.md)
   : Retrieve and select a P-Number for a product name
+- [`last_approved()`](https://agroscope-ch.github.io/srppphist/reference/last_approved.md)
+  : Find the year of the last approved use of an active substance
 
 ## Functions to create data objects from XML versions of the SRPPP
 

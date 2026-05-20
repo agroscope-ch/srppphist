@@ -1,5 +1,12 @@
 # Changelog
 
+## version 2.0.3
+
+- Add function
+  [`last_approved()`](https://agroscope-ch.github.io/srppphist/reference/last_approved.md)
+  to find the year of the last occurrence of a substance in the list of
+  registers provided here
+
 ## version 2.0.2
 
 - Read in using srppp v2.0.5, in order to correct some dosage

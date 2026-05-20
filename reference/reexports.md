@@ -5,4 +5,4 @@ to see their documentation.
 
 - srppp:
 
-  [`srppp_xml_get`](https://agroscope-ch.github.io/srppp/reference/srppp_xml_get.html)
+  [`srppp_xml_get()`](https://agroscope-ch.github.io/srppp/reference/srppp_xml_get.html)

@@ -26,6 +26,11 @@ Useful links:
 **Maintainer**: Johannes Ranke <johannes.ranke@agroscope.admin.ch>
 ([ORCID](https://orcid.org/0000-0003-4371-6538))
 
+Authors:
+
+- Johannes Ranke <johannes.ranke@agroscope.admin.ch>
+  ([ORCID](https://orcid.org/0000-0003-4371-6538))
+
 Other contributors:
 
 - Daniel Baumgartner \[contributor\]

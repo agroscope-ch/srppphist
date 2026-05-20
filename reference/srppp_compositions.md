@@ -13,9 +13,9 @@ srppp_compositions
 
 ## Format
 
-A [tibble::tibble](https://tibble.tidyverse.org/reference/tibble.html)
-with the columns P-Number 'pNbr', substance primary key 'pk', 'type' and
-product composition columns 'percent', 'g_per_L', 'ingredient_de',
+A [tibble](https://tibble.tidyverse.org/reference/tibble.html) with the
+columns P-Number 'pNbr', substance primary key 'pk', 'type' and product
+composition columns 'percent', 'g_per_L', 'ingredient_de',
 'ingredient_fr' and 'ingredient_it', and the column 'latest', indicating
 the year entry of that combination.
 

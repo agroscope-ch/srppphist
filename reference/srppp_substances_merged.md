@@ -13,8 +13,8 @@ srppp_substances_merged
 
 ## Format
 
-A [tibble::tibble](https://tibble.tidyverse.org/reference/tibble.html).
-The different types of primary keys (integer and uuid) are listed in the
+A [tibble](https://tibble.tidyverse.org/reference/tibble.html). The
+different types of primary keys (integer and uuid) are listed in the
 columns `pk_v1` and `pk_v2`, respectively. The earliest and the latest
 year of occurrence are given in the columns 'earliest' and 'latest'.
 
