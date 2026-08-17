@@ -56,6 +56,10 @@
 #' - If you use the historical registration data in the form provided by this
 #' package, please cite the package as described by the output of
 #' `citation("srppphist")`.
+#' - Please note that some known errors in the original XML data are corrected
+#' when the data are read using the `srppp` package. For details, see
+#' [Corrections made to the
+#' data](https://agroscope-ch.github.io/srppp/reference/srppp_dm.html#corrections-made-to-the-data).
 #'
 #' @name srppp_list
 #' @docType data
@@ -140,10 +144,13 @@
 #' substances to the latest entry in any of the 'substances' tables in
 #' [srppp_list]. The earliest and the latest year of occurrence
 #' are given in the columns 'earliest' and 'latest'.
-#' @note Note that a substance occurring in the register in a certain year
-#' does not necessarily mean that a product containing the substance was
-#' authorized. In particular, a number of products with such comments are present
-#' in the register used as representative for 2011.
+#' @note Note that a substance occurring in the register in a certain year does
+#' not necessarily mean that a product containing the substance was
+#' authorized. In particular, a number of products with such comments are
+#' present in the register used as representative for 2011. Also note that
+#' some known errors in the original XML data are corrected when the data are
+#' read using the `srppp` package. For details, see [Corrections made to the
+#' data](https://agroscope-ch.github.io/srppp/reference/srppp_dm.html#corrections-made-to-the-data).
 #' @seealso [srppp_active_substances_merged], [srppp_substances], [srppp_products]
 #' @examples
 #' print(srppp_active_substances, n = Inf)
@@ -165,8 +172,11 @@
 #' @format A [tibble]
 #' @note Note that a substance occurring in the register in a certain year
 #' does not necessarily mean that a product containing the substance was
-#' authorized. In particular, a number of products with such comments are present
-#' in the register used as representative for 2011.
+#' authorized. In particular, a number of products with such comments are
+#' present in the register used as representative for 2011. Also note that some
+#' known errors in the original XML data are corrected when the data are read
+#' using the `srppp` package. For details, see [Corrections made to the
+#' data](https://agroscope-ch.github.io/srppp/reference/srppp_dm.html#corrections-made-to-the-data).
 #' @seealso [srppp_active_substances], [srppp_substances_merged], [srppp_products]
 #' @examples
 #' print(srppp_active_substances_merged, n = Inf)
