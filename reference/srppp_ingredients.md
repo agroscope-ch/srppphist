@@ -5915,7 +5915,7 @@ print(srppp_ingredients, n = Inf)
 #> 5878  8708   2026 738BFE0C-9… ACTI…  41.3    480     "als 49.7% D… "sous forme …
 #> 5879  8710   2024 1527        ACTI…   1        9.3    NA            NA          
 #> 5880  8710   2024 1685        ADDI…  NA       NA      NA            NA          
-#> 5881  8710   2018 1846        ACTI…  NA       NA      NA            NA          
+#> 5881  8710   2018 1846        ADDI…  NA       NA      NA            NA          
 #> 5882  8710   2024 1894        ADDI…  NA       NA      NA            NA          
 #> 5883  8711   2025 1187        ACTI…   9.53   100      NA            NA          
 #> 5884  8711   2026 1FCE99C4-F… ACTI…   9.53   100      NA            NA          

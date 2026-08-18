@@ -410,4 +410,16 @@ print(srppp_xml_dates)
 #>                                              "2025-04-01" 
 #> 2026/Daten Pflanzenschutzmittelverzeichnis_2026-02-03.zip 
 #>                                              "2026-02-03" 
+#> 2026/Daten Pflanzenschutzmittelverzeichnis_2026-03-12.zip 
+#>                                              "2026-03-11" 
+#> 2026/Daten Pflanzenschutzmittelverzeichnis_2026-04-15.zip 
+#>                                              "2026-04-15" 
+#> 2026/Daten Pflanzenschutzmittelverzeichnis_2026-05-07.zip 
+#>                                              "2026-05-07" 
+#> 2026/Daten Pflanzenschutzmittelverzeichnis_2026-06-03.zip 
+#>                                              "2026-06-03" 
+#> 2026/Daten Pflanzenschutzmittelverzeichnis_2026-07-07.zip 
+#>                                              "2026-07-07" 
+#> 2026/Daten Pflanzenschutzmittelverzeichnis_2026-08-07.zip 
+#>                                              "2026-08-07" 
 ```
