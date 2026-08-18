@@ -42,28 +42,28 @@ years <- 2011:2026 # When adding a new year, we need to install the package
 # make them available to the function srppp_xml_get.numeric.
 time <- system.time({
   #srppp_list <- lapply(years, srppp_dm) # lapply prints messages in RStudio
-  srppp_list <- parallel::mclapply(years, srppp_dm, verbose = FALSE, mc.cores = 16)
+  srppp_list <- parallel::mclapply(years, srppp_dm, verbose = FALSE, mc.cores = 8)
   names(srppp_list) <- years
 })
 
 # Check referential integrity of the dm objects in the list
 parallel::mclapply(srppp_list,
-  function(srppp) dm_examine_constraints(srppp), mc.cores = 16)
+  function(srppp) dm_examine_constraints(srppp), mc.cores = 4)
 
 save("srppp_list", file = here("data/srppp_list.rda"), compress = "xz")
 
 # Combine ingredients tables from all years, using both versions of substance keys
-srppp_ingredients <- bind_rows(lapply(srppp_list, function(x) x$ingredients), .id = "year") |>
+srppp_ingredients_all <- bind_rows(lapply(srppp_list, function(x) x$ingredients), .id = "year") |>
   mutate(year = as.integer(year))
 
 # All pk values used for ingredients (integer and uuid)
-srppp_ingredient_pks <- srppp_ingredients |>
+srppp_ingredient_pks <- srppp_ingredients_all |>
   select(pk) |>
   unique() |>
   arrange(pk)
 
 # All primary keys used for active ingredients (integer and uuid)
-srppp_active_ingredient_pks <- srppp_ingredients |>
+srppp_active_ingredient_pks <- srppp_ingredients_all |>
   filter(type == "ACTIVE_INGREDIENT") |>
   select(pk) |>
   unique() |>
@@ -183,7 +183,7 @@ srppp_products <- rbind(products, parallel_imports) |>
   summarise(
     earliest = min(year),
     latest = max(year),
-    .groups = "drop_last") |>
+    .groups = "drop") |>
   rowwise() |>
   mutate(
     categories_de = product_categories(pNbr, latest, "de"),
@@ -200,7 +200,7 @@ srppp_ingredients <- bind_rows(lapply(srppp_list,
   function(x) x$ingredients), .id = "year") |>
   mutate(year = as.integer(year)) |>
   group_by(pNbr, pk, type, percent, g_per_L, ingredient_de, ingredient_fr, ingredient_it) |>
-  summarise(latest = max(year), .groups = "drop_last") |>
+  summarise(latest = max(year), .groups = "drop") |>
   select(pNbr, latest, pk, type, percent:ingredient_it) |>
   arrange(pNbr, pk)
 
