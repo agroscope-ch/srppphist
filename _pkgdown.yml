@@ -20,7 +20,6 @@ reference:
       - srppp_pests
       - srppp_obligations_spe3
       - srppp_xml_dates
-      - srppp_xml_product_use_not_authorized
       - srppp_xml_zip_files
   - title: Functions to work with the data
     contents:
@@ -28,6 +27,7 @@ reference:
       - composition
       - pNbr
       - last_approved
+      - srppp_xml_product_use_not_authorized
   - title: Functions to create data objects from XML versions of the SRPPP
     contents:
       - srppp_xml_get.numeric
