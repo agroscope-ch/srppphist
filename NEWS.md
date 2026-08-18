@@ -1,5 +1,6 @@
 ## version 2.0.3
 
+- Read in the XML data with current `srppp`, in order to avoid that octabenzone shows up in the list of active ingredients due to an error in the XML file from 2018. Also, we now drop the grouping in `srppp_ingredients`
 - Add function `last_approved()` to find the year of the last occurrence of a substance in the list of registers provided here
 
 ## version 2.0.2
