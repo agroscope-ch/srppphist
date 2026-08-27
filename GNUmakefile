@@ -53,7 +53,7 @@ pd_all:
 	Rscript -e 'pkgdown::build_site(lazy = FALSE, run_dont_run = TRUE)'
 
 test: 
-	Rscript -e 'devtools::test()' 2>&1 | tee log/test.log
+	NOT_CRAN=true "$(RBIN)/Rscript" -e 'options(cli.dynamic = TRUE); devtools::test()' 2>&1 | tee log/test.log
 	sed -i -e "s/.*\r.*\r//" log/test.log
 
 .PHONY: data roxy build install quickinstall check quickcheck pd pd_all test

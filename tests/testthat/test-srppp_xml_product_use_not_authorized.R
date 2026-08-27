@@ -1,5 +1,6 @@
 test_that("Unauthorized products can be detected", {
 
+  library(dplyr, warn.conflicts = FALSE)
   # Products in the 2011 register with suspended or terminated authorizations
   example_products_2011 <- srppp_list[["2011"]]$products |>
     mutate(nonauth = srppp_xml_product_use_not_authorized(name, 2011, exhaustionDeadline)) |>

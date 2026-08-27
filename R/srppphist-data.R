@@ -132,7 +132,7 @@
 #' Please note that products whose authorisation has expired remain in the
 #' files until the end of the period during which use by the end user is
 #' still permitted. Therefore, the latest year given in this dataset means
-#' the latest year where a use up period ('expirationDeadline') of at least one
+#' the latest year where a use up period ('exhaustionDeadline') of at least one
 #' product containing the substance had not expired in the beginning of the
 #' respective year.
 #'
@@ -161,7 +161,7 @@
 #' Please note that products whose authorisation has expired remain in the
 #' files until the end of the period during which use by the end user is
 #' still permitted. Therefore, the latest year given in this dataset means
-#' the latest year where a use up period ('expirationDeadline') of at least one
+#' the latest year where a use up period ('exhaustionDeadline') of at least one
 #' product containing the substance had not expired in the beginning of the
 #' respective year.
 #'
@@ -229,7 +229,7 @@
 #' Please note that products whose authorisation has expired remain in the
 #' files until the end of the period during which use by the end user is
 #' still permitted. The end of the sell-out period ('soldoutDeadline') and the
-#' end of the use period ('expirationDeadline') are given in the respective
+#' end of the use period ('exhaustionDeadline') are given in the respective
 #' columns of the `products` table.
 #'
 #' As of version 1.0.0.9004, parallel imports are included in the table, and

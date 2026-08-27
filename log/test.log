@@ -1,10 +1,62 @@
 ℹ Testing srppphist
 ✔ | F W  S  OK | Context
-✔ |          5 | alternative_products [13.8s]
-✔ |         10 | srppp_dm [31.3s]
+✔ |          5 | alternative_products [12.5s]
+⠼ |          5 | srppp_dm                                                       # A tibble: 247 x 3
+    pNbr pk        n
+   <int> <chr> <int>
+ 1    NA 1000      2
+ 2    NA 1002      5
+ 3    NA 101       9
+ 4    NA 1010      2
+ 5    NA 102       3
+ 6    NA 1025      6
+ 7    NA 1027      4
+ 8    NA 1030      2
+ 9    NA 1032      2
+10    NA 1034      7
+# i 237 more rows
+✖ | 1        6 | srppp_dm [21.9s]
+────────────────────────────────────────────────────────────────────────────────
+Error ('test-srppp_dm.R:37:7'): Methods for reading in XML files work
+Error in `srppp_dm(as.Date("2015-01-06"))`: Duplicate entries for the same ingredient in the same product
+Backtrace:
+     ▆
+  1. ├─testthat::expect_message(...) at test-srppp_dm.R:35:3
+  2. │ └─testthat:::expect_condition_matching_(...)
+  3. │   └─testthat:::quasi_capture(...)
+  4. │     ├─testthat (local) .capture(...)
+  5. │     │ └─base::withCallingHandlers(...)
+  6. │     └─rlang::eval_bare(quo_get_expr(.quo), quo_get_env(.quo))
+  7. ├─testthat::expect_message(...)
+  8. │ └─testthat:::expect_condition_matching_(...)
+  9. │   └─testthat:::quasi_capture(...)
+ 10. │     ├─testthat (local) .capture(...)
+ 11. │     │ └─base::withCallingHandlers(...)
+ 12. │     └─rlang::eval_bare(quo_get_expr(.quo), quo_get_env(.quo))
+ 13. └─srppp::srppp_dm(as.Date("2015-01-06")) at test-srppp_dm.R:37:7
+────────────────────────────────────────────────────────────────────────────────
 ✔ |          3 | srppp_xml_product_use_not_authorized
 
 ══ Results ═════════════════════════════════════════════════════════════════════
-Duration: 45.2 s
+Duration: 34.5 s
 
-[ FAIL 0 | WARN 0 | SKIP 0 | PASS 18 ]
+── Failed tests ────────────────────────────────────────────────────────────────
+Error ('test-srppp_dm.R:37:7'): Methods for reading in XML files work
+Error in `srppp_dm(as.Date("2015-01-06"))`: Duplicate entries for the same ingredient in the same product
+Backtrace:
+     ▆
+  1. ├─testthat::expect_message(...) at test-srppp_dm.R:35:3
+  2. │ └─testthat:::expect_condition_matching_(...)
+  3. │   └─testthat:::quasi_capture(...)
+  4. │     ├─testthat (local) .capture(...)
+  5. │     │ └─base::withCallingHandlers(...)
+  6. │     └─rlang::eval_bare(quo_get_expr(.quo), quo_get_env(.quo))
+  7. ├─testthat::expect_message(...)
+  8. │ └─testthat:::expect_condition_matching_(...)
+  9. │   └─testthat:::quasi_capture(...)
+ 10. │     ├─testthat (local) .capture(...)
+ 11. │     │ └─base::withCallingHandlers(...)
+ 12. │     └─rlang::eval_bare(quo_get_expr(.quo), quo_get_env(.quo))
+ 13. └─srppp::srppp_dm(as.Date("2015-01-06")) at test-srppp_dm.R:37:7
+
+[ FAIL 1 | WARN 0 | SKIP 0 | PASS 14 ]

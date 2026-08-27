@@ -20,7 +20,7 @@ srppp_products
 Please note that products whose authorisation has expired remain in the
 files until the end of the period during which use by the end user is
 still permitted. The end of the sell-out period ('soldoutDeadline') and the
-end of the use period ('expirationDeadline') are given in the respective
+end of the use period ('exhaustionDeadline') are given in the respective
 columns of the \code{products} table.
 }
 \details{
