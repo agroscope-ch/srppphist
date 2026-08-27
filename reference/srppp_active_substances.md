@@ -35,7 +35,11 @@ for details on the different primary keys used in these tables.
 Note that a substance occurring in the register in a certain year does
 not necessarily mean that a product containing the substance was
 authorized. In particular, a number of products with such comments are
-present in the register used as representative for 2011.
+present in the register used as representative for 2011. Also note that
+some known errors in the original XML data are corrected when the data
+are read using the `srppp` package. For details, see [Corrections made
+to the
+data](https://agroscope-ch.github.io/srppp/reference/srppp_dm.html#corrections-made-to-the-data).
 
 ## See also
 

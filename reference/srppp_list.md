@@ -58,6 +58,11 @@ package, please note the following:
   this package, please cite the package as described by the output of
   `citation("srppphist")`.
 
+- Please note that some known errors in the original XML data are
+  corrected when the data are read using the `srppp` package. For
+  details, see [Corrections made to the
+  data](https://agroscope-ch.github.io/srppp/reference/srppp_dm.html#corrections-made-to-the-data).
+
 ## Examples
 
 ``` r
