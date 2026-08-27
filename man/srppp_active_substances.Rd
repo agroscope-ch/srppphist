@@ -26,10 +26,12 @@ Please see \link{srppp_substances} and \link{srppp_substances_merged} for detail
 on the different primary keys used in these tables.
 }
 \note{
-Note that a substance occurring in the register in a certain year
-does not necessarily mean that a product containing the substance was
-authorized. In particular, a number of products with such comments are present
-in the register used as representative for 2011.
+Note that a substance occurring in the register in a certain year does
+not necessarily mean that a product containing the substance was
+authorized. In particular, a number of products with such comments are
+present in the register used as representative for 2011. Also note that
+some known errors in the original XML data are corrected when the data are
+read using the \code{srppp} package. For details, see \href{https://agroscope-ch.github.io/srppp/reference/srppp_dm.html#corrections-made-to-the-data}{Corrections made to the data}.
 }
 \examples{
 print(srppp_active_substances, n = Inf)

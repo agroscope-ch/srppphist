@@ -13,7 +13,7 @@ srppp_substances
 \description{
 A table of all primary keys ('pk') of the active substances, resolving them
 to the latest entry in any of the 'substances' tables in \link{srppp_list}. As the
-primary key scheme was in the XML files published by the registration
+primary key scheme was changed in the XML files published by the registration
 authorities in the end of 2025, some substances in this table are listed
 twice, once with the old integer primary key, and once with the new primary
 key in the form of a

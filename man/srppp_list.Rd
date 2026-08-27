@@ -49,6 +49,9 @@ object.
 \item If you use the historical registration data in the form provided by this
 package, please cite the package as described by the output of
 \code{citation("srppphist")}.
+\item Please note that some known errors in the original XML data are corrected
+when the data are read using the \code{srppp} package. For details, see
+\href{https://agroscope-ch.github.io/srppp/reference/srppp_dm.html#corrections-made-to-the-data}{Corrections made to the data}.
 }
 }
 

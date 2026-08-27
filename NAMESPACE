@@ -9,19 +9,23 @@ export(product_categories)
 export(srppp_xml_get)
 export(srppp_xml_product_use_not_authorized)
 importFrom(data.tree,Node)
-importFrom(dplyr,arrange)
-importFrom(dplyr,case_when)
-importFrom(dplyr,everything)
-importFrom(dplyr,filter)
-importFrom(dplyr,if_else)
-importFrom(dplyr,left_join)
-importFrom(dplyr,matches)
-importFrom(dplyr,pull)
-importFrom(dplyr,row_number)
-importFrom(dplyr,select)
-importFrom(dplyr,slice)
+importFrom(dplyr,
+  arrange,
+  case_when,
+  everything,
+  filter,
+  if_else,
+  left_join,
+  matches,
+  pull,
+  row_number,
+  select,
+  slice
+)
 importFrom(purrr,list_rbind)
 importFrom(rlang,.data)
-importFrom(srppp,srppp_xml_get)
-importFrom(srppp,srppp_xml_get_from_path)
+importFrom(srppp,
+  srppp_xml_get,
+  srppp_xml_get_from_path
+)
 importFrom(stringr,str_detect)
