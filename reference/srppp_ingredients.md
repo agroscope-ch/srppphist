@@ -31,8 +31,6 @@ for one product composition per product
 ``` r
 print(srppp_ingredients, n = Inf)
 #> # A tibble: 7,047 × 9
-#> # Groups:   pNbr, pk, type, percent, g_per_L, ingredient_de, ingredient_fr
-#> #   [7,045]
 #>       pNbr latest pk          type   percent g_per_L ingredient_de ingredient_fr
 #>      <int>  <int> <chr>       <chr>    <dbl>   <dbl> <chr>         <chr>        
 #>    1    38   2025 338         ACTI…  80       NA      NA            NA          
