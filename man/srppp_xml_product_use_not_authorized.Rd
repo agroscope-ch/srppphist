@@ -65,6 +65,7 @@ register for 2022, there are two products where an exhaustion date of
 31 December 2021 is indicated. In these cases, the function returns TRUE.
 }
 \examples{
+library(dplyr, warn.conflicts = TRUE)
 srppp_list[["2011"]]$products |>
   mutate(nonauth = srppp_xml_product_use_not_authorized(name, 2011, exhaustionDeadline)) |>
   select(pNbr:soldoutDeadline, nonauth) |>

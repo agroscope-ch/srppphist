@@ -1,12 +1,12 @@
 * using log directory ‘/home/f80868656/projects/srppphist/srppphist.Rcheck’
-* using R version 4.6.0 (2026-04-24)
+* using R version 4.6.1 (2026-06-24)
 * using platform: x86_64-pc-linux-gnu
 * R was compiled by
     gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
     GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
 * running under: Ubuntu 24.04.4 LTS
 * using session charset: UTF-8
-* current time: 2026-05-20 07:01:02 UTC
+* current time: 2026-09-16 14:46:42 UTC
 * using options ‘--no-tests --as-cran’
 * checking for file ‘srppphist/DESCRIPTION’ ... OK
 * checking extension type ... Package
@@ -21,7 +21,7 @@
 * checking for hidden files and directories ... OK
 * checking for portable file names ... OK
 * checking for sufficient/correct file permissions ... OK
-* checking whether package ‘srppphist’ can be installed ... [115s/122s] OK
+* checking whether package ‘srppphist’ can be installed ... [122s/129s] OK
 * checking installed package size ... INFO
   installed size is 40.6Mb
   sub-directories of 1Mb or more:
@@ -63,15 +63,15 @@
 * checking data for ASCII and uncompressed saves ... OK
 * checking installed files from ‘inst/doc’ ... OK
 * checking files in ‘vignettes’ ... OK
-* checking examples ... [31s/33s] NOTE
+* checking examples ... [32s/34s] NOTE
 Examples with CPU (user + system) or elapsed time > 5s
                     user system elapsed
-product_categories 8.502  1.679  12.651
+product_categories 8.796  1.855  12.696
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... SKIPPED
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes ... OK
-* checking re-building of vignette outputs ... [16s/18s] OK
+* checking re-building of vignette outputs ... [16s/19s] OK
 * checking PDF version of manual ... OK
 * checking HTML version of manual ... NOTE
 Skipping checking HTML validation: no command 'tidy' found.

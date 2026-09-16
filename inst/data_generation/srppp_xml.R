@@ -20,7 +20,7 @@ srppp_xml_dates <- sapply(srppp_xml_zip_files, function(zip_file) {
     gsub("PublicationData_(....)_(..)_(..).*\\.xml",
       "\\1-\\2-\\3", file_with_date)
   }) |>
-as.Date()
+  as.Date()
 
 names(srppp_xml_zip_files) <- as.character(srppp_xml_dates)
 
