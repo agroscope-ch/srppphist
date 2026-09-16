@@ -78,6 +78,7 @@ returns TRUE.
 ## Examples
 
 ``` r
+library(dplyr, warn.conflicts = TRUE)
 srppp_list[["2011"]]$products |>
   mutate(nonauth = srppp_xml_product_use_not_authorized(name, 2011, exhaustionDeadline)) |>
   select(pNbr:soldoutDeadline, nonauth) |>
