@@ -162,14 +162,14 @@ lapply(example_years, function(year) {
 #> # A tibble: 8 × 7
 #>   year   pNbr wNbr   name             exhaustionDeadline soldoutDeadline nonauth
 #>   <chr> <int> <chr>  <chr>            <chr>              <chr>           <lgl>  
-#> 1 2019   6501 5479   "Allegro "       ""                 ""              FALSE  
-#> 2 2019   6501 5479-1 "Allegro"        ""                 ""              FALSE  
-#> 3 2020   6501 5479   "Allegro "       ""                 ""              FALSE  
-#> 4 2020   6501 5479-1 "Allegro"        ""                 ""              FALSE  
-#> 5 2021   6501 5479   "Allegro "       ""                 ""              FALSE  
-#> 6 2021   6501 5479-1 "Allegro"        ""                 ""              FALSE  
-#> 7 2022   6501 5479   "Allegro [Bewil… "2022-08-31"       ""              FALSE  
-#> 8 2022   6501 5479-1 "Allegro [Wegen… "2022-08-31"       "2021-12-31"    FALSE  
+#> 1 2019   6501 5479   Allegro          ""                 ""              FALSE  
+#> 2 2019   6501 5479-1 Allegro          ""                 ""              FALSE  
+#> 3 2020   6501 5479   Allegro          ""                 ""              FALSE  
+#> 4 2020   6501 5479-1 Allegro          ""                 ""              FALSE  
+#> 5 2021   6501 5479   Allegro          ""                 ""              FALSE  
+#> 6 2021   6501 5479-1 Allegro          ""                 ""              FALSE  
+#> 7 2022   6501 5479   Allegro [Bewill… "2022-08-31"       ""              FALSE  
+#> 8 2022   6501 5479-1 Allegro [Wegen … "2022-08-31"       "2021-12-31"    FALSE  
 
 lapply(example_years, function(year) {
   sr <- srppp_list[[year]]
@@ -185,7 +185,7 @@ lapply(example_years, function(year) {
 #> 1 2020 2494 1997
 #> 2 2020 3614 2831
 #>                                                                                                                                                                          name
-#> 1                       Cortilan  [Ausverkaufs- und Aufbrauchsfrist / Délai d'écoulement des stocks et d'utilisation / Termine per la svendita e per l'utilizzo: 30.06.2020] 
+#> 1                        Cortilan  [Ausverkaufs- und Aufbrauchsfrist / Délai d'écoulement des stocks et d'utilisation / Termine per la svendita e per l'utilizzo: 30.06.2020]
 #> 2 Rover [Ausverkaufsfrist / Délai d'écoulement des stocks / Termine per la svendita : 10.12.2019; Aufbrauchsfrist / Délai d'utilisation / Termine per l'utilizzo: 31.12.2019]
 #>   exhaustionDeadline soldoutDeadline nonauth
 #> 1                                      FALSE

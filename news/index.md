@@ -7,7 +7,8 @@
   in the XML file from 2018. Also, we now drop the grouping in
   `srppp_ingredients` and avoid falsely excluded ingredients that were
   dropped by the unsafe coded that was introduced to remove duplicated
-  ingredients.
+  ingredients. Also, trailing (and leading) whitespace is now removed
+  from product names like “Fruitone”.
 - Add function
   [`last_approved()`](https://agroscope-ch.github.io/srppphist/reference/last_approved.md)
   to find the year of the last occurrence of a substance in the list of

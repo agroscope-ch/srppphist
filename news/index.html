@@ -39,7 +39,7 @@
 
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="2.0.3" id="version-203">version 2.0.3<a class="anchor" aria-label="anchor" href="#version-203"></a></h2>
-<ul><li>Read in the XML data with current <code>srppp</code>, in order to avoid that octabenzone shows up in the list of active ingredients due to an error in the XML file from 2018. Also, we now drop the grouping in <code>srppp_ingredients</code> and avoid falsely excluded ingredients that were dropped by the unsafe coded that was introduced to remove duplicated ingredients.</li>
+<ul><li>Read in the XML data with current <code>srppp</code>, in order to avoid that octabenzone shows up in the list of active ingredients due to an error in the XML file from 2018. Also, we now drop the grouping in <code>srppp_ingredients</code> and avoid falsely excluded ingredients that were dropped by the unsafe coded that was introduced to remove duplicated ingredients. Also, trailing (and leading) whitespace is now removed from product names like “Fruitone”.</li>
 <li>Add function <code><a href="../reference/last_approved.html">last_approved()</a></code> to find the year of the last occurrence of a substance in the list of registers provided here</li>
 </ul></div>
     <div class="section level2">
