@@ -1,7 +1,7 @@
 ---
 title: Products with the same name but different active ingredients in the Swiss Register of Plant Protection Products
 author: Johannes Ranke
-date: Last change 3 March 2026 (rebuilt `r Sys.Date()`)
+date: Last change 29 September 2026 (rebuilt `r Sys.Date()`)
 output:
   rmarkdown::html_vignette
 vignette: >
@@ -43,6 +43,12 @@ was apparently replaced by a different set of active ingredients. In the case
 of the product name "Dominator", three very different active ingredient compositions
 were registered under this name.
 
+In some rare cases, products under the same name containing different active 
+ingredients were authorized at the same time. This is true for "Banjo" for the
+year 2019 to 2021. One parallel import under this name contained fluazinam
+as the only active ingredient, another one contained tebuconazole and
+prothioconazole.
+
 ```{r different_ais}
 chNbr_ais <- srppp_compositions |> 
   filter(type == "ACTIVE_INGREDIENT") |>  
@@ -51,7 +57,7 @@ chNbr_ais <- srppp_compositions |>
   left_join(srppp_substances[c("pk", "substance_de")], by = "pk") |> 
   arrange(pNbr, pk) |> 
   group_by(pNbr, chNbr, name, earliest = earliest, latest = latest) |> 
-  summarise(ais = paste(substance_de, collapse = ", "), .groups = "drop")
+  summarise(ais = paste(sort(substance_de), collapse = ", "), .groups = "drop")
 
 names_different_ais <- chNbr_ais |>
   distinct(name, ais) |> # Look for distinct combinations of name and ais
